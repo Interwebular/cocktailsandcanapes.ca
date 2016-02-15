@@ -1,0 +1,21 @@
+.client {
+    @include font-regular();
+    font-size: 1.4em;
+
+    strong {
+        @include font-bold();
+        font-size: 1.3em;
+    }
+
+    blockquote {
+        margin-top: 20px;
+        width: 50%;
+        float: right;
+        font-size: 0.6em;
+    }
+
+    span {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

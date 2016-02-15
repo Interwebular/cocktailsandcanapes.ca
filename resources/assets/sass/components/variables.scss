@@ -1,0 +1,30 @@
+$font: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin font-light() {
+    font-family: $font;
+    font-weight: 100;
+}
+
+@mixin font-regular() {
+    font-family: $font;
+    font-weight: 300;
+}
+
+@mixin font-bold() {
+    font-family: $font;
+    font-weight: 700;
+}
+
+@mixin font-black() {
+    font-family: $font;
+    font-weight: 900;
+}
+
+@mixin text-shadow() {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+
+$color-dark: #262626;
+$color-darker: #121b26;
+$color-offwhite: #f9f9f9;

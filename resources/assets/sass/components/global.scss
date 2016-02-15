@@ -1,0 +1,18 @@
+
+body.dark {
+    background: #222;
+}
+
+body.padding {
+    padding-top: 120px;
+}
+
+label {
+    @include font-regular();
+    text-transform: uppercase;
+}
+
+.form-control {
+    border-radius: 0;
+    @include font-regular();
+}
