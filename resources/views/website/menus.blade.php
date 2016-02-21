@@ -11,7 +11,7 @@
 
                 @foreach(\App\Services\Menus\Menus::getAll() as $nav)
                     <li style="width: {{ 100 / count(\App\Services\Menus\Menus::getAll()) }}%;">
-                        <a href="{{ route('menu.show', $nav->slug) }}" class="{{ $menu->slug == $nav->slug ? 'active' : '' }}">{{ $nav->name }}</a>
+                        <a href="{{ route('menus.show', $nav->slug) }}" class="{{ $menu->slug == $nav->slug ? 'active' : '' }}">{{ $nav->name }}</a>
                     </li>
                 @endforeach
 

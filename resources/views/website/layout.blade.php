@@ -15,6 +15,12 @@
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <script>
+          	document.createElement('video');
+          </script>
+          <style>
+          video { display: block; }
+          </style>
         <![endif]-->
     </head>
     {{-- <body class="dark padding"> --}}
@@ -37,12 +43,7 @@
             <div class="nav-inner">
                 <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
                 <ul class="nav-items">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ route('page.show', 'menus') }}">Menus</a></li>
-                    <li><a href="{{ route('page.show', 'the-team') }}">The Team</a></li>
-                    <li><a href="{{ route('page.show', 'weddings') }}">Weddings</a></li>
-                    <li><a href="{{ route('page.show', 'gallery') }}">Gallery</a></li>
-                    <li><a href="" class="contact">Contact Us</a></li>
+                    @include('layouts.partials.navitems')
                 </ul>
             </div>
         </nav>
@@ -55,12 +56,7 @@
                 <ul class="nav-items">
                     <li><a href="#" class="close-mobile-nav"><i class="fa fa-close"></i></a></li>
                     <li><a href="{{ url('/') }}"><img class="nav-logo" src="img/logo_icon.png" alt="Cocktails And Canapes"/></a></li>
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ route('page.show', 'menus') }}">Menus</a></li>
-                    <li><a href="{{ route('page.show', 'the-team') }}">The Team</a></li>
-                    <li><a href="{{ route('page.show', 'weddings') }}">Weddings</a></li>
-                    <li><a href="{{ route('page.show', 'gallery') }}">Gallery</a></li>
-                    <li><a href="{{ route('page.show', 'contact') }}">Contact Us</a></li>
+                    @include('layouts.partials.navitems')
                 </ul>
             </div>
         </nav>

@@ -1,7 +1,15 @@
 @extends('website.layout')
 
 @section('content')
-    <section class="section-panel panel-fullscreen" style="background: #5b6fc5">
+
+    <video autoplay loop muted poster="{{ asset('videos/intro.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro.png') }})">
+        <source src="{{ asset('videos/intro.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
+    </video>
+
+    <div class="bgimage" style="background-image:url({{ asset('videos/intro.png') }})"></div>
+
+    <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
             <h1>Not Just Canapes.</h1>
             <div class="cta-wrapper">
@@ -10,7 +18,7 @@
         </div>
     </section>
 
-    <section class="section-panel section-fluid-height padding">
+    <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
             <img src="{{asset('img/logo_icon_dark.png')}}" class="logo-icon" />
             <div class="spacer"></div>
@@ -102,7 +110,7 @@
     </section>
 
 
-    <section class="section-panel section-fluid-height">
+    <section class="section-panel section-fluid-height section-white">
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
         <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
         <div class="content-center">

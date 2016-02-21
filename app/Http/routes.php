@@ -3,7 +3,7 @@
 // Admin Routes
 Route::group([
     //'middleware' => ['auth', 'web'],
-    'middleware' => ['web'],
+    'middleware' => ['web', 'auth'],
     'namespace' => 'Admin',
     'prefix' => 'admin'
 ], function () {
@@ -26,6 +26,12 @@ Route::group([
     Route::get('meals/{meal}/edit', ['as' => 'admin.meals.edit', 'uses' => 'MealController@edit']);
     Route::put('meals/{meal}/edit', ['as' => 'admin.meals.save', 'uses' => 'MealController@save']);
 
+    Route::get('venues', ['as' => 'admin.venues.index', 'uses' => 'VenueController@index']);
+    Route::get('venues/create', ['as' => 'admin.venues.create', 'uses' => 'VenueController@create']);
+    Route::post('venues/create', ['as' => 'admin.venues.store', 'uses' => 'VenueController@store']);
+    Route::get('venues/{venue}/edit', ['as' => 'admin.venues.edit', 'uses' => 'VenueController@edit']);
+    Route::put('venues/{venue}/edit', ['as' => 'admin.venues.save', 'uses' => 'VenueController@save']);
+
 });
 
 // Public Routes
@@ -33,9 +39,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::auth();
 
-    Route::get('menus/{menu?}', ['as' => 'menu.show', 'uses' => 'MenuController@show']);
+    Route::get('menus/{menu?}', ['as' => 'menus.show', 'uses' => 'MenuController@show']);
 
+    Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
-    Route::get('/page', ['as' => 'page.show', 'uses' => 'PageController@show']);
 
 });
