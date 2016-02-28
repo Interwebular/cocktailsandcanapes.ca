@@ -32,6 +32,14 @@ Route::group([
     Route::get('venues/{venue}/edit', ['as' => 'admin.venues.edit', 'uses' => 'VenueController@edit']);
     Route::put('venues/{venue}/edit', ['as' => 'admin.venues.save', 'uses' => 'VenueController@save']);
 
+    Route::get('blog', ['as' => 'admin.blog.index', 'uses' => 'BlogController@index']);
+    Route::get('blog/create', ['as' => 'admin.blog.create', 'uses' => 'BlogController@create']);
+    Route::post('blog/create', ['as' => 'admin.blog.store', 'uses' => 'BlogController@store']);
+    Route::get('blog/{post}', ['as' => 'admin.blog.edit', 'uses' => 'BlogController@edit']);
+    Route::put('blog/{post}', ['as' => 'admin.blog.save', 'uses' => 'BlogController@save']);
+
+
+
 });
 
 // Public Routes
