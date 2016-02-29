@@ -52,4 +52,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
 
+    Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
+    Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
+
 });

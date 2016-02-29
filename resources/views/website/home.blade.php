@@ -13,7 +13,7 @@
         <div class="panel-content middle">
             <h1>Not Just Canapes.</h1>
             <div class="cta-wrapper">
-                <a class="cta" href="#">Catering Menu</a>
+                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
             </div>
         </div>
     </section>

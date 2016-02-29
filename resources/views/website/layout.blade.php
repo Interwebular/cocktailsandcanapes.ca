@@ -26,7 +26,7 @@
     {{-- <body class="dark padding"> --}}
     <body class="@yield('body-classes', '')">
 
-        <div class="contact-us">
+        <div class="contact-us hidden-xs hidden-sm">
             <p>
                 604.424.8788<br>
                 <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
@@ -41,7 +41,9 @@
         <div class="nav-background"></div>
         <nav class="desktop hidden-xs hidden-sm">
             <div class="nav-inner">
-                <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
+                <a href="{{ url('/') }}">
+                    <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
+                </a>
                 <ul class="nav-items">
                     @include('layouts.partials.navitems')
                 </ul>
@@ -50,7 +52,9 @@
 
         <nav class="mobile hidden-md hidden-lg">
             <div class="nav-inner">
-                <img class="nav-logo" src="img/logo_icon.png" alt="Cocktails And Canapes"/>
+                <a href="{{ url('/') }}">
+                    <img class="nav-logo" src="{{ asset('img/logo_icon.png') }}" alt="CNC"/>
+                </a>
                 <a href="#" class="open-mobile-nav"><i class="fa fa-bars"></i></a>
 
                 <ul class="nav-items">
@@ -80,14 +84,18 @@
                 </div>
                 <div class="col-md-4" style="text-align: center;">
                     <div class="cta-wrapper" >
-                        <a class="cta" href="#">Catering Menu</a>
+                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
                     </div>
+
+                    <a href="http://droskiturner.com/" target="_blank" class="dt-logo">
+                        <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" />
+                    </a>
                 </div>
                 <div class="col-md-4 social-icons">
                     <h4>Connect With Us</h4>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
         </footer>

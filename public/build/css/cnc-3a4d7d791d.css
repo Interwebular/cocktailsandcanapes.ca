@@ -203,6 +203,8 @@ nav.mobile.scrolled {
     width: 100%; }
   .section-panel.section-fluid-height {
     padding: 150px 0; }
+  .section-panel.section-header {
+    padding: 70px 0; }
   .section-panel.with-background-image {
     background-repeat: no-repeat;
     background-position: center center;
@@ -212,6 +214,14 @@ nav.mobile.scrolled {
     height: auto; }
   .section-panel.section-white {
     background: #fff; }
+  .section-panel.section-dark {
+    background: #262626;
+    color: #fff; }
+  .section-panel .heading {
+    font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
   .section-panel .panel-content.middle {
     position: absolute;
     top: 50%;
@@ -281,7 +291,10 @@ nav.mobile.scrolled {
   font-weight: 300;
   font-size: 1.05em;
   letter-spacing: 2px;
-  margin-bottom: 35px; }
+  line-height: 1.8em;
+  margin-bottom: 35px;
+  text-align: justify;
+  text-justify: inter-word; }
 
 .dark-spacer {
   height: 20px;
@@ -491,6 +504,14 @@ footer {
       padding: 5px;
       font-size: 2em;
       margin-left: 10px; }
+  footer .dt-logo {
+    display: block;
+    max-width: 200px;
+    margin: 60px auto 0 auto;
+    opacity: 0.5;
+    transition: all 200ms; }
+    footer .dt-logo:hover {
+      opacity: 1; }
 
 @media (max-width: 992px) {
   footer {
@@ -729,5 +750,21 @@ footer {
     padding: 5px;
     color: #262626;
     font-size: 1.1em; }
+
+.blog-post {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e6e6e6; }
+  .blog-post.single {
+    border: none; }
+  .blog-post .title {
+    color: #262626;
+    font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 2.5em; }
+    .blog-post .title:hover {
+      text-decoration: none; }
+  .blog-post .meta {
+    margin-bottom: 10px; }
 
 /*# sourceMappingURL=cnc.css.map */

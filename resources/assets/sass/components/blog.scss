@@ -1,0 +1,27 @@
+.blog-post {
+
+
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid darken(#fff, 10%);
+
+    &.single {
+        border: none;
+    }
+
+    .title {
+        color: $color-dark;
+        @include font-light();
+        font-size: 2.5em;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .meta {
+        margin-bottom: 10px;
+    }
+
+
+}

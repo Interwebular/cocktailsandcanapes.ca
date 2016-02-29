@@ -34,6 +34,17 @@ footer {
             margin-left: 10px;
         }
     }
+
+    .dt-logo {
+        display: block;
+        max-width: 200px;
+        margin: 60px auto 0 auto;
+        opacity: 0.5;
+        transition: all 200ms;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
 
