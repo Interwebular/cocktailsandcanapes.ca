@@ -22,13 +22,17 @@
 
             <li><a href="{{ route('admin.index') }}"><i class='fa fa-home'></i> <span>Home</span></a></li>
 
-            <li><a href="{{ route('admin.users.index') }}"><span>Users</span></a></li>
+            <li><a href="{{ route('admin.users.index') }}"><i class='fa fa-users'></i> <span>Users</span></a></li>
 
-            <li><a href="{{ route('admin.menus.index') }}"><span>Menus</span></a></li>
+            <li><a href="{{ route('admin.blog.index') }}"><i class='fa fa-pencil-square-o'></i> <span>Blog</span></a></li>
 
-            <li><a href="{{ route('admin.meals.index') }}"><span>Meals</span></a></li>
+            <li><a href="{{ route('admin.menus.index') }}"><i class='fa fa-book'></i> <span>Menus</span></a></li>
 
-            <li><a href="{{ route('admin.venues.index') }}"><span>Venues</span></a></li>
+            <li><a href="{{ route('admin.meals.index') }}"><i class='fa fa-cutlery'></i> <span>Meals</span></a></li>
+
+            <li><a href="{{ route('admin.venues.index') }}"><i class='fa fa-building'></i> <span>Venues</span></a></li>
+
+            <li><a href="{{ route('admin.testimonials.index') }}"><i class='fa fa-comments'></i> <span>Testimonials</span></a></li>
 
             {{-- <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
