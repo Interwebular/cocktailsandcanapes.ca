@@ -4,6 +4,10 @@
 padding dark
 @endsection
 
+@section('page-title'){{ $post->title }}@endsection
+@section('meta-description'){{ $post->seo_description }}@endsection
+@section('meta-keywords'){{ $post->seo_keywords }}@endsection
+
 @section('content')
 
     <section class="section-panel section-white section-fluid-height">

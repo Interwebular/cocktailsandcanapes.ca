@@ -4,13 +4,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cocktails &amp; Canapes</title>
+        <title>@yield('page-title', 'Welcome') | Cocktails &amp; Canapes</title>
         <script src="https://use.typekit.net/ahl2ncy.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
         <link href="{{ elixir('css/cnc.css') }}" rel="stylesheet">
+
+        <meta name="application-name" content="Cocktails And Canapes">
+        <meta name="description" content="@yield('meta-description')">
+        <meta name="keywords" content="@yield('meta-keywords')">
+        <meta property="og:site_name" content="Cocktails And Canapes"/>
+        <meta property="og:title" content="@yield('page-title', 'Cocktails And Canapes')"/>
+        <meta property="og:description" content="@yield('meta-description')">
+        <meta property="og:url" content="{{ URL::current() }}"/>
+        <meta property="og:type" content="website"/>
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
