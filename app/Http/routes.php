@@ -38,7 +38,11 @@ Route::group([
     Route::get('blog/{post}', ['as' => 'admin.blog.edit', 'uses' => 'BlogController@edit']);
     Route::put('blog/{post}', ['as' => 'admin.blog.save', 'uses' => 'BlogController@save']);
 
-
+    Route::get('testimonials', ['as' => 'admin.testimonials.index', 'uses' => 'TestimonialController@index']);
+    Route::get('testimonials/create', ['as' => 'admin.testimonials.create', 'uses' => 'TestimonialController@create']);
+    Route::post('testimonials/create', ['as' => 'admin.testimonials.store', 'uses' => 'TestimonialController@store']);
+    Route::get('testimonials/{testimonial}', ['as' => 'admin.testimonials.edit', 'uses' => 'TestimonialController@edit']);
+    Route::put('testimonials/{testimonial}', ['as' => 'admin.testimonials.save', 'uses' => 'TestimonialController@save']);
 
 });
 

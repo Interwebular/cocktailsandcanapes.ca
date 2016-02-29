@@ -117,20 +117,18 @@
             <h1>Our Clients Are Our Biggest Fans</h1>
             <div class="spacer"></div>
             <div class="clients">
-                <div class="client">
-                    <div class="quote">
-                        <span><i class="fa fa-quote-left"></i></span>
-                        <strong>Cocktails &amp; Canapes</strong> did a fantastic job running the beverage program for the <strong>Olympic</strong> and <strong>Paralympic</strong> Games management Wrap Party inside the Olympic Village site. Over 1000 guests, tight deadlines, complex logistics and they made it happen effortlessly. Kudos to the team!
-                        <span><i class="fa fa-quote-right"></i></span>
+                @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
+                    <div class="client">
+                        <div class="quote">
+                            <span><i class="fa fa-quote-left"></i></span>
+                            {!! $testimonial->content !!}
+                            <span><i class="fa fa-quote-right"></i></span>
+                        </div>
+                        <blockquote>
+                            {!! $testimonial->client !!}
+                        </blockquote>
                     </div>
-                    <blockquote>
-                        Jordan Kallman, Village Plaza &amp; Events:<br>
-                        Vancouver Organizing Commitee for the 2010 Olympic & Paralympic Games
-                    </blockquote>
-                </div>
-                <div class="client">
-                    Cocktails &amp; Canapes did a fantastic job running the beverage program for the Olympic and Paralympic Games management Wrap Party inside the Olympic Village site. Over 1000 guests, tight deadlines, complex logistics and they made it happen effortlessly. Kudos to the team!
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
