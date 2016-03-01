@@ -1,7 +1,15 @@
 .directory-wrapper {
 
-    .container-fluid {
+    .container-fluid,
+    .container {
         background: $color-offwhite;
+    }
+
+    &.dark {
+        .container-fluid,
+        .container {
+            background: #222;
+        }
     }
 }
 
@@ -13,10 +21,15 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: $color-dark;
+
+    &.dark {
+        color: #fff;
+    }
 }
 
 .directory-items {
     padding: 20px 0;
+    overflow-x: hidden;
 }
 
 .directory-item {
@@ -48,7 +61,7 @@
 
 .directory-item-details {
     padding: 10px;
-
+    background: #fff;
     h3 {
         text-align: center;
         @include font-light();

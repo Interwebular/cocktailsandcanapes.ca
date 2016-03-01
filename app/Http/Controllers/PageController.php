@@ -9,14 +9,12 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
-    /**
-     * Show the page
-     *
-     * @return Response
-     */
-    public function show($page = 'home', $subpage = null) {
 
-        //return $subpage ? view('website.'.$page.'.'.$subpage) : view('website.'.$page);
+    public function weddings() {
+
+        return view('website.wedding.index', [
+            'venues' => \App\Venue::where('is_featured', 1)->take(3)->get()
+        ]);
     }
 
 }

@@ -69,6 +69,13 @@
                                 <textarea id="description" name="description" type="text" class="form-control">{{ old('description') }}</textarea>
                             </div>
 
+							<div class="form-group">
+								<label for="is_featured">Featured?</label>
+								<select class="form-control" id="is_featured" name="is_featured">
+									<option value="0">No</option>
+									<option value="1">Yes</option>
+								</select>
+							</div>
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>

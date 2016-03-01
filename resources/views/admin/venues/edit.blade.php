@@ -70,6 +70,13 @@
                                 <textarea id="description" name="description" type="text" class="form-control">{{ old('description') ? old('description') : $venue->description }}</textarea>
                             </div>
 
+							<div class="form-group">
+								<label for="is_featured">Featured?</label>
+								<select class="form-control" id="is_featured" name="is_featured">
+									<option value="0" @if(!$venue->is_featured) selected="selected" @endif>No</option>
+									<option value="1" @if($venue->is_featured) selected="selected" @endif>Yes</option>
+								</select>
+							</div>
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Save</button>

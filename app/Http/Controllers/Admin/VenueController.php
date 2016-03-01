@@ -48,7 +48,8 @@ class VenueController extends Controller {
             'contact_name' => '',
             'description' => 'required',
             'rececption_count' => 'required|numeric',
-            'dining_count' => 'required|numeric'
+            'dining_count' => 'required|numeric',
+            'is_featured' => 'required|numeric'
         ]);
 
         $venue = new \App\Venue;
@@ -61,6 +62,7 @@ class VenueController extends Controller {
         $venue->description = $request->description;
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
+        $venue->is_featured = $request->is_featured;
         $venue->save();
 
         return redirect()->route('admin.venues.index')->with('success', 'Venue Created');
@@ -94,7 +96,8 @@ class VenueController extends Controller {
             'contact_name' => '',
             'description' => 'required',
             'rececption_count' => 'required|numeric',
-            'dining_count' => 'required|numeric'
+            'dining_count' => 'required|numeric',
+            'is_featured' => 'required|numeric'
         ]);
 
         $venue->name = $request->name;
@@ -106,6 +109,7 @@ class VenueController extends Controller {
         $venue->description = $request->description;
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
+        $venue->is_featured = $request->is_featured;
         $venue->save();
 
         return redirect()->route('admin.venues.edit', [$venue])->with('success', 'Venue Saved');

@@ -2,7 +2,6 @@
 
 // Admin Routes
 Route::group([
-    //'middleware' => ['auth', 'web'],
     'middleware' => ['web', 'auth'],
     'namespace' => 'Admin',
     'prefix' => 'admin'
@@ -55,8 +54,11 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
-
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
+
+    Route::get('weddings', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
+
+    Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);
 
 });
