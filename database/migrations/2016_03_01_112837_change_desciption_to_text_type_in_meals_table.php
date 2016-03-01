@@ -13,7 +13,9 @@ class ChangeDesciptionToTextTypeInMealsTable extends Migration
     public function up()
     {
         Schema::table('meals', function (Blueprint $table) {
-            $table->dropColumn('description');
+            if (Schema::hasColumn('meals', 'description')) {
+                $table->dropColumn('description');
+            }
         });
     }
 
