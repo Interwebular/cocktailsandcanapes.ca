@@ -34,8 +34,8 @@
                         @foreach($menu->meals as $meal)
                             <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
                                 <a href="#" class="menu-item update-menu-item-image" data-image="{{ $meal->image }}">
-                                    <h3>{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif</h3>
-                                    <p>{{ $meal->description }}</p>
+                                    <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif</h3>
+                                    <p>{!! nl2br(e($meal->description)) !!}</p>
                                 </a>
                             </div>
                         @endforeach
