@@ -776,4 +776,27 @@ footer {
   .blog-post .meta {
     margin-bottom: 10px; }
 
+.venue-container .venue-header {
+  height: 250px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.venue-container h1 {
+  margin: 20px 0;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100; }
+
+.venue-container .venue-table {
+  width: 100%;
+  margin-top: 20px; }
+  .venue-container .venue-table td {
+    width: 50%;
+    font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding: 5px;
+    color: #262626;
+    font-size: 0.9em; }
+
 /*# sourceMappingURL=cnc.css.map */

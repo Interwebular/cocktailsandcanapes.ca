@@ -22,7 +22,7 @@ dark padding
             <div class="row directory-items m-grid">
                 @foreach($venues as $venue)
                     <div class="col-md-3 col-sm-6 col-xs-12 m-grid-item">
-                        <a href="#" class="directory-item">
+                        <a href="{{ route('venues.show', [$venue]) }}/{{ str_slug($venue->name) }}" class="directory-item">
                             @if($venue->image)
                                 <div class="directory-item-background" style="background-image:url({{ $venue->image }})"></div>
                             @endif

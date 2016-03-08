@@ -16,4 +16,11 @@ class VenueController extends Controller
         ]);
     }
 
+    public function show(\App\Venue $venue) {
+
+        return view('venues.show', [
+            'venue' => $venue
+        ]);
+    }
+
 }

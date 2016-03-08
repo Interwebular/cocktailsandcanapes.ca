@@ -1,0 +1,31 @@
+.venue-container {
+
+    .venue-header {
+        height: 250px;
+        width: 100%;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        margin: 20px 0;
+
+        @include font-light();
+    }
+
+    .venue-table {
+        width: 100%;
+        margin-top: 20px;
+
+        td {
+            width: 50%;
+            font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            padding: 5px;
+            color: #262626;
+            font-size: 0.9em;
+        }
+    }
+}
