@@ -158,6 +158,7 @@ return [
 
         // Vendors
         //Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
     ],
 
@@ -207,6 +208,7 @@ return [
 
         // Vendors
         //'AdminLTE'  => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
     ],
 
 ];

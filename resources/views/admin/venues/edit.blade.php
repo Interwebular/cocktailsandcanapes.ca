@@ -19,7 +19,7 @@
 
 					<div class="col-md-6 col-md-offset-3">
 
-						<form action="{{ route('admin.venues.save', [$venue]) }}" method="POST">
+						<form action="{{ route('admin.venues.save', [$venue]) }}" method="POST" enctype="multipart/form-data">
 
 							{{ csrf_field() }}
                             {{ method_field('PUT') }}
@@ -79,13 +79,24 @@
 							</div>
 
 							<div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" name="image" class="form-control" />
+                            </div>
+
+							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Save</button>
 							</div>
-
+							<div class="clearfix"></div>
 						</form>
+
+						<hr />
+
+						@if($venue->image)
+							Image URL: {{ $venue->image }}<br />
+							<img src="{{ $venue->image }}" class="img-responsive" />
+						@endif
+
 					</div>
-
-
                 </div>
             </div>
 		</div>

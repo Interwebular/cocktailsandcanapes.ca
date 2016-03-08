@@ -27,7 +27,7 @@
             </p>
 
             <div class="cta-wrapper">
-                <a class="cta black" href="#">Contact Us</a>
+                <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
             </div>
         </div>
     </section>

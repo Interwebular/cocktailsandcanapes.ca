@@ -19,7 +19,7 @@
 
 					<div class="col-md-6 col-md-offset-3">
 
-						<form action="{{ route('admin.venues.store') }}" method="POST">
+						<form action="{{ route('admin.venues.store') }}" method="POST" enctype="multipart/form-data">
 
 							{{ csrf_field() }}
 
@@ -76,6 +76,11 @@
 									<option value="1">Yes</option>
 								</select>
 							</div>
+
+							<div class="form-group">
+                                <label for="image">Upload An Image</label>
+                                <input type="file" name="image" class="form-control" />
+                            </div>
 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>

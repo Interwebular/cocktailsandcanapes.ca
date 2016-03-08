@@ -58,7 +58,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
 
     Route::get('weddings', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
-
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);
+    Route::get('find-the-perfect-venue/{venue}-{name}', ['as' => 'venues.show', 'uses' => 'VenueController@show']);
+    Route::get('contact', ['as' => 'contact.index', 'uses' => 'PageController@contact']);
+    Route::post('contact', ['as' => 'contact.submit', 'uses' => 'PageController@postContact']);
 
 });

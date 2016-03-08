@@ -1,4 +1,4 @@
 <!-- Main Footer -->
 <footer class="main-footer">
-    System built by Interwebular.
+    {{-- System built by Interwebular. --}}
 </footer>

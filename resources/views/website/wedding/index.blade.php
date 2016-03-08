@@ -33,7 +33,7 @@ dark
                 <p class="default">
                     Your guests arrive; anticipation of the celebration is building. They indulge in fine foods, scintillating cocktails, and pleasurable company. This sense of comfort and positive energy is subconscious to the crowd, yet each detail has been meticulously crafted to create an extraordinary event. Whether you desire an elegant formal sit down dinner, a family style dinning experience, or a cocktail soiree, we create a distinct social and culinary experience that will leave your guests buzzing. Say goodbye to the rubber chicken dinner.</p>
                 <div class="cta-wrapper">
-                    <a class="cta black" href="#">Contact Us</a>
+                    <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -51,7 +51,9 @@ dark
                 @foreach($venues as $venue)
                     <div class="col-md-4">
                         <a href="#" class="directory-item">
-                            <div class="directory-item-background" style="background-image:url(http://placehold.it/1000x500)"></div>
+                            @if($venue->image)
+                                <div class="directory-item-background" style="background-image:url({{ $venue->image }})"></div>
+                            @endif
                             <div class="directory-item-details">
                                 <h3>{{ $venue->name }}</h3>
                                 <table>

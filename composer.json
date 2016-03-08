@@ -9,7 +9,9 @@
         "laravel/framework": "5.2.*",
         "acacha/admin-lte-template-laravel": "2.*",
         "league/flysystem-aws-s3-v3": "~1.0",
-        "doctrine/dbal": "v2.5.4"
+        "doctrine/dbal": "v2.5.4",
+        "greggilbert/recaptcha": "dev-master",
+        "guzzlehttp/guzzle": "~5.3|~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

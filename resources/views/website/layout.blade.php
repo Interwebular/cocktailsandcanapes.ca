@@ -35,7 +35,7 @@
     {{-- <body class="dark padding"> --}}
     <body class="@yield('body-classes', '')">
 
-        <div class="contact-us hidden-xs hidden-sm">
+        {{-- <div class="contact-us hidden-xs hidden-sm">
             <p>
                 604.424.8788<br>
                 <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
@@ -45,7 +45,7 @@
                 P.O. Box 98882<br>
                 Vancouver, BC V6B 0M4
             </p>
-        </div>
+        </div> --}}
 
         <div class="nav-background"></div>
         <nav class="desktop hidden-xs hidden-sm">
