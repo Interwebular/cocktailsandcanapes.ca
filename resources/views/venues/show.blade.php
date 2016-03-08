@@ -8,16 +8,6 @@
 @section('meta-description'){{ $venue->name }}@endsection
 
 @section('content')
-    {{-- <section class="section-panel section-header section-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="heading">{{ $venue->name }}</h1>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     <section class="section-panel section-white section-fluid-height venue-container" style="padding-top: 0px">
         <div class="container">
             <div class="row">
@@ -30,7 +20,7 @@
                         <div class="col-md-6">
                             <h1>{{ $venue->name }}</h1>
                             <p>
-                                {{ nl2br(e($venue->description)) }}
+                                {!! nl2br(e($venue->description)) !!}
                             </p>
                         </div>
                         <div class="col-md-6">
