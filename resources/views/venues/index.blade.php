@@ -24,7 +24,7 @@ dark padding
                     <div class="col-md-3 col-sm-6 col-xs-12 m-grid-item">
                         <a href="#" class="directory-item">
                             @if($venue->image)
-                                <div class="directory-item-background" style="background-image:url(http://placehold.it/1000x500)"></div>
+                                <div class="directory-item-background" style="background-image:url({{ $venue->image }})"></div>
                             @endif
                             <div class="directory-item-details">
                                 <h3>{{ $venue->name }}</h3>
