@@ -44,11 +44,29 @@
                                 </select>
                             </div>
 
+							<div class="form-group">
+								<label for="category">Category</label>
+								<select class="form-control" name="category" id="category">
+									<option value="">-- Please Select --</option>
+									@foreach($categories as $category)
+										<option value="{{ $category->id }}" @if($meal->category_id == $category->id) selected="selected" @endif>{{ $category->name }}</option>
+									@endforeach
+								</select>
+							</div>
+
                             <div class="form-group">
                                 <label for="gluten_free">Gluten Free</label>
                                 <select class="form-control" name="gluten_free" id="gluten_free">
                                     <option value="0" {{ $meal->gluten_free ? '' : 'selected="selected"' }}>No</option>
                                     <option value="1" {{ $meal->gluten_free ? 'selected="selected"' : '' }}>Yes</option>
+                                </select>
+                            </div>
+
+							<div class="form-group">
+                                <label for="vegetarian">Vegetarian</label>
+                                <select class="form-control" name="vegetarian" id="vegetarian">
+                                    <option value="0" {{ $meal->vegetarian ? '' : 'selected="selected"' }}>No</option>
+                                    <option value="1" {{ $meal->vegetarian ? 'selected="selected"' : '' }}>Yes</option>
                                 </select>
                             </div>
 

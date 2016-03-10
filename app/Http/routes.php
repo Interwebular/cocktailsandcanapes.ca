@@ -43,6 +43,11 @@ Route::group([
     Route::get('testimonials/{testimonial}', ['as' => 'admin.testimonials.edit', 'uses' => 'TestimonialController@edit']);
     Route::put('testimonials/{testimonial}', ['as' => 'admin.testimonials.save', 'uses' => 'TestimonialController@save']);
 
+    Route::get('categories', ['as' => 'admin.categories.index', 'uses' => 'CategoryController@index']);
+    Route::get('categories/create', ['as' => 'admin.categories.create', 'uses' => 'CategoryController@create']);
+    Route::post('categories/create', ['as' => 'admin.categories.store', 'uses' => 'CategoryController@store']);
+    Route::get('categories/{category}/edit', ['as' => 'admin.categories.edit', 'uses' => 'CategoryController@edit']);
+    Route::put('categories/{category}/edit', ['as' => 'admin.categories.save', 'uses' => 'CategoryController@save']);
 });
 
 // Public Routes

@@ -9,6 +9,13 @@
     }
 }
 
+.menu-category {
+    @include font-light();
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
 .menu-container {
     position: relative;
     min-height: 900px;
@@ -169,6 +176,12 @@
         }
     }
 
+}
+
+.meal-bagde {
+    background-color: $color-dark;
+    @include font-bold();
+    letter-spacing: 1px;
 }
 
 .menu-item-loader-bg {

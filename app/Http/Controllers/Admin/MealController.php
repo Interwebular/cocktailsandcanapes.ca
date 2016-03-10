@@ -30,7 +30,8 @@ class MealController extends Controller {
     */
     public function create() {
         return view('admin.meals.create', [
-            'menus' => \App\Menu::all()
+            'menus' => \App\Menu::all(),
+            'categories' => \App\Category::all(),
         ]);
     }
 
@@ -45,14 +46,18 @@ class MealController extends Controller {
             'name' => 'required|max:64',
             'description' => 'required',
             'menu' => 'required|exists:menus,id',
-            'gluten_free' => 'required|numeric'
+            'category' => 'exists:categories,id',
+            'gluten_free' => 'required|numeric',
+            'vegetarian' => 'required|numeric'
         ]);
 
         $meal = new \App\Meal;
         $meal->name = $request->name;
         $meal->description = $request->description;
         $meal->menu_id = $request->menu;
+        $meal->category_id = $request->category;
         $meal->gluten_free = $request->gluten_free;
+        $meal->vegetarian = $request->vegetarian;
         $meal->save();
 
         return redirect()->route('admin.meals.index')->with('success', 'Meal Created');
@@ -67,7 +72,8 @@ class MealController extends Controller {
 
         return view('admin.meals.edit', [
             'meal' => $meal,
-            'menus' => \App\Menu::all()
+            'menus' => \App\Menu::all(),
+            'categories' => \App\Category::all(),
         ]);
     }
 
@@ -82,13 +88,17 @@ class MealController extends Controller {
             'name' => 'required|max:64',
             'description' => 'required',
             'menu' => 'required|exists:menus,id',
-            'gluten_free' => 'required|numeric'
+            'category' => 'exists:categories,id',
+            'gluten_free' => 'required|numeric',
+            'vegetarian' => 'required|numeric'
         ]);
 
         $meal->name = $request->name;
         $meal->description = $request->description;
         $meal->menu_id = $request->menu;
+        $meal->category_id = $request->category;
         $meal->gluten_free = $request->gluten_free;
+        $meal->vegetarian = $request->vegetarian;
         $meal->save();
 
         return redirect()->route('admin.meals.edit', [$meal])->with('success', 'Meal Saved');

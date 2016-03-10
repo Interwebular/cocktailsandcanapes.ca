@@ -28,6 +28,8 @@
 
             <li><a href="{{ route('admin.menus.index') }}"><i class='fa fa-book'></i> <span>Menus</span></a></li>
 
+            <li><a href="{{ route('admin.categories.index') }}"><i class='fa fa-book'></i> <span>Categories</span></a></li>
+
             <li><a href="{{ route('admin.meals.index') }}"><i class='fa fa-cutlery'></i> <span>Meals</span></a></li>
 
             <li><a href="{{ route('admin.venues.index') }}"><i class='fa fa-building'></i> <span>Venues</span></a></li>
