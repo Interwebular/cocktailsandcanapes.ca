@@ -44,7 +44,7 @@ class MealController extends Controller {
 
         $this->validate($request, [
             'name' => 'required|max:64',
-            'description' => 'required',
+            'description' => '',
             'menu' => 'required|exists:menus,id',
             'category' => 'exists:categories,id',
             'gluten_free' => 'required|numeric',
@@ -86,7 +86,7 @@ class MealController extends Controller {
 
         $this->validate($request, [
             'name' => 'required|max:64',
-            'description' => 'required',
+            'description' => '',
             'menu' => 'required|exists:menus,id',
             'category' => 'exists:categories,id',
             'gluten_free' => 'required|numeric',
