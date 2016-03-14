@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-	Add User
+	Edit Meal
 @endsection
 
 @section('main-content')
@@ -13,13 +13,13 @@
                     <i class="fa fa-plus"></i>
                     <h3 class="box-title">{{ $meal->name }}</h3>
 
-                    <a href="{{ route('admin.meals.index') }}" class="btn btn-danger btn-xs pull-right">Cancel</a>
+                    <a href="{{ route('admin.menus.show', [$menu]) }}" class="btn btn-info btn-xs pull-right">Back to Menu</a>
                 </div>
                 <div class="box-body pad table-responsive">
 
 					<div class="col-md-6 col-md-offset-3">
 
-						<form action="{{ route('admin.meals.save', [$meal]) }}" method="POST">
+						<form action="{{ route('admin.menus.meals.save', [$menu, $meal]) }}" method="POST">
 
 							{{ csrf_field() }}
                             {{ method_field('PUT') }}
@@ -34,21 +34,11 @@
                                 <textarea id="description" name="description" class="form-control">{{ old('description') ? old('description') : $meal->description }}</textarea>
 							</div>
 
-                            <div class="form-group">
-                                <label for="menu">Menu</label>
-                                <select class="form-control" name="menu">
-                                    <option value="">-- Please Select --</option>
-                                    @foreach($menus as $menu)
-                                        <option value="{{ $menu->id }}" @if($meal->menu_id == $menu->id) selected="selected" @endif>{{ $menu->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
 							<div class="form-group">
-								<label for="category">Category</label>
+								<label for="category">Change Category</label>
 								<select class="form-control" name="category" id="category">
-									<option value="">-- Please Select --</option>
-									@foreach($categories as $category)
+									<option value="0">Uncategorized</option>
+									@foreach($menu->categories as $category)
 										<option value="{{ $category->id }}" @if($meal->category_id == $category->id) selected="selected" @endif>{{ $category->name }}</option>
 									@endforeach
 								</select>
@@ -77,10 +67,13 @@
 						</form>
 					</div>
 
-
                 </div>
             </div>
 		</div>
 	</div>
+
+@endsection
+
+@section('js')
 
 @endsection

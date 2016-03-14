@@ -13,11 +13,31 @@ Route::group([
     Route::get('users/create', ['as' => 'admin.users.create', 'uses' => 'UserController@create']);
     Route::post('users/create', ['as' => 'admin.users.store', 'uses' => 'UserController@store']);
 
+    // Menus -- MenuController
     Route::get('menus', ['as' => 'admin.menus.index', 'uses' => 'MenuController@index']);
     Route::get('menus/create', ['as' => 'admin.menus.create', 'uses' => 'MenuController@create']);
     Route::post('menus/create', ['as' => 'admin.menus.store', 'uses' => 'MenuController@store']);
     Route::get('menus/{menu}/edit', ['as' => 'admin.menus.edit', 'uses' => 'MenuController@edit']);
     Route::put('menus/{menu}/edit', ['as' => 'admin.menus.save', 'uses' => 'MenuController@save']);
+
+    // Menus -- MealController
+    Route::get('menus/{menu}', ['as' => 'admin.menus.show', 'uses' => 'MenuController@show']);
+    Route::get('menus/{menu}/categories/{category}/meals/create', ['as' => 'admin.menus.categories.meals.create', 'uses' => 'MealController@create']);
+    Route::post('menus/{menu}/categories/{category}/meals/create', ['as' => 'admin.menus.categories.meals.store', 'uses' => 'MealController@store']);
+    Route::get('menus/{menu}/meals/create', ['as' => 'admin.menus.meals.create', 'uses' => 'MealController@create']);
+    Route::post('menus/{menu}/meals/create', ['as' => 'admin.menus.meals.store', 'uses' => 'MealController@store']);
+    Route::get('menus/{menu}/meals/{meal}/edit', ['as' => 'admin.menus.meals.edit', 'uses' => 'MealController@edit']);
+    Route::put('menus/{menu}/meals/{meal}/edit', ['as' => 'admin.menus.meals.save', 'uses' => 'MealController@save']);
+    Route::delete('menus/{menu}/meals/{meal}/delete', ['as' => 'admin.menus.meals.delete', 'uses' => 'MealController@destroy']);
+
+    // Menus -- CategoryController
+    Route::get('menus/{menu}/categories/create', ['as' => 'admin.menus.categories.create', 'uses' => 'CategoryController@create']);
+    Route::post('menus/{menu}/categories/create', ['as' => 'admin.menus.categories.store', 'uses' => 'CategoryController@store']);
+    Route::get('menus/{menu}/categories/{category}/edit', ['as' => 'admin.menus.categories.edit', 'uses' => 'CategoryController@edit']);
+    Route::put('menus/{menu}/categories/{category}/edit', ['as' => 'admin.menus.categories.save', 'uses' => 'CategoryController@save']);
+    Route::delete('menus/{menu}/categories/{category}/delete', ['as' => 'admin.menus.categories.destroy', 'uses' => 'CategoryController@destroy']);
+
+
 
     Route::get('meals', ['as' => 'admin.meals.index', 'uses' => 'MealController@index']);
     Route::get('meals/create', ['as' => 'admin.meals.create', 'uses' => 'MealController@create']);

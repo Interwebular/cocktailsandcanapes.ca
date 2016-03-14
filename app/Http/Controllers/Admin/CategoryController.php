@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\Category;
+use App\Menu;
 
 class CategoryController extends Controller {
 
@@ -28,9 +29,9 @@ class CategoryController extends Controller {
     *
     *   @return Response
     */
-    public function create() {
+    public function create(Menu $menu) {
         return view('admin.categories.create', [
-            'menus' => \App\Menu::all()
+            'menu' => $menu
         ]);
     }
 
@@ -39,19 +40,18 @@ class CategoryController extends Controller {
     *
     *   @return Response
     */
-    public function store(Request $request) {
+    public function store(Request $request, Menu $menu) {
 
         $this->validate($request, [
             'name' => 'required|max:64',
-            'menu' => 'required|exists:menus,id',
         ]);
 
         $category = new \App\Category;
         $category->name = $request->name;
-        $category->menu_id = $request->menu;
+        $category->menu_id = $menu->id;
         $category->save();
 
-        return redirect()->route('admin.categories.index')->with('success', 'Category Created');
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Category Created');
     }
 
     /**
@@ -59,11 +59,11 @@ class CategoryController extends Controller {
     *
     *   @return Response
     */
-    public function edit(Category $category) {
+    public function edit(Menu $menu, Category $category) {
 
         return view('admin.categories.edit', [
-            'category' => $category,
-            'menus' => \App\Menu::all()
+            'menu' => $menu,
+            'category' => $category
         ]);
     }
 
@@ -72,17 +72,31 @@ class CategoryController extends Controller {
     *
     *   @return Response
     */
-    public function save(Category $category, Request $request) {
+    public function save(Request $request, Menu $menu, Category $category) {
 
         $this->validate($request, [
             'name' => 'required|max:64',
-            'menu' => 'required|exists:menus,id',
         ]);
 
         $category->name = $request->name;
-        $category->menu_id = $request->menu;
         $category->save();
 
-        return redirect()->route('admin.categories.edit', [$category])->with('success', 'Saved');
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Saved');
+    }
+
+    /**
+    *   Delete the category
+    *
+    *   @return Response
+    */
+    public function destroy(Menu $menu, Category $category) {
+
+        foreach($category->meals as $meal) {
+            $meal->category_id = null;
+            $meal->save();
+        }
+
+        $category->delete();
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Category Deleted');
     }
 }

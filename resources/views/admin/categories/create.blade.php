@@ -13,13 +13,13 @@
                     <i class="fa fa-plus"></i>
                     <h3 class="box-title">Create Category</h3>
 
-                    <a href="{{ route('admin.categories.index') }}" class="btn btn-danger btn-xs pull-right">Cancel</a>
+                    <a href="{{ route('admin.menus.show', [$menu]) }}" class="btn btn-info btn-xs pull-right">Back to Menu</a>
                 </div>
                 <div class="box-body pad table-responsive">
 
 					<div class="col-md-6 col-md-offset-3">
 
-						<form action="{{ route('admin.categories.store') }}" method="POST">
+						<form action="{{ route('admin.menus.categories.store', [$menu]) }}" method="POST">
 
 							{{ csrf_field() }}
 
@@ -29,18 +29,8 @@
 							</div>
 
 							<div class="form-group">
-								<label>Menu</label>
-								<select name="menu" class="form-control">
-									@foreach($menus as $menu)
-										<option value="{{ $menu->id }}">{{ $menu->name }}</option>
-									@endforeach
-								</select>
-							</div>
-
-							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>
-
 						</form>
 					</div>
                 </div>

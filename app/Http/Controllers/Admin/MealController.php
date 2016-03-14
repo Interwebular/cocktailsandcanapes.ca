@@ -8,6 +8,8 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\Meal;
+use App\Menu;
+use App\Category;
 
 class MealController extends Controller {
 
@@ -28,10 +30,11 @@ class MealController extends Controller {
     *
     *   @return Response
     */
-    public function create() {
+    public function create(Menu $menu, Category $category = null) {
+
         return view('admin.meals.create', [
-            'menus' => \App\Menu::all(),
-            'categories' => \App\Category::all(),
+            'menu' => $menu,
+            'category' => $category->id ? $category : null
         ]);
     }
 
@@ -40,13 +43,11 @@ class MealController extends Controller {
     *
     *   @return Response
     */
-    public function store(Request $request) {
+    public function store(Request $request, Menu $menu, Category $category = null) {
 
         $this->validate($request, [
             'name' => 'required|max:64',
             'description' => '',
-            'menu' => 'required|exists:menus,id',
-            'category' => 'exists:categories,id',
             'gluten_free' => 'required|numeric',
             'vegetarian' => 'required|numeric'
         ]);
@@ -54,13 +55,13 @@ class MealController extends Controller {
         $meal = new \App\Meal;
         $meal->name = $request->name;
         $meal->description = $request->description;
-        $meal->menu_id = $request->menu;
-        $meal->category_id = $request->category;
+        $meal->menu_id = $menu->id;
+        $meal->category_id = $category->id ? $category->id : null;
         $meal->gluten_free = $request->gluten_free;
         $meal->vegetarian = $request->vegetarian;
         $meal->save();
 
-        return redirect()->route('admin.meals.index')->with('success', 'Meal Created');
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Meal Created');
     }
 
     /**
@@ -68,12 +69,11 @@ class MealController extends Controller {
     *
     *   @return Response
     */
-    public function edit(Meal $meal) {
+    public function edit(Menu $menu, Meal $meal) {
 
         return view('admin.meals.edit', [
-            'meal' => $meal,
-            'menus' => \App\Menu::all(),
-            'categories' => \App\Category::all(),
+            'menu' => $menu,
+            'meal' => $meal
         ]);
     }
 
@@ -82,25 +82,33 @@ class MealController extends Controller {
     *
     *   @return Response
     */
-    public function save(Meal $meal, Request $request) {
+    public function save(Request $request, Menu $menu, Meal $meal) {
 
         $this->validate($request, [
             'name' => 'required|max:64',
             'description' => '',
-            'menu' => 'required|exists:menus,id',
-            'category' => 'exists:categories,id',
+            'category' => 'required|numeric',
             'gluten_free' => 'required|numeric',
             'vegetarian' => 'required|numeric'
         ]);
 
         $meal->name = $request->name;
         $meal->description = $request->description;
-        $meal->menu_id = $request->menu;
-        $meal->category_id = $request->category;
+        $meal->category_id = $request->category ? $request->category : null;
         $meal->gluten_free = $request->gluten_free;
         $meal->vegetarian = $request->vegetarian;
         $meal->save();
 
-        return redirect()->route('admin.meals.edit', [$meal])->with('success', 'Meal Saved');
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Meal Saved');
+    }
+
+    /**
+    *   Delete the meal
+    *
+    *   @return Response
+    */
+    public function destroy(Menu $menu, Meal $meal) {
+        $meal->delete();
+        return redirect()->route('admin.menus.show', [$menu])->with('success', 'Meal Deleted');
     }
 }

@@ -26,7 +26,7 @@
                 @endif
             </header>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8" style="padding-bottom: 15px;">
                     <div class="row m-grid">
                         @foreach($menu->meals as $meal)
                             @if(!$meal->category_id)

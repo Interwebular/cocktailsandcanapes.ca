@@ -55,6 +55,18 @@ class MenuController extends Controller {
     }
 
     /**
+    *   Show the menu
+    *
+    *   @return Response
+    */
+    public function show(Menu $menu) {
+
+        return view('admin.menus.show', [
+            'menu' => $menu
+        ]);
+    }
+
+    /**
     *   Show the edit menu form
     *
     *   @return Response
