@@ -19,7 +19,7 @@
 
 					<div class="col-md-6 col-md-offset-3">
 
-						<form action="{{ route('admin.menus.meals.save', [$menu, $meal]) }}" method="POST">
+						<form action="{{ route('admin.menus.meals.save', [$menu, $meal]) }}" method="POST" enctype="multipart/form-data">
 
 							{{ csrf_field() }}
                             {{ method_field('PUT') }}
@@ -61,10 +61,21 @@
                             </div>
 
 							<div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" name="image" class="form-control" />
+                            </div>
+
+							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Save</button>
 							</div>
 
 						</form>
+					</div>
+
+					<div class="col-md-6 col-md-offset-3" style="margin-top: 20px;">
+						@if($meal->image)
+							<img src="{{ $meal->image }}" class="img-responsive"/>
+						@endif
 					</div>
 
                 </div>

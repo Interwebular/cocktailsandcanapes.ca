@@ -17,7 +17,7 @@
                 <div class="box-body pad table-responsive">
 
 					<div class="col-md-6 col-md-offset-3">
-						<form action="{{ $category ? route('admin.menus.categories.meals.store', [$menu, $category]) : route('admin.menus.meals.store', [$menu]) }}" method="POST">
+						<form action="{{ $category ? route('admin.menus.categories.meals.store', [$menu, $category]) : route('admin.menus.meals.store', [$menu]) }}" method="POST" enctype="multipart/form-data">
 
 							{{ csrf_field() }}
 
@@ -47,6 +47,11 @@
                                 </select>
                             </div>
 
+							<div class="form-group">
+								<label for="image">Upload An Image</label>
+								<input type="file" name="image" class="form-control" />
+							</div>
+							
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>
