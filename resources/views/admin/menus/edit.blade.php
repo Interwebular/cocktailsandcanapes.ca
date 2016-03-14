@@ -13,7 +13,7 @@
                     <i class="fa fa-plus"></i>
                     <h3 class="box-title">{{ $menu->name }}</h3>
 
-                    <a href="{{ route('admin.menus.index') }}" class="btn btn-danger btn-xs pull-right">Cancel</a>
+                    <a href="{{ route('admin.menus.index') }}" class="btn btn-info btn-xs pull-right">Back</a>
                 </div>
                 <div class="box-body pad table-responsive">
 
