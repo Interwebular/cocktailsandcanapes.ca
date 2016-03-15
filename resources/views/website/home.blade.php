@@ -32,83 +32,74 @@
         </div>
     </section>
 
-    <section class="section-panel panel-75 hidden-xs hidden-sm">
-        <div class="menu-preview-image-container">
+    @if($canapes)
+        <section class="section-panel panel-75 hidden-xs hidden-sm">
+            <div class="menu-preview-image-container">
 
-            <div class="menu-preview-title">
-                <h5>Example Menu</h5>
-                <h1>Canapes</h1>
-                <div class="cta-wrapper">
-                    <a class="cta" href="#">Catering Menu</a>
+                <div class="menu-preview-title">
+                    <h1>Canapes</h1>
+                    <div class="cta-wrapper">
+                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
+                    </div>
+                </div>
+
+                <div class="menu-image-preview-slider menu-image-preview-slider-1">
+                    @foreach($canapes as $canape)
+                        <div style="background-image:url({{ $canape->image }})"></div>
+                    @endforeach
                 </div>
             </div>
+            <div class="menu-preview-content-container">
+                <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
+                <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
 
-            <div class="menu-image-preview-slider menu-image-preview-slider-1">
-                <div style="background-image:url(http://placehold.it/1000/333333/444444?text=Image+Placeholder+1)"></div>
-                <div style="background-image:url(http://placehold.it/1000/333333/444444?text=Image+Placeholder+2)"></div>
-            </div>
-        </div>
-        <div class="menu-preview-content-container">
-            <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
-            <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
-
-            <div class="menu-preview-content">
-                <div class="menu-content-preview-slider menu-content-preview-slider-1">
-                    <div>
-                        <h1>Scotch Eggs</h1>
-                        <p>
-                            Quail Egg, Organic Wild Boar Sausage, Tamarind Ketchup, Red Micro Shoots
-                        </p>
-                    </div>
-                    <div>
-                        <h1>BBQ Duck Blini</h1>
-                        <p>
-                            Scallion Blini, BBQ Duck, Hong Kong Style Hoi Sin, Gooseberry Slaw
-                        </p>
+                <div class="menu-preview-content">
+                    <div class="menu-content-preview-slider menu-content-preview-slider-1">
+                        @foreach($canapes as $canape)
+                            <div>
+                                <h1>{{ $canape->name }}</h1>
+                                <p>{{ $canape->description }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
-    <section class="section-panel panel-75  hidden-xs hidden-sm">
-        <div class="menu-preview-content-container">
-            <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
-            <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
+    @if($dinners)
+        <section class="section-panel panel-75  hidden-xs hidden-sm">
+            <div class="menu-preview-content-container">
+                <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
+                <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
 
-            <div class="menu-preview-content">
-                <div class="menu-content-preview-slider menu-content-preview-slider-2">
-                    <div>
-                        <h1>Beef Short Ribs</h1>
-                        <p>
-                            Braised Beef Short Rib, Smoked Cheddar Mash Potato, Red Wine Demi Glace, Rosemary Rock Salt Focaccia
-                        </p>
-                    </div>
-                    <div>
-                        <h1>Line Caught Lingcod</h1>
-                        <p>
-                            Pan Seared Oceanwise Lingcod, Cippolini Onions, Baby Red Potatoes, Baby Organic Carrots, Roasted Red Pepper Beurre Blanc
-                        </p>
+                <div class="menu-preview-content">
+                    <div class="menu-content-preview-slider menu-content-preview-slider-2">
+                        @foreach($dinners as $dinner)
+                            <div>
+                                <h1>{{ $dinner->name }}</h1>
+                                <p>{{ $dinner->description }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="menu-preview-image-container">
-            <div class="menu-preview-title">
-                <h5>Example Menu</h5>
-                <h1>Dinner</h1>
-                <div class="cta-wrapper">
-                    <a class="cta" href="#">Catering Menu</a>
+            <div class="menu-preview-image-container">
+                <div class="menu-preview-title">
+                    <h1>Dinners</h1>
+                    <div class="cta-wrapper">
+                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
+                    </div>
+                </div>
+
+                <div class="menu-image-preview-slider menu-image-preview-slider-2">
+                    @foreach($dinners as $dinner)
+                        <div style="background-image:url({{ $dinner->image }})"></div>
+                    @endforeach
                 </div>
             </div>
-
-            <div class="menu-image-preview-slider menu-image-preview-slider-2">
-                <div style="background-image:url(http://placehold.it/1000/333333/444444?text=Image+Placeholder+1)"></div>
-                <div style="background-image:url(http://placehold.it/1000/333333/444444?text=Image+Placeholder+2)"></div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    @endif
 
     <section class="section-panel section-fluid-height section-white">
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
@@ -129,6 +120,47 @@
                         </blockquote>
                     </div>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="section-panel section-fluid-height section-dark">
+        <div class="content-center">
+            <h1>From The Blog</h1>
+        </div>
+
+        <div class="container">
+            <div class="row blog-preview">
+                @foreach($posts as $post)
+                    <div class="col-md-4 blog-preview-item">
+                        <a href="{{ route('blog.post', $post->slug) }}">
+                            @if($post->image)
+                                <div class="blog-preview-image" style="background-image: url({{ $post->image }})"></div>
+                            @endif
+                            <div class="blog-preview-content">
+                                <h3>{{ $post->title }}</h3>
+                                <small>
+                                    Posted by {{ $post->user->name }} {{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }}
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="content-center" style="margin-top: 45px;">
+            <div class="cta-wrapper">
+                <a class="cta" href="{{ route('blog.index') }}">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-panel section-fluid-height section-white">
+        <div class="content-center">
+            <h1>Ready to chat?</h1>
+            <div class="cta-wrapper">
+                <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
             </div>
         </div>
     </section>

@@ -22,6 +22,44 @@
     .meta {
         margin-bottom: 10px;
     }
+}
 
+
+.blog-preview {
+
+    .blog-preview-item {
+        background: #fff;
+        color: #333;
+        padding: 0;
+        margin: 7.5px;
+        a {
+            display: block;
+            color: #222;
+
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .blog-preview-image {
+            height: 200px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #000;
+        }
+
+        .blog-preview-content {
+            padding: 15px;
+
+            h3 {
+                @include font-light();
+                font-size: 1.3em;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+        }
+    }
 
 }
