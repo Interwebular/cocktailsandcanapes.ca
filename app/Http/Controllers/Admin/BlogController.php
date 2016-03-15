@@ -42,6 +42,7 @@ class BlogController extends Controller {
             'content' => '',
             'seo_description' => 'max:155',
             'public' => 'numeric',
+            'image' => 'mimes:jpeg,png,gif,jpg|max:15000'
         ]);
 
         $post = new \App\Post;
@@ -52,12 +53,18 @@ class BlogController extends Controller {
         $post->seo_keywords = $request->seo_keywords ? $request->seo_keywords : null;
         $post->published_at = \Carbon\Carbon::today();
         $post->public = $request->public;
-        // @todo
-        $post->image = 'http://placehold.it/1000x500';
         $post->save();
 
         $post->slug = $post->id . '-' . str_slug($post->title);
         $post->save();
+
+        if($request->hasFile('image') AND $request->file('image')->isValid()) {
+            $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
+            $imageUri = $prefix . 'posts/'.$post->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
+            \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
+            $post->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $post->save();
+        }
 
         return redirect()->route('admin.blog.index')->with('success', 'Saved!');
     }
@@ -86,6 +93,7 @@ class BlogController extends Controller {
             'content' => '',
             'seo_description' => 'max:155',
             'public' => 'numeric',
+            'image' => 'mimes:jpeg,png,gif,jpg|max:15000'
         ]);
 
         $post->title = $request->title;
@@ -94,12 +102,18 @@ class BlogController extends Controller {
         $post->seo_keywords = $request->seo_keywords ? $request->seo_keywords : null;
         $post->published_at = $request->published_at;
         $post->public = $request->public;
-        // @todo
-        $post->image = 'http://placehold.it/1000x500';
         $post->save();
 
         $post->slug = $post->id . '-' . str_slug($post->title);
         $post->save();
+
+        if($request->hasFile('image') AND $request->file('image')->isValid()) {
+            $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
+            $imageUri = $prefix . 'posts/'.$post->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
+            \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
+            $post->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $post->save();
+        }
 
         return redirect()->route('admin.blog.edit', [$post])->with('success', 'Saved!');
     }

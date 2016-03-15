@@ -16,7 +16,7 @@
                     <a href="{{ route('admin.blog.index') }}" class="btn btn-danger btn-xs pull-right">Cancel</a>
                 </div>
                 <div class="box-body pad table-responsive">
-					<form action="{{ route('admin.blog.save', [$post]) }}" method="POST">
+					<form action="{{ route('admin.blog.save', [$post]) }}" method="POST" enctype="multipart/form-data">
 						{{ csrf_field() }}
                         {{ method_field('PUT') }}
 					    <div class="col-md-8">
@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label for="image">Change Image</label>
-                                <input type="file" />
+                                <input type="file" name="image"/>
                             </div>
 
                             <div class="form-group">
