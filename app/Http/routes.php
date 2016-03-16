@@ -76,6 +76,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
     Route::get('menus/{menu?}', ['as' => 'menus.show', 'uses' => 'MenuController@show']);
+    Route::get('menus/{menu}/pdf', ['as' => 'menus.pdf', 'uses' => 'MenuController@pdf']);
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 

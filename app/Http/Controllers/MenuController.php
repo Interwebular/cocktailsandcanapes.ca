@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\Menu;
+use PDF;
 
 class MenuController extends Controller
 {
@@ -22,6 +23,22 @@ class MenuController extends Controller
         return view('website.menus', [
             'menu' => $menu
         ]);
+    }
+
+    /**
+     * Show the menu PDF
+     *
+     * @return Response
+     */
+    public function pdf($menu) {
+
+        $menu = Menu::where('slug', $menu)->firstOrFail();
+
+        $pdf = PDF::loadView('pdf.menu', [
+            'menu' => $menu
+        ]);
+
+        return $pdf->stream();
     }
 
 }

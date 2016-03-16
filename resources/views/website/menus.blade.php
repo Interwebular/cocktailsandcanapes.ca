@@ -17,9 +17,7 @@
             <header class="menu-header">
                 {{ $menu->name }}
 
-                @if($menu->download_link)
-                <a href="{{ $menu->download_link }}" data-toggle="tooltip" data-placement="right" title="Download The {{ $menu->name }} Menu"><i class="fa fa-file-pdf-o"></i></a>
-                @endif
+                <a href="{{ $menu->download_link ? $menu->download_link : route('menus.pdf', [$menu->slug]) }}" data-toggle="tooltip" data-placement="right" title="Download The {{ $menu->name }} Menu" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
 
                 @if($menu->pricing)
                     <div class="price">{!! nl2br(e($menu->pricing)) !!}</div>

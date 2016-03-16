@@ -159,6 +159,7 @@ return [
         // Vendors
         //Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -209,6 +210,7 @@ return [
         // Vendors
         //'AdminLTE'  => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
