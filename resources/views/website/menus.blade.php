@@ -7,21 +7,19 @@
 @section('content')
     <section class="menu">
         <div class="container-fluid menu-container">
-            <ul class="menu-buttons">
-                @foreach(\App\Services\Menus\Menus::getAll() as $nav)
-                    <li style="width: {{ 100 / count(\App\Services\Menus\Menus::getAll()) }}%;">
-                        <a href="{{ route('menus.show', $nav->slug) }}" class="{{ $menu->slug == $nav->slug ? 'active' : '' }}">{{ $nav->name }}</a>
-                    </li>
-                @endforeach
-            </ul>
+            {!! \App\Services\Menus\Menus::renderMenuNav($menu) !!}
+
             <header class="menu-header">
                 {{ $menu->name }}
 
-                {{-- <a href="{{ $menu->download_link ? $menu->download_link : route('menus.pdf', [$menu->slug]) }}" data-toggle="tooltip" data-placement="right" title="Download The {{ $menu->name }} Menu" target="_blank">Download Menu <i class="fa fa-file-pdf-o"></i></a> --}}
                 <a href="{{ $menu->download_link ? $menu->download_link : route('menus.pdf', [$menu->slug]) }}" target="_blank">Download Menu <i class="fa fa-file-pdf-o"></i></a>
 
                 @if($menu->pricing)
                     <div class="price">{!! nl2br(e($menu->pricing)) !!}</div>
+                @endif
+
+                @if($menu->description)
+                    <div class="description">{!! nl2br(e($menu->description)) !!}</div>
                 @endif
             </header>
             <div class="row">
@@ -102,6 +100,10 @@
 
             $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
             e.preventDefault();
+        });
+
+        $('.coming-soon').click(function() {
+            return false;
         });
 
     </script>

@@ -36,7 +36,7 @@
         padding: 0;
         //width: 16.66667%;
 
-        a {
+        a,button {
             display: block;
             //background: #555;
             padding: 10px 5px;
@@ -52,6 +52,17 @@
                 text-decoration: none;
                 background: $color-dark;
                 color: $color-offwhite;
+            }
+        }
+
+        button {
+            background: $color-offwhite;
+            border: none;
+            width: 100%;
+            &:hover {
+                background: darken($color-offwhite, 10%);
+                color: $color-dark;
+                cursor: default;
             }
         }
     }
@@ -83,6 +94,12 @@
 
     .price {
         font-size: 0.5em;
+    }
+
+    .description {
+        margin-top: 6px;
+        font-size: 0.4em;
+        text-transform: none;
     }
 
     a {
