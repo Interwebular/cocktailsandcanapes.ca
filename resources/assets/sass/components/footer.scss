@@ -34,19 +34,23 @@ footer {
             margin-left: 10px;
         }
     }
-
-    .dt-logo {
-        display: block;
-        max-width: 200px;
-        margin: 60px auto;
-        opacity: 0.5;
-        transition: all 200ms;
-        &:hover {
-            opacity: 1;
-        }
-    }
 }
 
+.dt-branding {
+    padding: 15px 0;
+    text-align: center;
+    background: darken(#222, 3%);
+}
+
+.dt-logo {
+    display: inline-block;
+    max-width: 200px;
+    opacity: 0.5;
+    transition: all 200ms;
+    &:hover {
+        opacity: 1;
+    }
+}
 
 @media(max-width: 992px) {
     footer {

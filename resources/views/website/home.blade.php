@@ -11,7 +11,7 @@
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
-            <h1>Not Just Canapes.</h1>
+            <h1>Welcome</h1>
             <div class="cta-wrapper">
                 <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
             </div>
@@ -20,10 +20,15 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <img src="{{asset('img/logo_icon_dark.png')}}" class="logo-icon" />
+            {{-- <img src="{{asset('img/logo_icon_dark.png')}}" class="logo-icon" /> --}}
+            {{-- <h1>Cocktails, Canapes &amp; Everything In Between</h1> --}}
+            <h1>A Distinctive Social Experience</h1>
             <div class="spacer"></div>
             <p class="default">
-                Essentially, we’re a one-stop shop for all of your catering and event needs. We specialize in conceptualizing and producing large-scale cocktail soirees where guests can mingle and socialize throughout a custom-designed room while indulging on a perfectly-executed, customized menu.  Whether you desire an elegant cocktail party or an event with a specific thematic experience, our event architects cover every last detail to create your desired ambience including choice of venue, decor, entertainment, as well as food and beverage.  From unique interpretations of classic dishes and skilfully prepared craft  cocktails to memorable venues. Cocktails & Canapés creates a distinctive social experience that leaves guests buzzing.
+                We are a <strong>one-stop shop</strong> for all of your catering and event planning needs.
+                Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, we have you covered.
+                From unique interpretations of classic dishes and skilfully prepared craft cocktails to memorable venues.
+                <strong>Cocktails &amp; Canapés</strong> creates a distinctive social experience that leaves guests buzzing.
             </p>
 
             <div class="cta-wrapper">
@@ -158,7 +163,7 @@
 
     <section class="section-panel section-fluid-height section-white">
         <div class="content-center">
-            <h1>Ready to chat?</h1>
+            <h1>Let's Talk</h1>
             <div class="cta-wrapper">
                 <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
             </div>

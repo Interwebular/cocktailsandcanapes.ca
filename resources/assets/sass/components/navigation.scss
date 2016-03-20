@@ -1,7 +1,7 @@
 .nav-background {
     z-index: 9;
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 0;
     right: 0;
     width: 100%;
@@ -15,11 +15,78 @@
     }
 }
 
+    @media(max-width: 992px) {
+        .nav-background {
+            top: 0;
+        }
+    }
+
+.topbar {
+    z-index: 15;
+    height: 35px;
+    background: #1a1a1a;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: right;
+    @include font-light();
+
+
+    span {
+        color: #fff;
+        display: inline-block;
+        margin: 8px 210px 0 0;
+
+        small {
+            text-size: 0.5em;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social {
+            display: inline-block;
+            margin-right: 6px;
+        }
+    }
+
+    .topbar--cta {
+        z-index: 15;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 45px;
+        line-height: 45px;
+        @include font-bold();
+        display: block;
+        letter-spacing: 1px;
+        background: #EF4836;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0 20px;
+        border-bottom-left-radius: 5px;
+        transition: background 200ms;
+
+        &:hover {
+            background: darken(#EF4836, 10%);
+        }
+    }
+}
+
+    @media(max-width: 992px) {
+        .topbar {
+            display: none;
+        }
+    }
 
 nav.desktop {
     z-index: 10;
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 0;
     right: 0;
     width: 100%;
@@ -54,6 +121,8 @@ nav.desktop {
                 letter-spacing: 1px;
                 border: 1px solid rgba(255,255,255,0);
                 transition: all 250ms;
+                font-size: 1.15em;
+                text-transform: uppercase;
 
                 &:hover, &.active {
                     border: 1px solid #fff;
@@ -94,9 +163,13 @@ nav.desktop.scrolled {
         max-width: 100px;
     }
 
-    a {
-        padding: 6px 10px;
-        font-size: 0.8em;
+    .nav-items {
+        li {
+            a {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
+        }
     }
 }
 

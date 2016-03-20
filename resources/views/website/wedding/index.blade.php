@@ -31,7 +31,7 @@ dark
         <section class="section-panel section-fluid-height" style="background: #fff; padding-left: 20px; padding-right: 20px;">
             <div class="content-center">
                 <p class="default">
-                    Your guests arrive; anticipation of the celebration is building. They indulge in fine foods, scintillating cocktails, and pleasurable company. This sense of comfort and positive energy is subconscious to the crowd, yet each detail has been meticulously crafted to create an extraordinary event. Whether you desire an elegant formal sit down dinner, a family style dinning experience, or a cocktail soiree, we create a distinct social and culinary experience that will leave your guests buzzing. Say goodbye to the rubber chicken dinner.</p>
+                    Whether you desire an elegant formal sit down dinner, a family style dinning experience, or a cocktail soiree, we create a distinct social and culinary experience that will leave your guests buzzing. Say goodbye to the rubber chicken dinner.</p>
                 <div class="cta-wrapper">
                     <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
                 </div>

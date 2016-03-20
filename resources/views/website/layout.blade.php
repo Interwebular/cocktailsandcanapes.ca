@@ -47,6 +47,17 @@
             </p>
         </div> --}}
 
+        <div class="topbar">
+            <span>
+                604.424.8788 &middot; <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
+                <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
+            </span>
+            <a class="topbar--cta" href="{{ route('contact.index') }}">Request A Quote</a>
+        </div>
+
         <div class="nav-background"></div>
         <nav class="desktop hidden-xs hidden-sm">
             <div class="nav-inner">
@@ -86,28 +97,37 @@
                         <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
                     </p>
                     <p>
+                        <strong>Mailing Address:</strong><br>
                         150 – 351 Abbott St.<br>
                         P.O. Box 98882<br>
                         Vancouver, BC V6B 0M4
+                    </p>
+                    <p>
+                        <strong>Commissary Address:</strong><br>
+                        686 Powell St.<br>
+                        Vancouver, BC V6A 3G1<br>
                     </p>
                 </div>
                 <div class="col-md-4" style="text-align: center;">
                     <div class="cta-wrapper" >
                         <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
                     </div>
-
-                    <a href="http://droskiturner.com/" target="_blank" class="dt-logo">
-                        <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" />
-                    </a>
                 </div>
                 <div class="col-md-4 social-icons">
                     <h4>Connect With Us</h4>
+                    <a href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
                     <a href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
         </footer>
+
+        <div class="dt-branding">
+            <a href="http://droskiturner.com/" target="_blank" class="dt-logo">
+                <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" />
+            </a>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

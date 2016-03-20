@@ -56,12 +56,8 @@
                                     <input type="email" id="email" name="email" class="form-control input-lg" value="{{ old('email') }}" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone_number">Phone Number</label>
+                                    <label for="phone_number">Phone Number *</label>
                                     <input type="text" id="phone_number" name="phone_number" class="form-control input-lg" value="{{ old('phone_number') }}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="company">Company</label>
-                                    <input type="text" id="company" name="company" class="form-control input-lg" value="{{ old('company') }}" />
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message *</label>

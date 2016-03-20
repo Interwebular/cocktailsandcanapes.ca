@@ -39,6 +39,19 @@
 							</div>
 
 							<div class="form-group">
+								<label for="description">Description</label>
+								<textarea name="description" id="description" class="form-control">{{ old('description') }}</textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="is_coming_soon">Status</label>
+								<select name="is_coming_soon" id="is_coming_soon" class="form-control">
+									<option value="0">Active</option>
+									<option value="1">Coming Soon</option>
+								</select>
+							</div>
+
+							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>
 

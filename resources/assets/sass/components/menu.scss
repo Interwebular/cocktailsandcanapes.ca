@@ -74,7 +74,7 @@
 
 .menu-header {
     padding: 25px;
-    text-align: center;
+    text-align: left;
     @include font-light();
     font-size: 2em;
     letter-spacing: 2px;
@@ -87,7 +87,7 @@
 
     a {
         color: $color-dark;
-        font-size: 0.9em;
+        font-size: 0.5em;
         &:hover {
             text-decoration: none;
         }

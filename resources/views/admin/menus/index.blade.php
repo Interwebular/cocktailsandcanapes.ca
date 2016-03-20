@@ -16,6 +16,7 @@
                     <table class="table">
                         @foreach($menus as $menu)
                             <tr>
+								<td>{{ $menu->sorting_order }}</td>
                                 <td><a href="{{ route('admin.menus.show', [$menu]) }}">{{ $menu->name }}</a></td>
                                 <td><a class="btn btn-info btn-xs pull-right" href="{{ route('admin.menus.edit', [$menu]) }}"><i class="fa fa-pencil"></i></a></td>
                             </tr>
