@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
+use DB;
 use App\Menu;
 use PDF;
 
@@ -16,9 +16,9 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function show($menu = 'canapes') {
+    public function show($menu = null) {
 
-        $menu = Menu::where('slug', $menu)->firstOrFail();
+        $menu = $menu ? Menu::where('slug', $menu)->firstOrFail() : Menu::where('sorting_order', 1)->firstOrFail();
 
         return view('website.menus', [
             'menu' => $menu
