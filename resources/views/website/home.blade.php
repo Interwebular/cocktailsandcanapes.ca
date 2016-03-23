@@ -2,26 +2,24 @@
 
 @section('content')
 
-    <video autoplay loop muted poster="{{ asset('videos/intro.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro.png') }})">
-        <source src="{{ asset('videos/intro.webm') }}" type="video/webm">
-        <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
+    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
+        <source src="{{ asset('videos/intro_v2.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/intro_v2.mp4') }}" type="video/mp4">
     </video>
 
-    <div class="bgimage" style="background-image:url({{ asset('videos/intro.png') }})"></div>
+    <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div>
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
             <h1>Welcome</h1>
             <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
+                <a class="cta" href="{{ route('menus.show') }}">See Our Catering Menu</a>
             </div>
         </div>
     </section>
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            {{-- <img src="{{asset('img/logo_icon_dark.png')}}" class="logo-icon" /> --}}
-            {{-- <h1>Cocktails, Canapes &amp; Everything In Between</h1> --}}
             <h1>A Distinctive Social Experience</h1>
             <div class="spacer"></div>
             <p class="default">

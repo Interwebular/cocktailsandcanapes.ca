@@ -18,4 +18,13 @@
         display: inline-block;
         margin: 0 10px;
     }
+
+    &.client--white {
+        color: #fff;
+        text-align: center;
+    }
+
+    &.client--lg {
+        font-size: 1.6em;
+    }
 }

@@ -75,15 +75,15 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::auth();
 
-    Route::get('menus/{menu?}', ['as' => 'menus.show', 'uses' => 'MenuController@show']);
-    Route::get('menus/{menu}/pdf', ['as' => 'menus.pdf', 'uses' => 'MenuController@pdf']);
+    Route::get('event-catering-menus/{menu?}', ['as' => 'menus.show', 'uses' => 'MenuController@show']);
+    Route::get('event-catering-menus/{menu}/pdf', ['as' => 'menus.pdf', 'uses' => 'MenuController@pdf']);
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
 
-    Route::get('weddings', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
+    Route::get('vancouver-wedding-caterers', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);
     Route::get('find-the-perfect-venue/{venue}/{name?}', ['as' => 'venues.show', 'uses' => 'VenueController@show']);
     Route::get('contact', ['as' => 'contact.index', 'uses' => 'PageController@contact']);
