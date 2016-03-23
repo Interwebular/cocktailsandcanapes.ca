@@ -19,6 +19,9 @@
                     <table class="table">
                         @foreach($testimonials as $testimonial)
                             <tr>
+								<td>
+									{{ $testimonial->type }}
+								</td>
                                 <td>
 									<a href="{{ route('admin.testimonials.edit', [$testimonial]) }}">{!! $testimonial->client !!}</a>
 								</td>

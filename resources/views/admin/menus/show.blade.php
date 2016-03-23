@@ -19,9 +19,10 @@
                             <a href="{{ route('admin.menus.meals.create', [$menu]) }}" class="btn btn-default btn-xs"><i class="fa fa-plus"></i> Add Meal</a>
                         </h4>
                         <table class="table table-hover">
-                            @foreach($menu->meals as $meal)
+                            @foreach($menu->meals()->orderBy('sorting_order', 'ASC')->get() as $meal)
                                 @if(!$meal->category_id)
                                     <tr>
+										<td>{{ $meal->sorting_order }}</td>
                                         <td><a href="{{ route('admin.menus.meals.edit', [$menu, $meal]) }}">{{ $meal->name }}</a></td>
                                         <td>
                                             <form action="{{ route('admin.menus.meals.delete', [$menu, $meal]) }}" method="POST" class="delete-action">
@@ -49,9 +50,10 @@
                                 <a href="{{ route('admin.menus.categories.meals.create', [$menu, $category]) }}" class="btn btn-default btn-xs"><i class="fa fa-plus"></i> Add Meal</a>
                             </h4>
                             <table class="table table-hover">
-                                @foreach($category->meals as $meal)
+                                @foreach($category->meals()->orderBy('sorting_order', 'ASC')->get() as $meal)
                                     @if($meal->category_id)
                                         <tr>
+											<td>{{ $meal->sorting_order }}</td>
                                             <td><a href="{{ route('admin.menus.meals.edit', [$menu, $meal]) }}">{{ $meal->name }}</a></td>
                                             <td>
                                                 <form action="{{ route('admin.menus.meals.delete', [$menu, $meal]) }}" method="POST">

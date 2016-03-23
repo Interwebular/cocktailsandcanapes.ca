@@ -6,16 +6,12 @@ namespace App\Services\Testimonials;
 class Retrieve {
 
 
-    static function random() {
+    static function random($type = null) {
 
-        $testimonials = \App\Testimonial::all();
+        $testimonials = $type ? \App\Testimonial::where('type', $type)->get() : \App\Testimonial::all();
 
         $testimonialCount = count($testimonials);
 
-        if($testimonialCount > 5) {
-            return $testimonials->random(5);
-        }
-        
-        return $testimonials;
+        return $testimonialCount > 5 ? $testimonials->random(5) : $testimonials;
     }
 }

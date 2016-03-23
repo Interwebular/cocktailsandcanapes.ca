@@ -25,6 +25,11 @@
                             {{ method_field('PUT') }}
 
 							<div class="form-group">
+								<label for="sorting_order">Sorting Order</label>
+								<input id="sorting_order" name="sorting_order" type="text" class="form-control" value="{{ old('sorting_order') ? old('sorting_order') : $meal->sorting_order }}" />
+							</div>
+
+							<div class="form-group">
 								<label for="name">Name</label>
 								<input id="name" name="name" type="text" class="form-control" value="{{ old('name') ? old('name') : $meal->name }}" />
 							</div>

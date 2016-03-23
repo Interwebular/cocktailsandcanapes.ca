@@ -32,7 +32,7 @@ dark
         <div class="container">
             <div class="col-md-6 col-md-offset-3" style="margin-top: 250px;">
                 <div class="clients">
-                    @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
+                    @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
                         <div class="client client--white client--lg">
                             <div class="quote">
                                 <span><i class="fa fa-quote-left"></i></span>
@@ -54,7 +54,7 @@ dark
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
 
-            <h1>Say goodbye to the rubber chicken dinner.</h1>
+            <h1>Have fun with it, it's your day</h1>
             <div class="spacer"></div>
             <p class="default">
                 Whether you desire an elegant formal sit down dinner, a family style dinning experience, or a cocktail soiree, we create a distinct social and culinary experience that will leave your guests buzzing. Say goodbye to the rubber chicken dinner.

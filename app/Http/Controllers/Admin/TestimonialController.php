@@ -40,11 +40,13 @@ class TestimonialController extends Controller {
         $this->validate($request, [
             'client' => 'required',
             'content' => 'required',
+            'type' => 'required',
         ]);
 
         $testimonial = new \App\Testimonial;
         $testimonial->client = $request->client;
         $testimonial->content = $request->content;
+        $testimonial->type = $request->type;
         $testimonial->save();
 
         return redirect()->route('admin.testimonials.index')->with('success', 'Saved!');
@@ -72,10 +74,12 @@ class TestimonialController extends Controller {
         $this->validate($request, [
             'client' => 'required',
             'content' => 'required',
+            'type' => 'required',
         ]);
 
         $testimonial->client = $request->client;
         $testimonial->content = $request->content;
+        $testimonial->type = $request->type;
         $testimonial->save();
 
         return redirect()->route('admin.testimonials.edit', [$testimonial])->with('success', 'Saved!');

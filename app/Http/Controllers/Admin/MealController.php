@@ -21,7 +21,7 @@ class MealController extends Controller {
     */
     public function index() {
         return view('admin.meals.index', [
-            'meals' => \App\Meal::all()
+            'meals' => \App\Meal::orderBy('sorting_order', 'ASC')->get()
         ]);
     }
 
@@ -98,10 +98,12 @@ class MealController extends Controller {
             'description' => '',
             'category' => 'required|numeric',
             'gluten_free' => 'required|numeric',
-            'vegetarian' => 'required|numeric'
+            'vegetarian' => 'required|numeric',
+            'sorting_order' => 'required|numeric'
         ]);
 
         $meal->name = $request->name;
+        $meal->sorting_order = $request->sorting_order;
         $meal->description = $request->description;
         $meal->category_id = $request->category ? $request->category : null;
         $meal->gluten_free = $request->gluten_free;
