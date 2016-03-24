@@ -5,9 +5,12 @@
 @endsection
 
 @section('content')
+    <div class="menu-item-image hidden-sm hidden-xs"></div>
     <section class="menu">
         <div class="container-fluid menu-container">
-            {!! \App\Services\Menus\Menus::renderMenuNav($menu) !!}
+            <div class="menu-button-container">
+                {!! \App\Services\Menus\Menus::renderMenuNav($menu) !!}
+            </div>
 
             <header class="menu-header">
                 {{ $menu->name }}
@@ -71,10 +74,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu-item-image hidden-sm hidden-xs"></div>
+                <div class="col-md-4 menu-item-image-width-holder"></div>
             </div>
         </div>
+        <div class="bottom-of-menu"></div>
     </section>
+
 @endsection
 
 @section('js')
@@ -88,6 +93,57 @@
         //     firstItem.addClass('active');
         //     $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
         // });
+
+
+        var totalHeightCached;
+        var totalImageWidth;
+
+        $(function(){
+
+            var firstItem = $($('.menu-item')[0]);
+            $('.menu-item-image').css('top', firstItem.offset().top + 'px');
+            $('.menu-item-image').css('width', $('.menu-item-image-width-holder').width() + 'px');
+
+            //
+            // var buttonContainerHeight = $('.menu-button-container').height() + 20;
+            // var menuHeaderHeight = $('.menu-header').height() + 50;
+            // var categoryTitleHeight = 70;
+            // var totalHeight = menuHeaderHeight + categoryTitleHeight + buttonContainerHeight;
+            // totalHeightCached = totalHeight;
+            //
+            // //$('.menu-item-image').css('top', totalHeight + 'px');
+            // totalImageWidth = $('.menu-item-image').width();
+        });
+
+        $(window).scroll(function() {
+
+            var offsiteHeight = 96;
+            var heightOfBottom = $('.bottom-of-menu').offset().top;
+            var firstItem = $($('.menu-item')[0]);
+            var heightOfFirstItem = firstItem.offset().top;
+            var heightOfScroll = $(window).scrollTop() + offsiteHeight;
+            var heightOfImageBottom = $('.menu-item-image').offset().top + $('.menu-item-image').height();
+
+            if(heightOfFirstItem <= heightOfScroll) {
+
+                $('.menu-item-image').css({
+                    position: 'fixed',
+                    top: offsiteHeight + 'px'
+                });
+
+            }
+            else {
+                $('.menu-item-image').css({
+                    position: 'absolute',
+                    top: heightOfFirstItem + 'px'
+                });
+            }
+        });
+
+        $(window).resize(function(){
+            $('.menu-item-image').width( $('.menu-item-image-width-holder').width() + 'px' );
+        });
+
 
         $('.update-menu-item-image').click(function(e){
 

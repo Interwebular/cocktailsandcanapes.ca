@@ -12,6 +12,7 @@
         width: 50%;
         float: right;
         font-size: 0.6em;
+        border-left: none;
     }
 
     span {
@@ -21,10 +22,27 @@
 
     &.client--white {
         color: #fff;
+
+    }
+
+    &.client--left {
+        text-align: left;
+    }
+
+    &.client--center {
         text-align: center;
     }
 
     &.client--lg {
         font-size: 1.6em;
+    }
+
+    .quote__left {
+        text-align: left;
+        display: block;
+    }
+    .quote__right {
+        text-align: right;
+        display: block;
     }
 }

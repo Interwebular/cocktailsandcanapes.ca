@@ -34,6 +34,11 @@ class MenuController extends Controller
 
         $menu = Menu::where('slug', $menu)->firstOrFail();
 
+
+        // return view('pdf.menu', [
+        //     'menu' => $menu
+        // ]);
+
         $pdf = PDF::loadView('pdf.menu', [
             'menu' => $menu
         ]);

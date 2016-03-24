@@ -17,7 +17,7 @@ class HomeController extends Controller
     */
     public function index() {
 
-        $canapes = Menu::where('slug', 'canapes')->first();
+        $canapes = Menu::where('slug', 'hot-canapes')->first();
 
         if($canapes)
             $canapes = $canapes->meals()->whereNotNull('image')->take(3)->get();

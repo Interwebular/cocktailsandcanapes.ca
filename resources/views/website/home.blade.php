@@ -13,7 +13,7 @@
         <div class="panel-content middle">
             <h1>Welcome</h1>
             <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}">See Our Catering Menu</a>
+                <a class="cta" href="{{ route('menus.show') }}">View Our Catering Menu</a>
             </div>
         </div>
     </section>
@@ -114,9 +114,7 @@
                 @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
                     <div class="client">
                         <div class="quote">
-                            <span><i class="fa fa-quote-left"></i></span>
                             {!! $testimonial->content !!}
-                            <span><i class="fa fa-quote-right"></i></span>
                         </div>
                         <blockquote>
                             {!! $testimonial->client !!}

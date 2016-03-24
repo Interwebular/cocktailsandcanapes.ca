@@ -9,35 +9,20 @@ dark
 @section('meta-keywords') Keywords @endsection
 
 @section('content')
-    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
-        <source src="{{ asset('videos/intro_v2.webm') }}" type="video/webm">
-        <source src="{{ asset('videos/intro_v2.mp4') }}" type="video/mp4">
-    </video>
 
-    <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/wedding/wedding1.jpg') }}); background-position: left center; display:block;"></div>
 
-    {{-- <section class="section-panel panel-fullscreen panel-fixed">
-        <div class="panel-content middle">
-            <h1>Welcome</h1>
-            <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
-            </div>
-        </div>
-    </section> --}}
 
     <section class="section-panel panel-fullscreen panel-fixed">
-        <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
-        <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
-
-        <div class="container">
-            <div class="col-md-6 col-md-offset-3" style="margin-top: 250px;">
+        <div class="container-fluid">
+            <div class="col-md-6" style="margin-top:220px">
                 <div class="clients">
                     @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
-                        <div class="client client--white client--lg">
+                        <div class="client client--white client--lg client--left">
                             <div class="quote">
-                                <span><i class="fa fa-quote-left"></i></span>
+                                {{-- <span class="quote__left"><i class="fa fa-quote-left"></i></span> --}}
                                 {!! $testimonial->content !!}
-                                <span><i class="fa fa-quote-right"></i></span>
+                                {{-- <span class="quote__right"><i class="fa fa-quote-right"></i></span> --}}
                             </div>
                             <blockquote>
                                 {!! $testimonial->client !!}
@@ -45,13 +30,23 @@ dark
                         </div>
                     @endforeach
                 </div>
+
+                <button style="top: auto; bottom: 0; left: 100px; background: none;" class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
+                <button style="top: auto; bottom: 0; right: 100px; background: none;" class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
+
+
+                <div style="text-align:center; margin-top: 30px;">
+                    <div class="cta-wrapper">
+                        <a class="cta" href="#learn-more">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
 
     </section>
 
 
-    <section class="section-panel section-white section-fluid-height padding">
+    <section id="learn-more"  class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
 
             <h1>Have fun with it, it's your day</h1>
@@ -113,5 +108,26 @@ dark
             </div>
         </div>
     </div>
+
+@endsection
+
+@section('js')
+    <script>
+
+        $('a[href*=\\#]:not([href=\\#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+
+    </script>
+
 
 @endsection
