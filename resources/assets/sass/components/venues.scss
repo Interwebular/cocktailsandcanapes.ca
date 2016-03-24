@@ -1,18 +1,41 @@
 .venue-container {
 
     .venue-header {
-        height: 330px;
+        margin-top: 20px;
+        height: 400px;
         width: 100%;
-
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    .venue-title {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        @include font-bold();
+        color: #fff;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 5px #000;
+        letter-spacing: 1px;
+        font-size: 2.5em;
     }
 
     h1 {
-        margin: 20px 0;
+        text-align: center;
+        margin: 30px 0;
+        @include font-bold();
+    }
 
-        @include font-light();
+    .venue-description {
+        margin-top: 30px;
+        @include font-regular();
+        font-size: 1.2em;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 1.5em;
     }
 
     .venue-table {
@@ -21,11 +44,11 @@
 
         td {
             width: 50%;
-            font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            @include font-regular();
             font-weight: 300;
             padding: 5px;
             color: #262626;
-            font-size: 0.9em;
+            font-size: 1.2em;
         }
     }
 }

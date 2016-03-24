@@ -13,37 +13,70 @@
             <div class="row">
                 <div class="col-md-12">
                     @if($venue->image)
-                        <div class="venue-header" style="background-image:url({{ $venue->image }})"></div>
+                        <div class="venue-header" style="background-image:url({{ $venue->image }})">
+                            <div class="venue-title">
+                                {{ $venue->name }}
+                            </div>
+                        </div>
                     @endif
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <h1>{{ $venue->name }}</h1>
-                            <p>
-                                {!! nl2br(e($venue->description)) !!}
+                        <div class="col-md-8 col-md-offset-2">
+                            @if(!$venue->image)
+                                <h1>{{ $venue->name }}</h1>
+                            @endif
+                            <p class="venue-description">
+                                @if($venue->description && $venue->description != '-')
+                                    {!! nl2br(e($venue->description)) !!}
+                                @endif
                             </p>
-                        </div>
-                        <div class="col-md-6">
+
 
                             <table class="venue-table">
-                                <tr>
-                                    <td align="right"><b>Location</b></td>
-                                    <td>{{ $venue->location }}</td>
-                                </tr>
+                                @if($venue->location)
+                                    <tr>
+                                        <td align="right"><b>Location</b></td>
+                                        <td>{{ $venue->location }}</td>
+                                    </tr>
+                                @endif
 
-                                <tr>
-                                    <td align="right"><b>Reception</b></td>
-                                    <td>{{ $venue->rececption_count }}</td>
-                                </tr>
-                                <tr>
-                                    <td align="right"><b>Dining</b></td>
-                                    <td>{{ $venue->dining_count }}</td>
-                                </tr>
+                                @if($venue->rececption_count)
+                                    <tr>
+                                        <td align="right"><b>Reception</b></td>
+                                        <td>{{ $venue->rececption_count }}</td>
+                                    </tr>
+                                @endif
+
+                                @if($venue->dining_count)
+                                    <tr>
+                                        <td align="right"><b>Dining</b></td>
+                                        <td>{{ $venue->dining_count }}</td>
+                                    </tr>
+                                @endif
+
+                                @if($venue->website)
+                                    <tr>
+                                        <td align="right"><b>Website</b></td>
+                                        <td><a href="{{ $venue->website }}" target="blank">Visit <i class="fa fa-external-link"></i></a></td>
+                                    </tr>
+                                @endif
+
+                                @if($venue->phonenumber)
+                                    <tr>
+                                        <td align="right"><b>Phone Number</b></td>
+                                        <td>{{ $venue->phonenumber }}</td>
+                                    </tr>
+                                @endif
                             </table>
 
+                            <div style="text-align: center; margin-top: 30px;">
+                                <div class="cta-wrapper">
+                                    <a class="cta black" href="{{ route('venues.index') }}">&larr; Venues</a>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="col-md-6 col-md-offset-3" style="margin-top: 80px;">
-                            <hr />
+                        <div class="col-md-6 col-md-offset-3" style="margin-top: 30px;">
                             <h1>Contact This Venue</h1>
                             <form action="{{ route('contact.submit') }}" method="POST">
                                 {{ csrf_field() }}

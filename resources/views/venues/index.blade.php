@@ -29,19 +29,26 @@ dark padding
                             <div class="directory-item-details">
                                 <h3>{{ $venue->name }}</h3>
                                 <table>
-                                    <tr>
-                                        <td align="right"><b>Location</b></td>
-                                        <td>{{ $venue->location }}</td>
-                                    </tr>
+                                    @if($venue->location)
+                                        <tr>
+                                            <td align="right"><b>Location</b></td>
+                                            <td>{{ $venue->location }}</td>
+                                        </tr>
+                                    @endif
 
-                                    <tr>
-                                        <td align="right"><b>Reception</b></td>
-                                        <td>{{ $venue->rececption_count }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td align="right"><b>Dining</b></td>
-                                        <td>{{ $venue->dining_count }}</td>
-                                    </tr>
+                                    @if($venue->rececption_count)
+                                        <tr>
+                                            <td align="right"><b>Reception</b></td>
+                                            <td>{{ $venue->rececption_count }}</td>
+                                        </tr>
+                                    @endif
+
+                                    @if($venue->dining_count)
+                                        <tr>
+                                            <td align="right"><b>Dining</b></td>
+                                            <td>{{ $venue->dining_count }}</td>
+                                        </tr>
+                                    @endif
                                 </table>
                             </div>
                         </a>
