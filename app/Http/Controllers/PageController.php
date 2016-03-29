@@ -58,4 +58,16 @@ class PageController extends Controller
         return redirect()->route('contact.index')->with('success', 'We\'ll get back to you shortly');
     }
 
+
+    /**
+    *   Show the gallery page
+    *
+    *   @return View
+    */
+    public function gallery() {
+        return view('website.gallery', [
+            'images' => \App\Image::all()
+        ]);
+    }
+
 }

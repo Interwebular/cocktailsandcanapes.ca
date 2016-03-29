@@ -94,5 +94,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('find-the-perfect-venue/{venue}/{name?}', ['as' => 'venues.show', 'uses' => 'VenueController@show']);
     Route::get('contact', ['as' => 'contact.index', 'uses' => 'PageController@contact']);
     Route::post('contact', ['as' => 'contact.submit', 'uses' => 'PageController@postContact']);
+    Route::get('gallery', ['as' => 'gallery.index', 'uses' => 'PageController@gallery']);
 
 });
