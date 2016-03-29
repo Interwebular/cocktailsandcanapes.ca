@@ -48,14 +48,25 @@
         </div> --}}
 
         <div class="topbar">
-            <span>
-                604.424.8788 &middot; <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
-                <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
-            </span>
-            <a class="topbar--cta" href="{{ route('contact.index') }}">Request A Quote</a>
+
+            <div class="topbar__left">
+                <span style="text-align: left;">
+                    <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
+                    <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
+                </span>
+            </div>
+
+            <div class="topbar__right">
+                <span style="text-align: right;">
+                    <a href="mailto:info@cocktailsandcanapes.ca">Request A Quote</a> &middot;
+                    604.424.8788 &middot; <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
+                </span>
+            </div>
+
+            <div class="clearfix"></div>
+            {{-- <a class="topbar--cta" href="{{ route('contact.index') }}">Request A Quote</a> --}}
         </div>
 
         <div class="nav-background"></div>

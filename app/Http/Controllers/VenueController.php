@@ -12,6 +12,7 @@ class VenueController extends Controller
 
     public function index() {
         return view('venues.index', [
+            'featuredVenues' => \App\Venue::featured()->get(),
             'venues' => \App\Venue::paginate(25)
         ]);
     }

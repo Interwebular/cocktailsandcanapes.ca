@@ -1,3 +1,9 @@
+.wedding-title {
+    color: #fff;
+    small { color: darken(#fff, 15%); font-size: 0.5em; }
+}
+
+
 .client {
     @include font-regular();
     font-size: 1.4em;
@@ -11,8 +17,11 @@
         margin-top: 20px;
         width: 50%;
         float: right;
-        font-size: 0.6em;
+        font-size: 0.8em;
         border-left: none;
+        p {
+            text-align: right;
+        }
     }
 
     span {

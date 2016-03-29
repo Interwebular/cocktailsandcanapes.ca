@@ -68,6 +68,12 @@ Route::group([
     Route::post('categories/create', ['as' => 'admin.categories.store', 'uses' => 'CategoryController@store']);
     Route::get('categories/{category}/edit', ['as' => 'admin.categories.edit', 'uses' => 'CategoryController@edit']);
     Route::put('categories/{category}/edit', ['as' => 'admin.categories.save', 'uses' => 'CategoryController@save']);
+
+    Route::get('gallery', ['as' => 'admin.gallery.index', 'uses' => 'GalleryController@index']);
+    Route::get('gallery/upload', ['as' => 'admin.gallery.create', 'uses' => 'GalleryController@create']);
+    Route::post('gallery/upload', ['as' => 'admin.gallery.store', 'uses' => 'GalleryController@store']);
+    Route::delete('gallery/{image}', ['as' => 'admin.gallery.destroy', 'uses' => 'GalleryController@destroy']);
+
 });
 
 // Public Routes
@@ -80,8 +86,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
-    Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
-    Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
+    Route::get('news', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
+    Route::get('news/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
 
     Route::get('vancouver-wedding-caterers', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);

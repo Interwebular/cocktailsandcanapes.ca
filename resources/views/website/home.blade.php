@@ -11,22 +11,22 @@
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
-            <h1>Welcome</h1>
+            <h1>Goodbye, Rubber Chicken Dinners</h1>
             <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}">View Our Catering Menu</a>
+                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
             </div>
         </div>
     </section>
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1>A Distinctive Social Experience</h1>
+            <h1>A Distinctive Culinary Experience</h1>
             <div class="spacer"></div>
             <p class="default">
                 We are a <strong>one-stop shop</strong> for all of your catering and event planning needs.
-                Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, we have you covered.
+                Whether you desire an elegant wedding reception, cocktail party, or a tailored <strong>thematic experience</strong>, we have you covered.
                 From unique interpretations of classic dishes and skilfully prepared craft cocktails to memorable venues.
-                <strong>Cocktails &amp; Canapés</strong> creates a distinctive social experience that leaves guests buzzing.
+                <strong>Cocktails &amp; Canapés</strong> creates a distinctive culinary experience that leaves guests buzzing.
             </p>
 
             <div class="cta-wrapper">
@@ -127,7 +127,7 @@
 
     <section class="section-panel section-fluid-height section-dark">
         <div class="content-center">
-            <h1>From The Blog</h1>
+            <h1>Recent News</h1>
         </div>
 
         <div class="container">

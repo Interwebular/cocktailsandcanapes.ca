@@ -32,6 +32,8 @@
 
             <li><a href="{{ route('admin.testimonials.index') }}"><i class='fa fa-comments'></i> <span>Testimonials</span></a></li>
 
+            <li><a href="{{ route('admin.gallery.index') }}"><i class='fa fa-image'></i> <span>Gallery</span></a></li>
+
             {{-- <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

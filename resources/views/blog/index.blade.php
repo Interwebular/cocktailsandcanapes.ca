@@ -12,7 +12,7 @@ padding dark
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="heading">Blog</h1>
+                    <h1 class="heading">News</h1>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@ padding dark
                     {!! $posts->render() !!}
                 </div>
                 <div class="col-md-4">
-                    <h3>Recent Posts</h3>
+                    <h3>Recent Articles</h3>
                     @foreach($posts as $post)
                         <a href="{{ route('blog.post', $post->slug) }}">{{ $post->title }}</a> <br>
                     @endforeach

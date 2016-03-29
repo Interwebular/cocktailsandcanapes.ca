@@ -77,7 +77,7 @@
 
                         </div>
                         <div class="col-md-6 col-md-offset-3" style="margin-top: 30px;">
-                            <h1>Contact This Venue</h1>
+                            <h1>Interested In This Venue?</h1>
                             <form action="{{ route('contact.submit') }}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="form-group">
