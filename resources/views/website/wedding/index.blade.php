@@ -57,7 +57,7 @@ dark
             </p>
 
             <div class="cta-wrapper">
-                <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
+                <a class="cta black" href="{{ route('wedding.menus.show') }}">Wedding Catering Menu</a>
             </div>
         </div>
     </section>
