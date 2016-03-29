@@ -52,6 +52,14 @@
 							</div>
 
 							<div class="form-group">
+								<label for="type">Type</label>
+								<select name="type" id="type" class="form-control">
+									<option value="default">Default</option>
+									<option value="wedding">Wedding</option>
+								</select>
+							</div>
+
+							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>
 

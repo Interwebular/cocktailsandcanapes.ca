@@ -11,10 +11,21 @@ class Menus {
         return \App\Menu::orderBy('sorting_order', 'ASC')->get();
     }
 
-    static function renderMenuNav($activeMenu) {
+    static function getMenus($type) {
+
+        if($type === 'default')
+            return \App\Menu::normal()->orderBy('sorting_order', 'ASC')->get();
+
+        if($type === 'wedding')
+            return \App\Menu::wedding()->orderBy('sorting_order', 'ASC')->get();
+
+        return \App\Menu::orderBy('sorting_order', 'ASC')->get();
+    }
+
+    static function renderMenuNav($type = 'default', $activeMenu) {
 
         $chunkSize = 6;
-        $menus = self::getAll();
+        $menus = self::getMenus($type);
         $html = '';
 
         foreach($menus->chunk($chunkSize) as $menuChunks) {
@@ -22,7 +33,7 @@ class Menus {
             foreach($menuChunks as $menu) {
 
                 $active = $activeMenu->slug == $menu->slug ? 'active' : '';
-                $url = route('menus.show', $menu->slug);
+                $url = $type === 'default' ? route('menus.show', $menu->slug) : route('wedding.menus.show', $menu->slug);
 
                 $html .= '<li style="width: '. 100/$chunkSize .'%;">';
                     if($menu->is_coming_soon) {

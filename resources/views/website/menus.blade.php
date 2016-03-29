@@ -9,7 +9,7 @@
     <section class="menu">
         <div class="container-fluid menu-container">
             <div class="menu-button-container">
-                {!! \App\Services\Menus\Menus::renderMenuNav($menu) !!}
+                {!! \App\Services\Menus\Menus::renderMenuNav($type, $menu) !!}
             </div>
 
             <header class="menu-header">

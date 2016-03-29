@@ -18,10 +18,26 @@ class MenuController extends Controller
      */
     public function show($menu = null) {
 
-        $menu = $menu ? Menu::where('slug', $menu)->firstOrFail() : Menu::where('sorting_order', 1)->firstOrFail();
+        $menu = $menu ? Menu::normal()->where('slug', $menu)->firstOrFail() : Menu::normal()->where('sorting_order', 1)->firstOrFail();
 
         return view('website.menus', [
-            'menu' => $menu
+            'menu' => $menu,
+            'type' => 'default'
+        ]);
+    }
+
+    /**
+     * Show the wedding menu
+     *
+     * @return Response
+     */
+    public function showWedding($menu = null) {
+
+        $menu = $menu ? Menu::wedding()->where('slug', $menu)->firstOrFail() : Menu::wedding()->where('sorting_order', 1)->firstOrFail();
+
+        return view('website.menus', [
+            'menu' => $menu,
+            'type' => 'wedding'
         ]);
     }
 

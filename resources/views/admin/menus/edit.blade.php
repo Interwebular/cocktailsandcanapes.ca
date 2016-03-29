@@ -58,6 +58,14 @@
 							</div>
 
 							<div class="form-group">
+								<label for="type">Type</label>
+								<select name="type" id="type" class="form-control">
+									<option value="default" @if($menu->type == 'default') selected="selected" @endif>Default</option>
+									<option value="wedding" @if($menu->type == 'wedding') selected="selected" @endif>Wedding</option>
+								</select>
+							</div>
+
+							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Save</button>
 							</div>
 

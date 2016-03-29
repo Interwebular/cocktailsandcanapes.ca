@@ -82,7 +82,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
     Route::get('event-catering-menus/{menu?}', ['as' => 'menus.show', 'uses' => 'MenuController@show']);
-    Route::get('event-catering-menus/{menu}/pdf', ['as' => 'menus.pdf', 'uses' => 'MenuController@pdf']);
+    Route::get('wedding-catering-menus/{menu?}', ['as' => 'wedding.menus.show', 'uses' => 'MenuController@showWedding']);
+    Route::get('menus/{menu}/pdf', ['as' => 'menus.pdf', 'uses' => 'MenuController@pdf']);
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 

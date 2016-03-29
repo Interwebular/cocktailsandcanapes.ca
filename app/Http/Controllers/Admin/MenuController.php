@@ -42,7 +42,8 @@ class MenuController extends Controller {
         $this->validate($request, [
             'name' => 'required|max:64|unique:menus,name',
             'download_link' => '',
-            'is_coming_soon' => 'required|numeric'
+            'is_coming_soon' => 'required|numeric',
+            'type' => 'required'
         ]);
 
         $menu = new \App\Menu;
@@ -52,6 +53,7 @@ class MenuController extends Controller {
         $menu->pricing = $request->pricing;
         $menu->description = $request->description;
         $menu->is_coming_soon = $request->is_coming_soon;
+        $menu->type = $request->type;
         $menu->save();
 
         return redirect()->route('admin.menus.index')->with('success', 'Menu Created');
@@ -92,7 +94,8 @@ class MenuController extends Controller {
             'name' => 'required|max:64|unique:menus,name,'.$menu->id,
             'download_link' => '',
             'is_coming_soon' => 'required|numeric',
-            'sorting_order' => 'required|numeric'
+            'sorting_order' => 'required|numeric',
+            'type' => 'required'
         ]);
 
         if($menu->name != $request->name)
@@ -104,6 +107,7 @@ class MenuController extends Controller {
         $menu->description = $request->description;
         $menu->is_coming_soon = $request->is_coming_soon;
         $menu->sorting_order = $request->sorting_order;
+        $menu->type = $request->type;
         $menu->save();
 
         return redirect()->route('admin.menus.edit', [$menu])->with('success', 'Menu Saved');
