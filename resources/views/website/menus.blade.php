@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-8" style="padding-bottom: 15px;">
                     <div class="row m-grid">
-                        @foreach($menu->meals as $meal)
+                        @foreach($menu->meals()->orderBy('sorting_order', 'ASC')->get() as $meal)
                             @if(!$meal->category_id)
                                 <div class="col-xs-12 {{ $meal->is_full_width ? '' : 'col-sm-6 col-md-4' }} m-grid-item">
                                     <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="row m-grid">
-                            @foreach($category->meals as $meal)
+                            @foreach($category->meals()->orderBy('sorting_order', 'ASC')->get() as $meal)
                                 @if($meal->category_id)
                                     <div class="col-xs-12 {{ $meal->is_full_width ? '' : 'col-sm-6 col-md-4' }} m-grid-item">
                                         <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
