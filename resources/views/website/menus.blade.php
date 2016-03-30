@@ -6,9 +6,9 @@
 
 @section('content')
     <div class="menu-item-image hidden-sm hidden-xs">
-        <a href="mailto:info@cocktailsandcanapes.ca">
+        {{-- <a href="mailto:info@cocktailsandcanapes.ca">
             Request A Quote
-        </a>
+        </a> --}}
     </div>
 
     <section class="menu">
@@ -133,7 +133,7 @@
 
         $(window).scroll(function() {
 
-            var offsiteHeight = 196;
+            var offsiteHeight = 96;
             var heightOfBottom = $('.bottom-of-menu').offset().top;
             var firstItem = $($('.menu-item')[0]);
             var heightOfFirstItem = firstItem.offset().top;

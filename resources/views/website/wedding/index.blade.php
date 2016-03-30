@@ -16,10 +16,10 @@ dark
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="container-fluid">
             <div class="col-md-6" style="margin-top:220px">
-                <h1 class="wedding-title">We Rock Weddings<br><small>(But, don't take our word for it)</small></h1>
+                <h1 class="wedding-title">Weddings<br><small>A few accolades from happy couples:</small></h1>
                 <div class="clients">
                     @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
-                        <div class="client client--white client--lg client--left">
+                        <div class="client client--white client--lg client--left wedding-page">
                             <div class="quote">
                                 {{-- <span class="quote__left"><i class="fa fa-quote-left"></i></span> --}}
                                 {!! $testimonial->content !!}

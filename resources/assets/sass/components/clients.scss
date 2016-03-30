@@ -1,12 +1,23 @@
 .wedding-title {
     color: #fff;
-    small { color: darken(#fff, 15%); font-size: 0.5em; }
+    @include font-light();
+    text-transform: uppercase;
+
+    small {
+        color: darken(#fff, 15%); font-size: 0.5em;
+        @include font-bold();
+        text-transform: none;
+    }
 }
 
 
 .client {
     @include font-regular();
     font-size: 1.4em;
+
+    &.wedding-page {
+        font-size: 1.2em !important;
+    }
 
     strong {
         @include font-bold();
@@ -15,7 +26,7 @@
 
     blockquote {
         margin-top: 20px;
-        width: 50%;
+        width: 70%;
         float: right;
         font-size: 0.8em;
         border-left: none;
@@ -53,5 +64,9 @@
     .quote__right {
         text-align: right;
         display: block;
+    }
+    .quote__justified {
+        text-align: justify;
+        text-justify: inter-word;
     }
 }

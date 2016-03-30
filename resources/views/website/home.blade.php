@@ -11,7 +11,11 @@
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
-            <h1>Goodbye, Rubber Chicken Dinners</h1>
+            <h1 class="alt">A Distinct Culinary Experience</h1>
+            {{-- <img src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
+            <br />
+            <br />
+            <br /> --}}
             <div class="cta-wrapper">
                 <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
             </div>
@@ -20,13 +24,13 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1>A Distinctive Culinary Experience</h1>
+            <h1>A Distinct Culinary Experience</h1>
             <div class="spacer"></div>
             <p class="default">
-                We are a <strong>one-stop shop</strong> for all of your catering and event planning needs.
-                Whether you desire an elegant wedding reception, cocktail party, or a tailored <strong>thematic experience</strong>, we have you covered.
+                We are a one-stop shop for all of your catering and event planning needs.
+                Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, we have you covered.
                 From unique interpretations of classic dishes and skilfully prepared craft cocktails to memorable venues.
-                <strong>Cocktails &amp; Canapés</strong> creates a distinctive culinary experience that leaves guests buzzing.
+                Cocktails &amp; Canapés creates a distinctive culinary experience that leaves guests buzzing.
             </p>
 
             <div class="cta-wrapper">
@@ -34,41 +38,6 @@
             </div>
         </div>
     </section>
-
-    @if($canapes)
-        <section class="section-panel panel-75 hidden-xs hidden-sm">
-            <div class="menu-preview-image-container">
-
-                <div class="menu-preview-title">
-                    <h1>Canapes</h1>
-                    <div class="cta-wrapper">
-                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
-                    </div>
-                </div>
-
-                <div class="menu-image-preview-slider menu-image-preview-slider-1">
-                    @foreach($canapes as $canape)
-                        <div style="background-image:url({{ $canape->image }})"></div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="menu-preview-content-container">
-                <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
-                <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
-
-                <div class="menu-preview-content">
-                    <div class="menu-content-preview-slider menu-content-preview-slider-1">
-                        @foreach($canapes as $canape)
-                            <div>
-                                <h1>{{ $canape->name }}</h1>
-                                <p>{{ $canape->description }}</p>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </section>
-    @endif
 
     @if($dinners)
         <section class="section-panel panel-75  hidden-xs hidden-sm">
@@ -88,17 +57,58 @@
                 </div>
             </div>
             <div class="menu-preview-image-container">
-                <div class="menu-preview-title">
+                {{-- <div class="menu-preview-title">
                     <h1>Dinners</h1>
                     <div class="cta-wrapper">
                         <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="menu-image-preview-slider menu-image-preview-slider-2">
                     @foreach($dinners as $dinner)
                         <div style="background-image:url({{ $dinner->image }})"></div>
                     @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($canapes)
+        <section class="section-panel panel-75 hidden-xs hidden-sm">
+            <div class="menu-preview-image-container">
+
+                {{-- <div class="menu-preview-title">
+                    <h1>Canapes</h1>
+                    <div class="cta-wrapper">
+                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
+                    </div>
+                </div> --}}
+
+                <div class="menu-image-preview-slider menu-image-preview-slider-1">
+                    @foreach($canapes as $canape)
+                        <div style="background-image:url({{ $canape->image }})"></div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="menu-preview-content-container">
+                <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
+                <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
+
+                <div class="menu-preview-content">
+
+                    <h1>Canapes</h1>
+
+                    <div class="menu-content-preview-slider menu-content-preview-slider-1">
+                        @foreach($canapes as $canape)
+                            <div>
+                                <h1>{{ $canape->name }}</h1>
+                                <p>{{ $canape->description }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <h1>Add button Below</h1>
+
                 </div>
             </div>
         </section>
@@ -113,7 +123,7 @@
             <div class="clients">
                 @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
                     <div class="client">
-                        <div class="quote">
+                        <div class="quote quote__justified">
                             {!! $testimonial->content !!}
                         </div>
                         <blockquote>
@@ -157,12 +167,12 @@
         </div>
     </section>
 
-    <section class="section-panel section-fluid-height section-white">
+    {{-- <section class="section-panel section-fluid-height section-white">
         <div class="content-center">
             <h1>Let's Talk</h1>
             <div class="cta-wrapper">
                 <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

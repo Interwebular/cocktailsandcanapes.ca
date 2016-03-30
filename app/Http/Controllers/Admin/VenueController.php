@@ -19,6 +19,7 @@ class VenueController extends Controller {
     */
     public function index() {
         return view('admin.venues.index', [
+            'featuredVenues' => \App\Venue::featured()->get(),
             'venues' => \App\Venue::all()
         ]);
     }
@@ -107,6 +108,7 @@ class VenueController extends Controller {
             'rececption_count' => 'required|numeric',
             'dining_count' => 'required|numeric',
             'is_featured' => 'required|numeric',
+            'sorting_order' => 'required|numeric',
             'image' => 'mimes:jpeg,png,gif,jpg|max:15000'
         ]);
 
@@ -120,6 +122,7 @@ class VenueController extends Controller {
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
         $venue->is_featured = $request->is_featured;
+        $venue->sorting_order = $request->sorting_order;
         $venue->save();
 
         if($request->hasFile('image') AND $request->file('image')->isValid()) {

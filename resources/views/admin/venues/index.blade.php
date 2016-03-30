@@ -15,7 +15,21 @@
 
                     <a href="{{ route('admin.venues.create') }}" class="btn btn-primary btn-xs pull-right"><i class="fa fa-plus"></i> Add</a>
                 </div>
+
+
+				<div class="box-body pad table-responsive">
+					<h2>Featured</h2>
+					<table class="table">
+						@foreach($featuredVenues as $venue)
+							<tr>
+								<td><a href="{{ route('admin.venues.edit', [$venue]) }}">{{ $venue->name }}</a></td>
+							</tr>
+						@endforeach
+					</table>
+				</div>
+
                 <div class="box-body pad table-responsive">
+					<h2>All</h2>
                     <table class="table">
                         @foreach($venues as $venue)
                             <tr>
