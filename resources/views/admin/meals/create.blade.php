@@ -48,10 +48,18 @@
                             </div>
 
 							<div class="form-group">
+                                <label for="is_full_width">Display Width</label>
+                                <select class="form-control" name="is_full_width" id="is_full_width">
+                                    <option value="0">Regular</option>
+                                    <option value="1">Large</option>
+                                </select>
+                            </div>
+
+							<div class="form-group">
 								<label for="image">Upload An Image</label>
 								<input type="file" name="image" class="form-control" />
 							</div>
-							
+
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>

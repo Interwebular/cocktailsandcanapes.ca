@@ -100,19 +100,18 @@
         </div>
 
         <div class="menu">
-            {{-- @foreach($menu->meals as $meal)
+            @foreach($menu->meals as $meal)
                 @if(!$meal->category_id)
 
                     <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
                     <p>{!! nl2br(e($meal->description)) !!}</p>
 
                 @endif
-            @endforeach --}}
+            @endforeach
 
-            {{-- @foreach($menu->categories as $category)
+            @foreach($menu->categories as $category)
 
                 <div class="menu__category">{{ $category->name }}</div>
-
 
                 @foreach($category->meals as $meal)
                     <div class="menu__item">
@@ -130,7 +129,7 @@
                     </div>
                 @endforeach
 
-            @endforeach --}}
+            @endforeach
         </div>
 
         <div class="footer">

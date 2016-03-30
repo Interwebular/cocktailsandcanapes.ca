@@ -50,6 +50,7 @@ class MealController extends Controller {
             'description' => '',
             'gluten_free' => 'required|numeric',
             'vegetarian' => 'required|numeric',
+            'is_full_width' => 'required|numeric',
             'image' => 'mimes:jpeg,png,gif,jpg|max:15000'
         ]);
 
@@ -60,6 +61,7 @@ class MealController extends Controller {
         $meal->category_id = $category->id ? $category->id : null;
         $meal->gluten_free = $request->gluten_free;
         $meal->vegetarian = $request->vegetarian;
+        $meal->is_full_width = $request->is_full_width;
         $meal->save();
 
         if($request->hasFile('image') AND $request->file('image')->isValid()) {
@@ -99,7 +101,8 @@ class MealController extends Controller {
             'category' => 'required|numeric',
             'gluten_free' => 'required|numeric',
             'vegetarian' => 'required|numeric',
-            'sorting_order' => 'required|numeric'
+            'sorting_order' => 'required|numeric',
+            'is_full_width' => 'required|numeric',
         ]);
 
         $meal->name = $request->name;
@@ -108,6 +111,7 @@ class MealController extends Controller {
         $meal->category_id = $request->category ? $request->category : null;
         $meal->gluten_free = $request->gluten_free;
         $meal->vegetarian = $request->vegetarian;
+        $meal->is_full_width = $request->is_full_width;
         $meal->save();
 
         if($request->hasFile('image') AND $request->file('image')->isValid()) {

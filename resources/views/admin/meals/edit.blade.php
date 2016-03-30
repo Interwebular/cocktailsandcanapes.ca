@@ -66,6 +66,14 @@
                             </div>
 
 							<div class="form-group">
+								<label for="is_full_width">Display Width</label>
+								<select class="form-control" name="is_full_width" id="is_full_width">
+									<option value="0" {{ $meal->is_full_width ? '' : 'selected="selected"' }}>Regular</option>
+									<option value="1" {{ $meal->is_full_width ? 'selected="selected"' : '' }}>Large</option>
+								</select>
+							</div>
+
+							<div class="form-group">
                                 <label for="image">Image</label>
                                 <input type="file" name="image" class="form-control" />
                             </div>

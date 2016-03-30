@@ -35,7 +35,7 @@
                     <div class="row m-grid">
                         @foreach($menu->meals as $meal)
                             @if(!$meal->category_id)
-                                <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
+                                <div class="col-xs-12 {{ $meal->is_full_width ? '' : 'col-sm-6 col-md-4' }} m-grid-item">
                                     <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
                                         @if($meal->image)
                                             <i class="menu-item--has-image fa fa-image"></i>
@@ -56,7 +56,7 @@
                         <div class="row m-grid">
                             @foreach($category->meals as $meal)
                                 @if($meal->category_id)
-                                    <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
+                                    <div class="col-xs-12 {{ $meal->is_full_width ? '' : 'col-sm-6 col-md-4' }} m-grid-item">
                                         <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
                                             @if($meal->image)
                                                 <i class="menu-item--has-image fa fa-image"></i>
@@ -98,11 +98,16 @@
     <script>
 
         $(function(){
-            var firstItem = $($("[data-image!=''][data-image]")[0]),
-                imageUrl = firstItem.data('image');
 
-            firstItem.addClass('active');
-            $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
+            if($("[data-image!=''][data-image]").length) {
+                var firstItem = $($("[data-image!=''][data-image]")[0]),
+                    imageUrl = firstItem.data('image');
+
+                firstItem.addClass('active');
+                $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
+            }
+
+
         });
 
 
