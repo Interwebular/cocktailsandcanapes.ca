@@ -97,4 +97,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('contact', ['as' => 'contact.submit', 'uses' => 'PageController@postContact']);
     Route::get('gallery', ['as' => 'gallery.index', 'uses' => 'PageController@gallery']);
 
+
+    //API development
+    Route::get('google-locations/{keyword?}', 'VenueController@googleApi');
 });
