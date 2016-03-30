@@ -21,9 +21,12 @@
                 background: #f5f5f5;
             }
 
-            body { font-family: 'bitter', Helvetica; color: #111; }
+            body { font-family: 'bitter', Helvetica; color: #111; padding-top: 160px;}
             .page-break { page-break-after: always; }
             h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0;  }
+            .cf {
+                clear: both;
+            }
 
             .header {
                 top: 0;
@@ -63,19 +66,35 @@
 
 
             .menu {
-                margin-top: 200px;
+                /*margin-top: 200px;*/
             }
             .menu__category {
                 font-family: 'Bitter-Bold';
-                font-size: 1.5em;
+                font-size: 1.2em;
                 font-weight: bold;
                 margin-bottom: 15px;
                 margin-top: 25px;
             }
             .menu__item {
                 width: 250px;
-                margin-bottom: 20px;
+                padding: 13px 0;
+                width: 45%;
             }
+
+            .menu__item--even {
+                float: left;
+            }
+
+            .menu__item--odd {
+                float: left;
+                margin-right: 30px;
+            }
+
+            .menu__item--is_full_width {
+                width: 90%;
+                float: none;
+            }
+
             .menu__item__name {
                 font-family: 'Bitter-Bold';
                 font-size: 0.9em;
@@ -99,38 +118,63 @@
             </div>
         </div>
 
-        <div class="menu">
-            @foreach($menu->meals as $meal)
-                @if(!$meal->category_id)
 
-                    <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
-                    <p>{!! nl2br(e($meal->description)) !!}</p>
+        @foreach($menu->meals as $meal)
+            @if(!$meal->category_id)
+                <div class="menu__item">
+                    <div class="menu__item__name">
+                        {{ $meal->name }}
+                        @if($meal->gluten_free) GF @endif
+                        @if($meal->vegetarian) V @endif
+                    </div>
 
+                    <div class="menu__item__description">
+                        {!! nl2br(e($meal->description)) !!}
+                    </div>
+                </div>
+            @endif
+        @endforeach
+
+
+        <?php
+            $numberOfCategories = count($menu->categories);
+            $currentIteration = 1;
+        ?>
+        @foreach($menu->categories as $category)
+
+            <div class="menu__category">{{ $category->name }}</div>
+
+            <?php $start = 1;  ?>
+            @foreach($category->meals as $meal)
+                @if($meal->category_id)
+                    <div class="menu__item <?php if($start % 2 == 0) echo "menu__item--even"; else echo "menu__item--odd"; ?> <?php if($meal->is_full_width) echo 'menu__item--is_full_width'; ?>">
+                        <div class="menu__item__name">
+                            {{ $meal->name }}
+                            @if($meal->gluten_free) GF @endif
+                            @if($meal->vegetarian) V @endif
+                        </div>
+
+                        <div class="menu__item__description">
+                            {!! nl2br(e($meal->description)) !!}
+                        </div>
+                    </div>
+                    <?php
+                        if($start % 2 == 0) {
+                            echo '<div class="cf"></div>';
+                        }
+
+                        $start++;
+                    ?>
                 @endif
             @endforeach
 
-            @foreach($menu->categories as $category)
+            @if($currentIteration < $numberOfCategories)
+                <div class="page-break"></div>
+                <?php $currentIteration++; ?>
+            @endif
 
-                <div class="menu__category">{{ $category->name }}</div>
+        @endforeach
 
-                @foreach($category->meals as $meal)
-                    <div class="menu__item">
-                        @if($meal->category_id)
-                            <div class="menu__item__name">
-                                {{ $meal->name }}
-                                @if($meal->gluten_free) GF @endif
-                                @if($meal->vegetarian) V @endif
-                            </div>
-
-                            <div class="menu__item__description">
-                                {!! nl2br(e($meal->description)) !!}
-                            </div>
-                        @endif
-                    </div>
-                @endforeach
-
-            @endforeach
-        </div>
 
         <div class="footer">
             #150 - 351 Abbott Street PO Box 98882 Vancouver, BC V6B 0M4 | 604-728-5937 | info@cocktailsandcanapes.ca
