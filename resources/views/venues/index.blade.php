@@ -27,7 +27,7 @@ dark padding
             </div>
             <div class="row directory-items m-grid">
                 @foreach($featuredVenues as $venue)
-                    @include('venues.venue', ['venue' => $venue])
+                    @include('venues.venue', ['venue' => $venue, 'columnsClass' => 'col-md-3'])
                 @endforeach
             </div>
             <div class="row">
@@ -37,7 +37,7 @@ dark padding
             </div>
             <div class="row directory-items m-grid">
                 @foreach($venues as $venue)
-                    @include('venues.venue', ['venue' => $venue])
+                    @include('venues.venue', ['venue' => $venue, 'columnsClass' => 'col-md-3'])
                 @endforeach
             </div>
 

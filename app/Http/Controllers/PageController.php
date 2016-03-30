@@ -16,7 +16,7 @@ class PageController extends Controller
     */
     public function weddings() {
         return view('website.wedding.index', [
-            'venues' => \App\Venue::where('is_featured', 1)->take(3)->get()
+            'venues' => \App\Venue::where('is_featured', 1)->take(6)->orderBy('sorting_order', 'ASC')->get()
         ]);
     }
 

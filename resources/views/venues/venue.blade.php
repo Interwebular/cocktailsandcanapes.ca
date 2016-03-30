@@ -1,4 +1,5 @@
-<div class="col-md-3 col-sm-6 col-xs-12 m-grid-item">
+
+<div class="{{ $columnsClass }} col-sm-6 col-xs-12 m-grid-item">
     <a href="{{ route('venues.show', [$venue]) }}/{{ str_slug($venue->name) }}" class="directory-item">
         @if($venue->image)
             <div class="directory-item-background" style="background-image:url({{ $venue->image }})"></div>

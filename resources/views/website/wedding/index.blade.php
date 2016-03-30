@@ -72,9 +72,12 @@ dark
             </div>
         </div>
         <div class="container">
-            <div class="row directory-items">
+            <div class="row directory-items m-grid">
                 @foreach($venues as $venue)
-                    <div class="col-md-4">
+                    @include('venues.venue', ['venue' => $venue, 'columnsClass' => 'col-md-4'])
+
+
+                    {{-- <div class="col-md-4">
                         <a href="{{ route('venues.show', [$venue]) }}/{{ str_slug($venue->name) }}" class="directory-item">
                             @if($venue->image)
                                 <div class="directory-item-background" style="background-image:url({{ $venue->image }})"></div>
@@ -98,7 +101,7 @@ dark
                                 </table>
                             </div>
                         </a>
-                    </div>
+                    </div> --}}
                 @endforeach
             </div>
 
