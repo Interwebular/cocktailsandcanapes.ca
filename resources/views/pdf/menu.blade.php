@@ -5,29 +5,42 @@
         <title>{{ $menu->name }}</title>
         <style>
 
+            /*@font-face {
+                font-family: 'Bitter';
+                src: url('{{storage_path()}}/fonts/Bitter.ttf')  format('truetype')
+            }
+
+            @font-face {
+                font-family: 'Bitter-Bold';
+                src: url('{{storage_path()}}/fonts/Bitter-Bold.ttf')  format('truetype')
+            }*/
+
             html {
                 padding: 0;
-                margin: 50px;
+                margin: 40px;
                 background: #f5f5f5;
             }
 
-            body { font-family: Helvetica; color: #111; }
+            body { font-family: 'bitter', Helvetica; color: #111; }
             .page-break { page-break-after: always; }
-            h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0; }
+            h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0;  }
 
             .header {
-                position: relative;
+                top: 0;
+                position: fixed;
                 margin-bottom: 30px;
             }
             .header__title {
+                font-family: 'bitter';
                 font-size: 1.8em;
                 font-weight: bold;
-                margin-bottom: 15px;
-                margin-top: 45px;
+                margin-bottom: 8px;
+                /*margin-top: 20px;*/
             }
             .header__pricing {
+                font-family: 'bitter';
                 font-size: 0.7em;
-                line-height: 1.5em;
+                line-height: 1.2em;
             }
             .header__logo {
                 position: absolute;
@@ -36,11 +49,24 @@
                 display: inline-block;
             }
             .header__logo__image {
-                width: 200px;
+                width: 160px;
             }
 
-            .menu {}
+            .footer {
+                bottom: 0;
+                position: fixed;
+                font-size: 0.7em;
+                text-align: center;
+            }
+
+
+
+
+            .menu {
+                margin-top: 200px;
+            }
             .menu__category {
+                font-family: 'Bitter-Bold';
                 font-size: 1.5em;
                 font-weight: bold;
                 margin-bottom: 15px;
@@ -51,6 +77,7 @@
                 margin-bottom: 20px;
             }
             .menu__item__name {
+                font-family: 'Bitter-Bold';
                 font-size: 0.9em;
                 font-weight: bold;
                 margin-bottom: 3px;
@@ -82,7 +109,7 @@
                 @endif
             @endforeach --}}
 
-            @foreach($menu->categories as $category)
+            {{-- @foreach($menu->categories as $category)
 
                 <div class="menu__category">{{ $category->name }}</div>
 
@@ -103,14 +130,12 @@
                     </div>
                 @endforeach
 
-            @endforeach
+            @endforeach --}}
         </div>
 
-
-
-
-
-
+        <div class="footer">
+            #150 - 351 Abbott Street PO Box 98882 Vancouver, BC V6B 0M4 | 604-728-5937 | info@cocktailsandcanapes.ca
+        </div>
 
     </body>
 </html>

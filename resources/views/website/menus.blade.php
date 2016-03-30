@@ -32,6 +32,9 @@
                             @if(!$meal->category_id)
                                 <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
                                     <a href="#" class="menu-item update-menu-item-image" data-image="{{ $meal->image }}">
+                                        @if($meal->image)
+                                            <i class="menu-item--has-image fa fa-image"></i>
+                                        @endif
                                         <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
                                         <p>{!! nl2br(e($meal->description)) !!}</p>
                                     </a>
@@ -50,6 +53,9 @@
                                 @if($meal->category_id)
                                     <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
                                         <a href="#" class="menu-item update-menu-item-image" data-image="{{ $meal->image }}">
+                                            @if($meal->image)
+                                                <i class="menu-item--has-image fa fa-image"></i>
+                                            @endif
                                             <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
                                             <p>{!! nl2br(e($meal->description)) !!}</p>
                                         </a>
