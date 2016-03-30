@@ -5,7 +5,12 @@
 @endsection
 
 @section('content')
-    <div class="menu-item-image hidden-sm hidden-xs"></div>
+    <div class="menu-item-image hidden-sm hidden-xs">
+        <a href="mailto:info@cocktailsandcanapes.ca">
+            Request A Quote
+        </a>
+    </div>
+
     <section class="menu">
         <div class="container-fluid menu-container">
             <div class="menu-button-container">
@@ -31,7 +36,7 @@
                         @foreach($menu->meals as $meal)
                             @if(!$meal->category_id)
                                 <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
-                                    <a href="#" class="menu-item update-menu-item-image" data-image="{{ $meal->image }}">
+                                    <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
                                         @if($meal->image)
                                             <i class="menu-item--has-image fa fa-image"></i>
                                         @endif
@@ -52,7 +57,7 @@
                             @foreach($category->meals as $meal)
                                 @if($meal->category_id)
                                     <div class="col-xs-12 col-sm-6 col-md-4 m-grid-item">
-                                        <a href="#" class="menu-item update-menu-item-image" data-image="{{ $meal->image }}">
+                                        <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}">
                                             @if($meal->image)
                                                 <i class="menu-item--has-image fa fa-image"></i>
                                             @endif
@@ -92,13 +97,13 @@
 
     <script>
 
-        // $(function(){
-        //     var firstItem = $($('.menu-item')[0]),
-        //         imageUrl = firstItem.data('image');
-        //
-        //     firstItem.addClass('active');
-        //     $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
-        // });
+        $(function(){
+            var firstItem = $($("[data-image!=''][data-image]")[0]),
+                imageUrl = firstItem.data('image');
+
+            firstItem.addClass('active');
+            $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
+        });
 
 
         var totalHeightCached;
@@ -123,7 +128,7 @@
 
         $(window).scroll(function() {
 
-            var offsiteHeight = 96;
+            var offsiteHeight = 196;
             var heightOfBottom = $('.bottom-of-menu').offset().top;
             var firstItem = $($('.menu-item')[0]);
             var heightOfFirstItem = firstItem.offset().top;
@@ -155,6 +160,10 @@
 
             var $this = $(this),
                 imageUrl = $this.data('image');
+
+            if($this.hasClass('no-image')) {
+                return false;
+            }
 
             $('.update-menu-item-image').removeClass('active');
 

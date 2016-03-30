@@ -166,13 +166,18 @@
         text-decoration: none;
         color: $color-dark;
     }
+
+    &.no-image {
+        background: #fff;
+        cursor:  default;
+    }
 }
 
 .menu-item--has-image {
     position: absolute;
     top: 4px;
     right: 4px;
-    color: darken(#fff, 20%);
+    color: darken(#fff, 30%);
 }
 
 .menu-item-image {
@@ -207,6 +212,24 @@
             background-color: $color-dark;
             @include font-bold();
             letter-spacing: 1px;
+        }
+    }
+
+    a {
+        @include font-bold();
+        position: absolute;
+        top: -80px;
+        width: 100%;
+        display: block;
+        background: $color-dark;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover {
+            text-decoration: none;
         }
     }
 
