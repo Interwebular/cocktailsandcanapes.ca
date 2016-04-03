@@ -18,6 +18,17 @@
 
 
 				<div class="box-body pad table-responsive">
+					<h2>Unverified</h2>
+					<table class="table">
+						@foreach($notVerifiedVenues as $venue)
+							<tr>
+								<td><a href="{{ route('admin.venues.edit', [$venue]) }}">{{ $venue->name }}</a></td>
+							</tr>
+						@endforeach
+					</table>
+				</div>
+
+				<div class="box-body pad table-responsive">
 					<h2>Featured</h2>
 					<table class="table">
 						@foreach($featuredVenues as $venue)

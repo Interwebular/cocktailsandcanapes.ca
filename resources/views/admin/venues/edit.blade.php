@@ -85,6 +85,14 @@
 							</div>
 
 							<div class="form-group">
+								<label for="verified">Verified?</label>
+								<select class="form-control" id="verified" name="verified">
+									<option value="0" @if(!$venue->verified) selected="selected" @endif>No</option>
+									<option value="1" @if($venue->verified) selected="selected" @endif>Yes</option>
+								</select>
+							</div>
+
+							<div class="form-group">
                                 <label for="image">Image</label>
                                 <input type="file" name="image" class="form-control" />
                             </div>

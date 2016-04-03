@@ -93,11 +93,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('vancouver-wedding-caterers', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);
     Route::get('find-the-perfect-venue/{venue}/{name?}', ['as' => 'venues.show', 'uses' => 'VenueController@show']);
+    Route::get('venues/submit', ['as' => 'venues.submit', 'uses' => 'VenueController@submit']);
+    Route::post('venues/submit', ['as' => 'venues.postSubmit', 'uses' => 'VenueController@postSubmit']);
     Route::get('contact', ['as' => 'contact.index', 'uses' => 'PageController@contact']);
     Route::post('contact', ['as' => 'contact.submit', 'uses' => 'PageController@postContact']);
     Route::get('gallery', ['as' => 'gallery.index', 'uses' => 'PageController@gallery']);
-
-
-    //API development
-    Route::get('google-locations/{keyword?}', 'VenueController@googleApi');
+    Route::get('privacy-policy', ['as' => 'legal.pp', 'uses' => 'PageController@privacy']);
+    Route::get('disclaimer', ['as' => 'legal.disclaimer', 'uses' => 'PageController@disclaimer']);
 });

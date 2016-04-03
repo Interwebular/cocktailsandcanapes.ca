@@ -19,6 +19,7 @@ class VenueController extends Controller {
     */
     public function index() {
         return view('admin.venues.index', [
+            'notVerifiedVenues' => \App\Venue::notVerified()->get(),
             'featuredVenues' => \App\Venue::featured()->get(),
             'venues' => \App\Venue::all()
         ]);
@@ -44,7 +45,7 @@ class VenueController extends Controller {
             'name' => 'required|max:64',
             'location' => 'required',
             'address' => 'required',
-            'website' => 'required|url',
+            'website' => 'required',
             'phonenumber' => 'required',
             'contact_name' => '',
             'description' => 'required',
@@ -101,13 +102,14 @@ class VenueController extends Controller {
             'name' => 'required|max:64',
             'location' => 'required',
             'address' => 'required',
-            'website' => 'required|url',
+            'website' => 'required',
             'phonenumber' => 'required',
             'contact_name' => '',
             'description' => 'required',
             'rececption_count' => 'required|numeric',
             'dining_count' => 'required|numeric',
             'is_featured' => 'required|numeric',
+            'verified' => 'required|numeric',
             'sorting_order' => 'required|numeric',
             'image' => 'mimes:jpeg,png,gif,jpg|max:15000'
         ]);
@@ -122,6 +124,7 @@ class VenueController extends Controller {
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
         $venue->is_featured = $request->is_featured;
+        $venue->verified = $request->verified;
         $venue->sorting_order = $request->sorting_order;
         $venue->save();
 

@@ -37,8 +37,8 @@
                 font-family: 'bitter';
                 font-size: 1.8em;
                 font-weight: bold;
-                margin-bottom: 8px;
-                /*margin-top: 20px;*/
+                margin-bottom: 0px;
+                margin-top: 20px;
             }
             .header__pricing {
                 font-family: 'bitter';
@@ -72,8 +72,8 @@
                 font-family: 'Bitter-Bold';
                 font-size: 1.2em;
                 font-weight: bold;
-                margin-bottom: 15px;
-                margin-top: 25px;
+                margin-bottom: 5px;
+                margin-top: 50px;
             }
             .menu__item {
                 width: 250px;
@@ -118,10 +118,15 @@
             </div>
         </div>
 
+        <?php $letterCount = 0; ?>
 
+        <?php $start = 1;  ?>
         @foreach($menu->meals as $meal)
             @if(!$meal->category_id)
-                <div class="menu__item">
+                <?php
+                    $letterCount += strlen(e($meal->description));
+                ?>
+                <div class="menu__item <?php if($start % 2 == 0) echo "menu__item--even"; else echo "menu__item--odd"; ?> <?php if($meal->is_full_width) echo 'menu__item--is_full_width'; ?>">
                     <div class="menu__item__name">
                         {{ $meal->name }}
                         @if($meal->gluten_free) GF @endif
@@ -132,21 +137,36 @@
                         {!! nl2br(e($meal->description)) !!}
                     </div>
                 </div>
+                <?php
+                    if($start % 2 == 0) {
+                        echo '<div class="cf"></div>';
+                    }
+
+                    $start++;
+
+                    if($letterCount >= 1100) {
+                        $letterCount = 0;
+                        echo "<div class=\"page-break\"></div>";
+                    }
+                ?>
             @endif
         @endforeach
 
-
-        <?php
-            $numberOfCategories = count($menu->categories);
-            $currentIteration = 1;
-        ?>
         @foreach($menu->categories as $category)
 
+            <div style="height: 5px; width: 100%"></div>
             <div class="menu__category">{{ $category->name }}</div>
 
             <?php $start = 1;  ?>
             @foreach($category->meals as $meal)
                 @if($meal->category_id)
+                    <?php
+                        $letterCount += strlen(e($meal->description));
+
+                        if($meal->is_full_width) {
+                            $letterCount = ($letterCount * 1.1);
+                        }
+                    ?>
                     <div class="menu__item <?php if($start % 2 == 0) echo "menu__item--even"; else echo "menu__item--odd"; ?> <?php if($meal->is_full_width) echo 'menu__item--is_full_width'; ?>">
                         <div class="menu__item__name">
                             {{ $meal->name }}
@@ -164,17 +184,15 @@
                         }
 
                         $start++;
+
+                        if($letterCount >= 1100) {
+                            $letterCount = 0;
+                            echo "<div class=\"page-break\"></div>";
+                        }
                     ?>
                 @endif
             @endforeach
-
-            @if($currentIteration < $numberOfCategories)
-                <div class="page-break"></div>
-                <?php $currentIteration++; ?>
-            @endif
-
         @endforeach
-
 
         <div class="footer">
             #150 - 351 Abbott Street PO Box 98882 Vancouver, BC V6B 0M4 | 604-728-5937 | info@cocktailsandcanapes.ca

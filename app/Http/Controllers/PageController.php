@@ -70,4 +70,21 @@ class PageController extends Controller
         ]);
     }
 
+    /**
+    *   Show the disclaimer
+    *
+    *   @return View
+    */
+    public function disclaimer() {
+        return view('website.disclaimer');
+    }
+
+    /**
+    *   Show the privacy policy
+    *
+    *   @return View
+    */
+    public function privacy() {
+        return view('website.privacy');
+    }
 }
