@@ -5,23 +5,17 @@
         <title>{{ $menu->name }}</title>
         <style>
 
-            /*@font-face {
-                font-family: 'Bitter';
-                src: url('{{storage_path()}}/fonts/Bitter.ttf')  format('truetype')
-            }
-
-            @font-face {
-                font-family: 'Bitter-Bold';
-                src: url('{{storage_path()}}/fonts/Bitter-Bold.ttf')  format('truetype')
-            }*/
-
             html {
                 padding: 0;
                 margin: 40px;
                 background: #f5f5f5;
             }
 
-            body { font-family: 'bitter', Helvetica; color: #111; padding-top: 160px;}
+            body {
+                font-family: DejaVu Sans, Helvetica;
+                color: #111;
+                padding-top: 160px;
+            }
             .page-break { page-break-after: always; }
             h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0;  }
             .cf {
@@ -34,14 +28,14 @@
                 margin-bottom: 30px;
             }
             .header__title {
-                font-family: 'bitter';
+                font-family: DejaVu Sans;
                 font-size: 1.8em;
                 font-weight: bold;
                 margin-bottom: 0px;
                 margin-top: 20px;
             }
             .header__pricing {
-                font-family: 'bitter';
+                font-family: DejaVu Sans;
                 font-size: 0.7em;
                 line-height: 1.2em;
             }
@@ -69,7 +63,7 @@
                 /*margin-top: 200px;*/
             }
             .menu__category {
-                font-family: 'Bitter-Bold';
+                font-family: DejaVu Sans;
                 font-size: 1.2em;
                 font-weight: bold;
                 margin-bottom: 5px;
@@ -96,13 +90,28 @@
             }
 
             .menu__item__name {
-                font-family: 'Bitter-Bold';
+                font-family: DejaVu Sans;
                 font-size: 0.9em;
                 font-weight: bold;
                 margin-bottom: 3px;
             }
             .menu__item__description {
                 font-size: 0.7em;
+            }
+
+            .badge {
+                display: inline-block;
+                background: #444;
+                color: #fff;
+                font-size: 0.6em;
+                border-radius: 8px;
+                font-family: DejaVu Sans;
+                font-weight: bold;
+                height: 16px;
+                width: 26px;
+                text-align: center;
+                line-height: 11px;
+                /*margin-top: 5px;*/
             }
 
         </style>
@@ -129,8 +138,8 @@
                 <div class="menu__item <?php if($start % 2 == 0) echo "menu__item--even"; else echo "menu__item--odd"; ?> <?php if($meal->is_full_width) echo 'menu__item--is_full_width'; ?>">
                     <div class="menu__item__name">
                         {{ $meal->name }}
-                        @if($meal->gluten_free) GF @endif
-                        @if($meal->vegetarian) V @endif
+                        @if($meal->gluten_free) <span class="badge">GF</span> @endif
+                        @if($meal->vegetarian) <span class="badge">V</span> @endif
                     </div>
 
                     <div class="menu__item__description">
@@ -152,12 +161,18 @@
             @endif
         @endforeach
 
+        <?php $catCount = 0; ?>
         @foreach($menu->categories as $category)
+
 
             <div style="height: 5px; width: 100%"></div>
             <div class="menu__category">{{ $category->name }}</div>
 
-            <?php $start = 1;  ?>
+            <?php
+                $start = 1;
+                $numMeals = count($category->meals);
+                $mealCountIsOdd = $numMeals & 1;
+            ?>
             @foreach($category->meals as $meal)
                 @if($meal->category_id)
                     <?php
@@ -170,8 +185,8 @@
                     <div class="menu__item <?php if($start % 2 == 0) echo "menu__item--even"; else echo "menu__item--odd"; ?> <?php if($meal->is_full_width) echo 'menu__item--is_full_width'; ?>">
                         <div class="menu__item__name">
                             {{ $meal->name }}
-                            @if($meal->gluten_free) GF @endif
-                            @if($meal->vegetarian) V @endif
+                            @if($meal->gluten_free) <span class="badge">GF</span> @endif
+                            @if($meal->vegetarian) <span class="badge">V</span> @endif
                         </div>
 
                         <div class="menu__item__description">
@@ -180,6 +195,10 @@
                     </div>
                     <?php
                         if($start % 2 == 0) {
+                            echo '<div class="cf"></div>';
+                        }
+
+                        if($mealCountIsOdd && $start == $numMeals) {
                             echo '<div class="cf"></div>';
                         }
 
@@ -192,6 +211,15 @@
                     ?>
                 @endif
             @endforeach
+            <?php
+                // $catCount++;
+                //
+                // if($catCount >= 2) {
+                //     echo "<div class=\"page-break\"></div>";
+                //     $catCount = 0;
+                //     $letterCount = 0;
+                // }
+            ?>
         @endforeach
 
         <div class="footer">
