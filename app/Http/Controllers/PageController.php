@@ -66,7 +66,7 @@ class PageController extends Controller
     */
     public function gallery() {
         return view('website.gallery', [
-            'images' => \App\Image::all()
+            'images' => \App\Image::orderBy('sorting_order', 'ASC')->paginate(100)
         ]);
     }
 

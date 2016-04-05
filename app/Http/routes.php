@@ -71,6 +71,8 @@ Route::group([
 
     Route::get('gallery', ['as' => 'admin.gallery.index', 'uses' => 'GalleryController@index']);
     Route::get('gallery/upload', ['as' => 'admin.gallery.create', 'uses' => 'GalleryController@create']);
+    Route::get('gallery/{image}/edit', ['as' => 'admin.gallery.edit', 'uses' => 'GalleryController@edit']);
+    Route::put('gallery/{image}/edit', ['as' => 'admin.gallery.save', 'uses' => 'GalleryController@save']);
     Route::post('gallery/upload', ['as' => 'admin.gallery.store', 'uses' => 'GalleryController@store']);
     Route::delete('gallery/{image}', ['as' => 'admin.gallery.destroy', 'uses' => 'GalleryController@destroy']);
 

@@ -17,7 +17,7 @@ class GalleryController extends Controller {
     */
     public function index() {
         return view('admin.gallery.index', [
-            'images' => \App\Image::paginate(40)
+            'images' => \App\Image::orderBy('sorting_order', 'ASC')->paginate(25)
         ]);
     }
 
@@ -57,6 +57,22 @@ class GalleryController extends Controller {
         return redirect()->route('admin.gallery.index')->with('error', 'The Image could not be uploaded. Refresh and try again.');
     }
 
+    public function edit(Image $image) {
+        return view('admin.gallery.edit', [
+            'image' => $image
+        ]);
+    }
+
+    public function save(Request $request, Image $image) {
+        $this->validate($request, [
+            'sorting_order' => 'required|integer'
+        ]);
+
+        $image->sorting_order = $request->sorting_order;
+        $image->save();
+
+        return redirect()->route('admin.gallery.index')->with('success', 'Saved');
+    }
 
     /**
     *   Delete the image

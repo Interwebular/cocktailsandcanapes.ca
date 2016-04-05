@@ -37,6 +37,10 @@ padding dark
                 </div>
             @endforeach
         </div>
+
+        <div style="text-align:center">
+            {!! $images->render()  !!}
+        </div>
     </section>
 
 @endsection
