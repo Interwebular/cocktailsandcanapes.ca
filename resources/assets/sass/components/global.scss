@@ -16,3 +16,50 @@ label {
     border-radius: 0;
     @include font-regular();
 }
+
+
+.gallery {
+    position: relative;
+
+    .background-image {
+        float: left;
+        width: 16.66666666666%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .background-images {
+        position: relative;
+    }
+
+    a {
+        display: inline-block;
+        padding: 12px 32px;
+        background: #333;
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include font-light();
+        color: #fff;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .gallery {
+        .background-image {
+            width: 33.3333333%;
+            height: 130px;
+        }
+    }
+}

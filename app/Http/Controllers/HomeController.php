@@ -31,9 +31,13 @@ class HomeController extends Controller
         else
             $dinners = null;
 
+        $images = \App\Image::all();
+        $images = $images->random(6);
+
         return view('website.home', [
             'canapes' => $canapes,
             'dinners' => $dinners,
+            'images' => $images,
             'posts' => \App\Post::where('public', 1)->orderBy('published_at', 'DESC')->take(3)->get()
         ]);
     }

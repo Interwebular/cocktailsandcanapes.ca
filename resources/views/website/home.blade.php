@@ -158,12 +158,18 @@
         </div>
     </section>
 
-    {{-- <section class="section-panel section-fluid-height section-white">
-        <div class="content-center">
-            <h1>Let's Talk</h1>
-            <div class="cta-wrapper">
-                <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
+    <section class="section-panel section-fluid-height section-white" style="padding: 0">
+
+        <div class="gallery">
+            <a href="/gallery">Gallery</a>
+            <div class="background-images">
+                @foreach($images as $image)
+                    <div class="background-image" style="background-image: url({{ $image->url }})"></div>
+                @endforeach
+                <div class="clearfix"></div>
             </div>
         </div>
-    </section> --}}
+
+
+    </section>
 @endsection
