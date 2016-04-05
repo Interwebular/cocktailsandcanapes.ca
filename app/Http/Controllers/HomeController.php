@@ -20,14 +20,14 @@ class HomeController extends Controller
         $canapes = Menu::where('slug', 'hot-canapes')->first();
 
         if($canapes)
-            $canapes = $canapes->meals()->whereNotNull('image')->take(3)->get();
+            $canapes = $canapes->meals()->whereNotNull('image')->take(6)->get();
         else
             $canapes = null;
 
         $dinners = Menu::where('slug', 'plated-dinner-fine')->first();
 
         if($dinners)
-            $dinners = $dinners->meals()->whereNotNull('image')->take(3)->get();
+            $dinners = $dinners->meals()->whereNotNull('image')->take(6)->get();
         else
             $dinners = null;
 
