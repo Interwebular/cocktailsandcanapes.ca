@@ -44,7 +44,10 @@
             <div class="menu-preview-content-container">
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-
+                <h1 class="menu-preview-title">
+                    <small>Menu</small>
+                    Dinner
+                </h1>
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($dinners as $dinner)
@@ -55,14 +58,9 @@
                         @endforeach
                     </div>
                 </div>
+                <a class="menu-preview-link" href="/event-catering-menus/plated-dinner-fine">Full Menu</a>
             </div>
             <div class="menu-preview-image-container">
-                {{-- <div class="menu-preview-title">
-                    <h1>Dinners</h1>
-                    <div class="cta-wrapper">
-                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
-                    </div>
-                </div> --}}
 
                 <div class="menu-image-preview-slider menu-image-preview-slider-2">
                     @foreach($dinners as $dinner)
@@ -76,14 +74,6 @@
     @if($canapes)
         <section class="section-panel panel-75 hidden-xs hidden-sm">
             <div class="menu-preview-image-container">
-
-                {{-- <div class="menu-preview-title">
-                    <h1>Canapes</h1>
-                    <div class="cta-wrapper">
-                        <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
-                    </div>
-                </div> --}}
-
                 <div class="menu-image-preview-slider menu-image-preview-slider-1">
                     @foreach($canapes as $canape)
                         <div style="background-image:url({{ $canape->image }})"></div>
@@ -94,10 +84,12 @@
                 <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
 
+                <h1 class="menu-preview-title">
+                    <small>Menu</small>
+                    Canapes
+                </h1>
+
                 <div class="menu-preview-content">
-
-                    <h1>Canapes</h1>
-
                     <div class="menu-content-preview-slider menu-content-preview-slider-1">
                         @foreach($canapes as $canape)
                             <div>
@@ -106,10 +98,9 @@
                             </div>
                         @endforeach
                     </div>
-
-                    <h1>Add button Below</h1>
-
                 </div>
+
+                <a class="menu-preview-link" href="/event-catering-menus/hot-canapes">Full Menu</a>
             </div>
         </section>
     @endif

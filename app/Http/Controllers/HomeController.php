@@ -24,7 +24,7 @@ class HomeController extends Controller
         else
             $canapes = null;
 
-        $dinners = Menu::where('slug', 'plated-dinner')->first();
+        $dinners = Menu::where('slug', 'plated-dinner-fine')->first();
 
         if($dinners)
             $dinners = $dinners->meals()->whereNotNull('image')->take(3)->get();
