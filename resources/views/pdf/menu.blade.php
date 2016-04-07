@@ -67,7 +67,7 @@
                 font-size: 1.2em;
                 font-weight: bold;
                 margin-bottom: 5px;
-                margin-top: 50px;
+                margin-top: 30px;
             }
             .menu__item {
                 width: 250px;
@@ -129,7 +129,11 @@
 
         <?php $letterCount = 0; ?>
 
-        <?php $start = 1;  ?>
+        <?php
+            $start = 1;
+            $numMeals = count($menu->meals()->where('category_id', null));
+            $mealCountIsOdd = $numMeals & 1;
+        ?>
         @foreach($menu->meals as $meal)
             @if(!$meal->category_id)
                 <?php
@@ -150,10 +154,13 @@
                     if($start % 2 == 0) {
                         echo '<div class="cf"></div>';
                     }
+                    if($mealCountIsOdd && $start == $numMeals) {
+                        echo '<div class="cf"></div>';
+                    }
 
                     $start++;
 
-                    if($letterCount >= 1100) {
+                    if($letterCount >= 900) {
                         $letterCount = 0;
                         echo "<div class=\"page-break\"></div>";
                     }
@@ -204,7 +211,7 @@
 
                         $start++;
 
-                        if($letterCount >= 1100) {
+                        if($letterCount >= 900) {
                             $letterCount = 0;
                             echo "<div class=\"page-break\"></div>";
                         }

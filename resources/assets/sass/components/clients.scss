@@ -1,12 +1,56 @@
 .wedding-title {
     color: #fff;
     @include font-light();
+    @include text-shadow();
     text-transform: uppercase;
+
 
     small {
         color: darken(#fff, 15%); font-size: 0.5em;
         @include font-bold();
         text-transform: none;
+    }
+
+    &.alt {
+        color: #000;
+        text-shadow: none;
+
+        small {
+            color: lighten(#000, 15%);
+        }
+    }
+}
+
+.wedding-button-group {
+    a {
+        color: #fff;
+        @include font-light();
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+        margin: 10px;
+        transition: all 300ms;
+        letter-spacing: 1px;
+
+        &:hover {
+            text-decoration: none;
+            background: #000;
+            color: #fff;
+        }
+    }
+
+    &.alt {
+        a {
+            color: #000;
+            border: 1px solid #000;
+
+            &:hover {
+                text-decoration: none;
+                background: #000;
+                color: #fff;
+            }
+        }
     }
 }
 

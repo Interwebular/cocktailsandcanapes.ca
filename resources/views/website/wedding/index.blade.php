@@ -10,20 +10,19 @@ dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url({{ asset('img/wedding/wedding1.jpg') }}); background-position: left center; display:block;"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/wedding/wedding12.jpg') }}); background-position: left center; display:block;"></div>
+    {{-- <div class="bgimage" style="background-image:url(https://images.unsplash.com/photo-1439539698758-ba2680ecadb9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=16ae0d59f1cdf1463b47a610c4c9b8d3); background-position: left center; display:block;"></div> --}}
 
 
-    <section class="section-panel panel-fullscreen panel-fixed">
+    {{-- <section class="section-panel panel-fullscreen panel-fixed">
         <div class="container-fluid">
-            <div class="col-md-6" style="margin-top:220px">
+            <div class="col-md-6 col-md-offset-3" style="margin-top:220px">
                 <h1 class="wedding-title">Weddings<br><small>A few accolades from happy couples:</small></h1>
                 <div class="clients">
                     @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
                         <div class="client client--white client--lg client--left wedding-page">
                             <div class="quote">
-                                {{-- <span class="quote__left"><i class="fa fa-quote-left"></i></span> --}}
                                 {!! $testimonial->content !!}
-                                {{-- <span class="quote__right"><i class="fa fa-quote-right"></i></span> --}}
                             </div>
                             <blockquote>
                                 {!! $testimonial->client !!}
@@ -44,20 +43,78 @@ dark
             </div>
         </div>
 
-    </section>
+    </section> --}}
 
+    <section class="section-panel section-fluid-height" style="padding: 270px 0;">
+        <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
+        <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
+        <div class="content-center">
+            <h1 class="wedding-title">
+                DON’T TAKE OUR WORD FOR IT<br>
+                <small>LET’S HEAR FROM THE BRIDE AND GROOM</small>
+            </h1>
+
+            <div class="spacer" style="background: #fff;"></div>
+            <div class="clients">
+                @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
+                    <div class="client" style="color: #fff;">
+                        <div class="quote quote__justified">
+                            {!! $testimonial->content !!}
+                        </div>
+                        <blockquote style="color: #fff;">
+                            {!! $testimonial->client !!}
+                        </blockquote>
+                    </div>
+                @endforeach
+            </div>
+            <div class="spacer" style="background: #fff;"></div>
+            <div class="wedding-button-group">
+                <a href="{{ route('wedding.menus.show') }}">Wedding Menus</a>
+                <a href="#learn-more">Learn More</a>
+                <a href="#request-a-tasting">Request A Tasting</a>
+            </div>
+        </div>
+    </section>
 
     <section id="learn-more"  class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
 
-            <h1>Have fun with it, it's your day</h1>
+            <h1 class="wedding-title alt">
+                IT'S YOUR DAY, YOUR VISION<br>
+                <small>WE'RE HERE TO HELP</small>
+            </h1>
             <div class="spacer"></div>
             <p class="default">
-                Whether you desire an elegant formal sit down dinner, a family style dinning experience, or a cocktail soiree, we create a distinct social and culinary experience that will leave your guests buzzing. Say goodbye to the rubber chicken dinner.
+                We would love the opportunity to work with you and create a memorable wedding experience tailored to your needs and wants. We are your escape from the cookie cutter menu offerings of maple-glazed salmon and rubber chicken dinners.
+                <br><br>
+                With us, you don’t just get a caterer, you get a team of experienced event and culinary professionals who have seen and done it all. We are here to make your vision come to life and provide a distinct culinary experience that leaves your guests buzzing.
+            </p>
+
+            <div class="wedding-button-group alt">
+                <a href="#request-a-tasting">Request A Tasting</a>
+            </div>
+
+            {{-- <div class="cta-wrapper">
+                <a class="cta black" href="#request-a-tasting">Request A Tasting</a>
+            </div> --}}
+        </div>
+    </section>
+
+    <section id="request-a-tasting"  class="section-panel section-dark section-fluid-height padding">
+        <div class="content-center">
+
+            <h1 class="wedding-title" style="text-shadow: none;">
+                TASTING
+            </h1>
+            <div class="spacer"></div>
+            <p class="default">
+                Having trouble deciding which menu items to serve for your special day?
+                <br><br>
+                The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $175 for up to four people. Additional $55.00 per Person, for extra guests. Tasting fee is full refunded upon booking with us, which we are certain you will!
             </p>
 
             <div class="cta-wrapper">
-                <a class="cta black" href="{{ route('wedding.menus.show') }}">Wedding Catering Menu</a>
+                <a class="cta" href="#request-a-tasting">Request A Tasting</a>
             </div>
         </div>
     </section>
