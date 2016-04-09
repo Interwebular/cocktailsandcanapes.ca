@@ -17,7 +17,7 @@ dark padding
                     <h1 class="heading">
                         Find the perfect venue
 
-                        <a href="{{ route('venues.submit') }}" class="btn btn-primary pull-right">
+                        <a href="{{ route('venues.submit') }}" class="boxcta pull-right" style="font-size: 0.4em;">
                             Add Your Venue
                         </a>
                     </h1>

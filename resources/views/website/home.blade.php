@@ -24,7 +24,7 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1>A Distinct Culinary Experience</h1>
+            <h1 class="skinny">A Distinct Culinary Experience</h1>
             <div class="spacer"></div>
             <p class="default">
                 We are a one-stop shop for all of your catering and event planning needs.
@@ -45,12 +45,16 @@
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
                 <h1 class="menu-preview-title">
-                    <small>Menu</small>
-                    Dinner
+                    Dinner Menu
                 </h1>
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($dinners as $dinner)
+                            <?php
+                                $dinner->name = str_replace('(Plus $5)', '', $dinner->name);
+                                $dinner->name = str_replace('(plus $5)', '', $dinner->name);
+                                $dinner->name = str_replace('(PLUS $5)', '', $dinner->name);
+                            ?>
                             <div>
                                 <h1>{{ $dinner->name }}</h1>
                                 <p>{{ $dinner->description }}</p>
@@ -85,8 +89,7 @@
                 <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
 
                 <h1 class="menu-preview-title">
-                    <small>Menu</small>
-                    Canapes
+                    Canapes Menu
                 </h1>
 
                 <div class="menu-preview-content">
@@ -109,7 +112,7 @@
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
         <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
         <div class="content-center">
-            <h1>Our Clients Are Our Biggest Fans</h1>
+            <h1 class="skinny">Our Clients Are Our Biggest Fans</h1>
             <div class="spacer"></div>
             <div class="clients">
                 @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
@@ -126,7 +129,7 @@
         </div>
     </section>
 
-    <section class="section-panel section-fluid-height section-dark">
+    {{-- <section class="section-panel section-fluid-height section-dark">
         <div class="content-center">
             <h1>Recent News</h1>
         </div>
@@ -156,15 +159,14 @@
                 <a class="cta" href="{{ route('blog.index') }}">View More</a>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="section-panel section-fluid-height section-white" style="padding: 0">
 
         <div class="gallery">
-            <a href="/gallery">Gallery</a>
             <div class="background-images">
                 @foreach($images as $image)
-                    <div class="background-image" style="background-image: url({{ $image->url }})"></div>
+                    <a href="{{ url('/gallery') }}" class="background-image" style="background-image: url({{ $image->url }})"></a>
                 @endforeach
                 <div class="clearfix"></div>
             </div>

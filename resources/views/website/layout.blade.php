@@ -64,7 +64,7 @@
                     <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
-                    &middot; 
+                    &middot;
                     <a href="mailto:info@cocktailsandcanapes.ca">Request A Quote</a> &middot;
                     604.424.8788 &middot; <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
                 </span>
@@ -89,13 +89,13 @@
         <nav class="mobile hidden-md hidden-lg">
             <div class="nav-inner">
                 <a href="{{ url('/') }}">
-                    <img class="nav-logo" src="{{ asset('img/logo_icon.png') }}" alt="CNC"/>
+                    <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="CNC"/>
                 </a>
                 <a href="#" class="open-mobile-nav"><i class="fa fa-bars"></i></a>
 
                 <ul class="nav-items">
                     <li><a href="#" class="close-mobile-nav"><i class="fa fa-close"></i></a></li>
-                    <li><a href="{{ url('/') }}"><img class="nav-logo" src="{{ asset('img/logo_icon.png') }}" alt="Cocktails And Canapes"/></a></li>
+                    <li><a href="{{ url('/') }}"><img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/></a></li>
                     @include('layouts.partials.navitems')
                 </ul>
             </div>

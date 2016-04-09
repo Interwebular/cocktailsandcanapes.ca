@@ -15,7 +15,16 @@ class PageController extends Controller
     *   @return View
     */
     public function weddings() {
+
+        $dinners = \App\Menu::where('slug', 'plated-dinner-fine')->first();
+
+        if($dinners)
+            $dinners = $dinners->meals()->whereNotNull('image')->take(6)->get();
+        else
+            $dinners = null;
+
         return view('website.wedding.index', [
+            'dinners' => $dinners,
             'venues' => \App\Venue::where('is_featured', 1)->take(6)->orderBy('sorting_order', 'ASC')->get()
         ]);
     }

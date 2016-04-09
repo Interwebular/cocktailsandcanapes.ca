@@ -71,7 +71,7 @@ dark
             <div class="wedding-button-group">
                 <a href="{{ route('wedding.menus.show') }}">Wedding Menus</a>
                 <a href="#learn-more">Learn More</a>
-                <a href="#request-a-tasting">Request A Tasting</a>
+                <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>
         </div>
     </section>
@@ -80,8 +80,7 @@ dark
         <div class="content-center">
 
             <h1 class="wedding-title alt">
-                IT'S YOUR DAY, YOUR VISION<br>
-                <small>WE'RE HERE TO HELP</small>
+                Bringing your vision to life
             </h1>
             <div class="spacer"></div>
             <p class="default">
@@ -91,7 +90,7 @@ dark
             </p>
 
             <div class="wedding-button-group alt">
-                <a href="#request-a-tasting">Request A Tasting</a>
+                <a href="#request-a-tasting">Interested In A Tasting?</a>
             </div>
 
             {{-- <div class="cta-wrapper">
@@ -99,6 +98,42 @@ dark
             </div> --}}
         </div>
     </section>
+
+    @if($dinners)
+        <section class="section-panel panel-75  hidden-xs hidden-sm">
+            <div class="menu-preview-content-container">
+                <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
+                <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
+                <h1 class="menu-preview-title">
+                    Dinner Menu
+                </h1>
+                <div class="menu-preview-content">
+                    <div class="menu-content-preview-slider menu-content-preview-slider-2">
+                        @foreach($dinners as $dinner)
+                            <?php
+                                $dinner->name = str_replace('(Plus $5)', '', $dinner->name);
+                                $dinner->name = str_replace('(plus $5)', '', $dinner->name);
+                                $dinner->name = str_replace('(PLUS $5)', '', $dinner->name);
+                            ?>
+                            <div>
+                                <h1>{{ $dinner->name }}</h1>
+                                <p>{{ $dinner->description }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <a class="menu-preview-link" href="/wedding-catering-menus/family-style">Full Menu</a>
+            </div>
+            <div class="menu-preview-image-container">
+
+                <div class="menu-image-preview-slider menu-image-preview-slider-2">
+                    @foreach($dinners as $dinner)
+                        <div style="background-image:url({{ $dinner->image }})"></div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
 
     <section id="request-a-tasting"  class="section-panel section-dark section-fluid-height padding">
         <div class="content-center">
@@ -114,7 +149,7 @@ dark
             </p>
 
             <div class="cta-wrapper">
-                <a class="cta" href="#request-a-tasting">Request A Tasting</a>
+                <a class="cta" href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>
         </div>
     </section>
@@ -169,6 +204,54 @@ dark
             </div>
         </div>
     </div>
+
+
+
+<div class="modal fade" id="tastingModal" tabindex="-1" role="dialog" aria-labelledby="tastingModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="tastingModalLabel">Request A Tasting</h4>
+      </div>
+      <div class="modal-body">
+            <p class="default" style="font-size: 1em;">
+                Having trouble deciding which menu items to serve for your special day?
+                <br><br>
+                The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $175 for up to four people. Additional $55.00 per Person, for extra guests. Tasting fee is full refunded upon booking with us, which we are certain you will!
+            </p>
+          <form action="{{ route('contact.submit') }}" method="POST">
+              {{ csrf_field() }}
+              <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" class="form-control input-lg" value="{{ old('name') }}" />
+              </div>
+              <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" class="form-control input-lg" value="{{ old('email') }}" />
+              </div>
+              <div class="form-group">
+                  <label for="phone_number">Phone Number *</label>
+                  <input type="text" id="phone_number" name="phone_number" class="form-control input-lg" value="{{ old('phone_number') }}" />
+              </div>
+              <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea name="message" id="message" class="form-control input-lg">{{ old('message') }}</textarea>
+              </div>
+              <div class="form-group">
+                  {!! Recaptcha::render() !!}
+              </div>
+              <div class="form-group">
+                  <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
+                  <div class="clearfix"></div>
+              </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
 @endsection
 

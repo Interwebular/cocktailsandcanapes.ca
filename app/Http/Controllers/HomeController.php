@@ -20,7 +20,7 @@ class HomeController extends Controller
         $canapes = Menu::where('slug', 'hot-canapes')->first();
 
         if($canapes)
-            $canapes = $canapes->meals()->whereNotNull('image')->take(6)->get();
+            $canapes = $canapes->meals()->whereNotNull('image')->orderBy('sorting_order', 'ASC')->take(6)->get();
         else
             $canapes = null;
 
