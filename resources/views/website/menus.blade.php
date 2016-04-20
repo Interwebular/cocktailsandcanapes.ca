@@ -41,7 +41,9 @@
                                             <i class="menu-item--has-image fa fa-image"></i>
                                         @endif
                                         <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
-                                        <p>{!! nl2br(e($meal->description)) !!}</p>
+
+
+                                        <p>{!! preg_replace('/\*\*(.+?)\*\*/s', '<strong>$1</strong>', nl2br(e($meal->description))) !!}</p>
                                     </a>
                                 </div>
                             @endif
@@ -62,7 +64,7 @@
                                                 <i class="menu-item--has-image fa fa-image"></i>
                                             @endif
                                             <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
-                                            <p>{!! nl2br(e($meal->description)) !!}</p>
+                                            <p>{!! preg_replace('/\*\*(.+?)\*\*/s', '<strong>$1</strong>', nl2br(e($meal->description))) !!}</p>
                                         </a>
                                     </div>
                                 @endif
