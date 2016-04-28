@@ -58,13 +58,12 @@ class PageController extends Controller
 
         $rawMessage = "Name: " . $request->name . "\n";
         $rawMessage .= "Email: " . $request->email . "\n";
-        $rawMessage .= "Phone: " . $request->phone_number . "\n";
-        $rawMessage .= "Company: " . $request->company . "\n\n";
+        $rawMessage .= "Phone: " . $request->phone_number . "\n\n";
         $rawMessage .= $request->message;
 
         $this->dispatch(new \App\Jobs\SendContactEmail($request->name, $request->email, $rawMessage));
 
-        return redirect()->route('contact.index')->with('success', 'We\'ll get back to you shortly');
+        return redirect()->route('contact.index')->with('success', 'Thanks! We\'ll get back to you shortly');
     }
 
 
