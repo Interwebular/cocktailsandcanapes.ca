@@ -10,7 +10,7 @@
     --}}
 
     {{-- <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div> --}}
-    <div class="bgimage" style="background-image:url({{ asset('img/sushi.jpg') }})"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div>
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
