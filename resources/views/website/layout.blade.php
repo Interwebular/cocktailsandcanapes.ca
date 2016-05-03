@@ -55,26 +55,13 @@
           </style>
         <![endif]-->
     </head>
-    {{-- <body class="dark padding"> --}}
     <body class="@yield('body-classes', '')">
-
-        {{-- <div class="contact-us hidden-xs hidden-sm">
-            <p>
-                604.424.8788<br>
-                <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
-            </p>
-            <p>
-                150 – 351 Abbott St.<br>
-                P.O. Box 98882<br>
-                Vancouver, BC V6B 0M4
-            </p>
-        </div> --}}
 
         <div class="topbar">
             <div class="topbar__right">
                 <span style="text-align: right;">
-                    <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
-                    <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
+                    @include('partials.email', ['linkTextAsIcon' => true])
+                    <a class="social" style="margin-left: 8px;" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
                     &middot;
@@ -82,9 +69,7 @@
                     604.424.8788 &middot; @include('partials.email', ['linkTextAsEmail' => true])
                 </span>
             </div>
-
             <div class="clearfix"></div>
-            {{-- <a class="topbar--cta" href="{{ route('contact.index') }}">Request A Quote</a> --}}
         </div>
 
         <div class="nav-background"></div>
@@ -115,8 +100,7 @@
         </nav>
 
         @yield('content')
-
-
+        
         <footer>
             <div class="container">
                 <div class="col-md-4">
