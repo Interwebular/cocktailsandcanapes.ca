@@ -75,7 +75,7 @@ padding dark
                     <div class="">
                         <p>
                             604.424.8788<br>
-                            <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
+                            @include('partials.email', ['linkTextAsEmail' => true])
                         </p>
                         <p>
                             <strong>Mailing Address:</strong><br>

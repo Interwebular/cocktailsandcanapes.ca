@@ -12,14 +12,37 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
         <link href="{{ elixir('css/cnc.css') }}" rel="stylesheet">
 
+        <!-- icons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ asset('ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
+        <!-- //icons -->
+
+        <!-- SEO meta -->
         <meta name="application-name" content="Cocktails And Canapes">
-        <meta name="description" content="@yield('meta-description')">
-        <meta name="keywords" content="@yield('meta-keywords')">
+        <meta name="description" content="@yield('meta-description', 'Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails and Canapes has you covered.')">
+        <meta name="keywords" content="@yield('meta-keywords', 'catering, vancouver caterer, vancouver catering company, cocktails, canapes, wedding canapes, wedding cocktails, wedding venues')">
         <meta property="og:site_name" content="Cocktails And Canapes"/>
         <meta property="og:title" content="@yield('page-title', 'Cocktails And Canapes')"/>
-        <meta property="og:description" content="@yield('meta-description')">
+        <meta property="og:description" content="@yield('meta-description', 'Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails and Canapes has you covered.')">
         <meta property="og:url" content="{{ URL::current() }}"/>
         <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ asset('img/social/cocktailsandcanapes_thumbnail.jpg') }}"/>
+        <!-- //SEO meta -->
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,16 +71,6 @@
         </div> --}}
 
         <div class="topbar">
-
-            <div class="topbar__left">
-                <span style="text-align: left;">
-                    {{-- <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
-                    <a class="social" href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a> --}}
-                </span>
-            </div>
-
             <div class="topbar__right">
                 <span style="text-align: right;">
                     <a class="social" style="margin-left: 30px;" href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
@@ -65,8 +78,8 @@
                     <a class="social" href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a class="social" href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
                     &middot;
-                    <a href="mailto:info@cocktailsandcanapes.ca">Request A Quote</a> &middot;
-                    604.424.8788 &middot; <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
+                    @include('partials.email') &middot;
+                    604.424.8788 &middot; @include('partials.email', ['linkTextAsEmail' => true])
                 </span>
             </div>
 
@@ -110,7 +123,7 @@
                     <h4>Contact Us</h4>
                     <p>
                         604.424.8788<br>
-                        <a href="mailto:info@cocktailsandcanapes.ca">info@cocktailsandcanapes.ca</a>
+                        @include('partials.email', ['linkTextAsEmail' => true])
                     </p>
                     <p>
                         <strong>Mailing Address:</strong><br>
@@ -131,7 +144,7 @@
                 </div>
                 <div class="col-md-4 social-icons">
                     <h4>Connect With Us</h4>
-                    <a href="mailto:info@cocktailsandcanapes.ca" target="_blank"><i class="fa fa-envelope"></i></a>
+                    @include('partials.email', ['linkTextAsIcon' => true])
                     <a href="https://twitter.com/cocktail_canape" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a href="https://www.facebook.com/CocktailsCanapes" target="_blank"><i class="fa fa-facebook"></i></a>
                     <a href="http://instagram.com/cocktailscanapes" target="_blank"><i class="fa fa-instagram"></i></a>
@@ -141,7 +154,7 @@
 
         <div class="dt-branding">
             <a href="http://droskiturner.com/" target="_blank" class="dt-logo">
-                <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" />
+                <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" alt="Droskiturner"/>
             </a>
         </div>
 
