@@ -69,6 +69,21 @@ dark
             </div>
             <div class="spacer" style="background: #fff;"></div>
             <div class="wedding-button-group">
+                @if(count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <a href="{{ route('wedding.menus.show') }}">Wedding Menus</a>
                 <a href="#learn-more">Learn More</a>
                 <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>

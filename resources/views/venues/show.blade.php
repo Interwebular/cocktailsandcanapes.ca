@@ -78,8 +78,24 @@
                         </div>
                         <div class="col-md-6 col-md-offset-3" style="margin-top: 30px;">
                             <h1>Interested In This Venue?</h1>
+                            @if(count($errors) > 0)
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <form action="{{ route('contact.submit') }}" method="POST">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="venue" value="{{ $venue->name }}" />
                                 <div class="form-group">
                                     <label for="name">Name *</label>
                                     <input type="text" id="name" name="name" class="form-control input-lg" value="{{ old('name') }}" />
@@ -100,7 +116,7 @@
                                     {!! Recaptcha::render() !!}
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
+                                    <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right dark">Submit</button>
                                 </div>
                             </form>
                         </div>

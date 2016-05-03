@@ -72,6 +72,11 @@ class VenueController extends Controller
             $venue->save();
         }
 
+        $rawMessage = "Name: " . $request->name . "\n";
+        $rawMessage .= "Email: " . $request->email . "\n";
+        $rawMessage .= "Phone: " . $request->phone_number . "\n\n";
+        $rawMessage .= $request->message;
+
         return redirect()->route('venues.submit')->with('success', 'Your venue has been submitted! Thank you.');
     }
 }
