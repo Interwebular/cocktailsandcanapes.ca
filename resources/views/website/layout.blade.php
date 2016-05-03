@@ -42,6 +42,11 @@
         <meta property="og:url" content="{{ URL::current() }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="{{ asset('img/social/cocktailsandcanapes_thumbnail.jpg') }}"/>
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="{{ URL::current() }}">
+        <meta name="twitter:title" content="@yield('page-title', 'Cocktails And Canapes')">
+        <meta name="twitter:description" content="@yield('meta-description', 'Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails and Canapes has you covered.')">
+        <meta name="twitter:image" content="{{ asset('img/social/cocktailsandcanapes_thumbnail.jpg') }}">
         <!-- //SEO meta -->
 
         <!--[if lt IE 9]>
@@ -100,7 +105,7 @@
         </nav>
 
         @yield('content')
-        
+
         <footer>
             <div class="container">
                 <div class="col-md-4">
