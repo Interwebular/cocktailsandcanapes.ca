@@ -1,14 +1,12 @@
 @extends('website.layout')
 
+@section('page-title') Event Catering Menus @endsection
+
 @section('body-classes')
     dark padding
 @endsection
 
 @section('content')
-    {{--
-    <div class="menu-item-image hidden-sm hidden-xs">
-    </div>
-    --}}
 
     <section class="menu">
         <div class="container-fluid menu-container">
@@ -57,16 +55,8 @@
                         @foreach($menu->meals()->orderBy('sorting_order', 'ASC')->get() as $meal)
                             @if(!$meal->category_id)
                                 <div class="col-xs-12 {{ $meal->is_full_width ? '' : 'col-sm-6 col-md-4' }} m-grid-item">
-                                    {{-- <a href="#" class="menu-item update-menu-item-image @if(!$meal->image) no-image @endif" data-image="{{ $meal->image }}"> --}}
                                     <a href="#" class="menu-item update-menu-item-image no-image" onClick="return false;">
-                                        {{--
-                                        @if($meal->image)
-                                            <i class="menu-item--has-image fa fa-image"></i>
-                                        @endif
-                                        --}}
                                         <h3 style="margin-bottom: 10px;">{{ $meal->name }} @if($meal->gluten_free) <span class="badge badge-default">GF</span> @endif @if($meal->vegetarian) <span class="badge badge-default">V</span> @endif</h3>
-
-
                                         <p>{!! preg_replace('/\*\*(.+?)\*\*/s', '<strong>$1</strong>', nl2br(e($meal->description))) !!}</p>
                                     </a>
                                 </div>
@@ -103,11 +93,6 @@
             <div class="menu-preview-content-container">
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-                {{--
-                <h1 class="menu-preview-title">
-                    {{ $menu->name }}
-                </h1>
-                --}}
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($menu->meals()->whereNotNull('image')->get() as $meal)
@@ -141,88 +126,6 @@
 @section('js')
 
     <script>
-        {{--
-        // $(function(){
-        //
-        //     if($("[data-image!=''][data-image]").length) {
-        //         var firstItem = $($("[data-image!=''][data-image]")[0]),
-        //             imageUrl = firstItem.data('image');
-        //
-        //         firstItem.addClass('active');
-        //         $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
-        //     }
-        //
-        //
-        // });
-        //
-        //
-        // var totalHeightCached;
-        // var totalImageWidth;
-        //
-        // $(function(){
-        //
-        //     var firstItem = $($('.menu-item')[0]);
-        //     $('.menu-item-image').css('top', firstItem.offset().top + 'px');
-        //     $('.menu-item-image').css('width', $('.menu-item-image-width-holder').width() + 'px');
-        //
-        //     //
-        //     // var buttonContainerHeight = $('.menu-button-container').height() + 20;
-        //     // var menuHeaderHeight = $('.menu-header').height() + 50;
-        //     // var categoryTitleHeight = 70;
-        //     // var totalHeight = menuHeaderHeight + categoryTitleHeight + buttonContainerHeight;
-        //     // totalHeightCached = totalHeight;
-        //     //
-        //     // //$('.menu-item-image').css('top', totalHeight + 'px');
-        //     // totalImageWidth = $('.menu-item-image').width();
-        // });
-        //
-        // $(window).scroll(function() {
-        //
-        //     var offsiteHeight = 96;
-        //     var heightOfBottom = $('.bottom-of-menu').offset().top;
-        //     var firstItem = $($('.menu-item')[0]);
-        //     var heightOfFirstItem = firstItem.offset().top;
-        //     var heightOfScroll = $(window).scrollTop() + offsiteHeight;
-        //     var heightOfImageBottom = $('.menu-item-image').offset().top + $('.menu-item-image').height();
-        //
-        //     if(heightOfFirstItem <= heightOfScroll) {
-        //
-        //         $('.menu-item-image').css({
-        //             position: 'fixed',
-        //             top: offsiteHeight + 'px'
-        //         });
-        //
-        //     }
-        //     else {
-        //         $('.menu-item-image').css({
-        //             position: 'absolute',
-        //             top: heightOfFirstItem + 'px'
-        //         });
-        //     }
-        // });
-        //
-        // $(window).resize(function(){
-        //     $('.menu-item-image').width( $('.menu-item-image-width-holder').width() + 'px' );
-        // });
-        //
-        //
-        // $('.update-menu-item-image').click(function(e){
-        //
-        //     var $this = $(this),
-        //         imageUrl = $this.data('image');
-        //
-        //     if($this.hasClass('no-image')) {
-        //         return false;
-        //     }
-        //
-        //     $('.update-menu-item-image').removeClass('active');
-        //
-        //     $this.addClass('active');
-        //
-        //     $('.menu-item-image').css('background-image', 'url(' + imageUrl + ')');
-        //     e.preventDefault();
-        // });
-        --}}
 
         $('.coming-soon').click(function() {
             return false;

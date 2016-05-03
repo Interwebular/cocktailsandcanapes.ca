@@ -1,5 +1,7 @@
 @extends('website.layout')
 
+@section('page-title') Contact Us @endsection
+
 @section('body-classes')
 padding dark
 @endsection

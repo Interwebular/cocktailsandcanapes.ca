@@ -1,5 +1,7 @@
 @extends('website.layout')
 
+@section('page-title') Catering Image Gallery @endsection
+
 @section('body-classes')
 padding dark
 @endsection

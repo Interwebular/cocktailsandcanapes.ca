@@ -1,5 +1,7 @@
 @extends('website.layout')
 
+@section('page-title') Submit your venue @endsection
+
 @section('body-classes')
 padding dark
 @endsection
