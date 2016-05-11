@@ -72,7 +72,7 @@ class VenueController extends Controller {
             $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
             $imageUri = $prefix . 'venues/'.$venue->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
             \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
-            $venue->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $venue->image = 'https://s3.amazonaws.com/cdn.cocktailsandcanapes.ca/' . $imageUri;
             $venue->save();
         }
 
@@ -132,7 +132,7 @@ class VenueController extends Controller {
             $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
             $imageUri = $prefix . 'venues/'.$venue->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
             \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
-            $venue->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $venue->image = 'https://s3.amazonaws.com/cdn.cocktailsandcanapes.ca/' . $imageUri;
             $venue->save();
         }
 

@@ -49,7 +49,7 @@ class GalleryController extends Controller {
             $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
             $imageUri = $prefix . 'gallery/'.$image->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
             \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
-            $image->url = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $image->url = 'https://s3.amazonaws.com/cdn.cocktailsandcanapes.ca/' . $imageUri;
             $image->save();
 
             return redirect()->route('admin.gallery.index')->with('success', 'Image Uploaded');

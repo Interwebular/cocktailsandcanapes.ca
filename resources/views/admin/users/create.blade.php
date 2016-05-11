@@ -33,6 +33,11 @@
 								<input id="email" name="email" type="email" class="form-control" value="{{ old('email') }}" />
 							</div>
 
+							<p>
+								The new user will be able to login with the password 'changeme'<br/>
+								It is advised that the new user changes their password right away.
+							</p>
+
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-right">Create</button>
 							</div>

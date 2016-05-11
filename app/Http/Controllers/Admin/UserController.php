@@ -42,15 +42,38 @@ class UserController extends Controller {
             'email' => 'required|email|max:64|unique:users,email'
         ]);
 
-        $password = str_random(8);
-
         $user = new \App\User;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = bcrypt($password);
+        $user->password = bcrypt('changeme');
         $user->save();
 
-
         return redirect()->route('admin.users.index')->with('success', 'User Created');
+    }
+
+    public function me(Request $request) {
+        return view('admin.users.me', [
+            'user' => $request->user()
+        ]);
+    }
+
+    public function postMe(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|max:64',
+            'email' => 'required|email|max:64|unique:users,email,'.$request->user()->id,
+            'password' => 'min:8|confirmed'
+        ]);
+
+        $user = $request->user();
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if($request->password)
+            $user->password = bcrypt($request->password);
+
+        $user->save();
+
+        return redirect()->back()->with('success', 'Saved');
     }
 }

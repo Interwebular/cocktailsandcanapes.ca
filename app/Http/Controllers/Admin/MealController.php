@@ -68,7 +68,7 @@ class MealController extends Controller {
             $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
             $imageUri = $prefix . 'meals/'.$meal->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
             \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
-            $meal->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $meal->image = 'https://s3.amazonaws.com/cdn.cocktailsandcanapes.ca/' . $imageUri;
             $meal->save();
         }
 
@@ -118,7 +118,7 @@ class MealController extends Controller {
             $prefix = app()->environment() === 'production' ? 'production/' : env('APP_ENV') . '/' . env('S3_ID') . '/';
             $imageUri = $prefix . 'meals/'.$meal->id.'/'.\Carbon\Carbon::now()->timestamp.'.'.$request->file('image')->getClientOriginalExtension();
             \Storage::put($imageUri,file_get_contents($request->file('image')->getRealPath()));
-            $meal->image = 'http://cdn.cocktailsandcanapes.ca.s3.amazonaws.com/' . $imageUri;
+            $meal->image = 'https://s3.amazonaws.com/cdn.cocktailsandcanapes.ca/' . $imageUri;
             $meal->save();
         }
 

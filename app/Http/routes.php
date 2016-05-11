@@ -13,6 +13,9 @@ Route::group([
     Route::get('users/create', ['as' => 'admin.users.create', 'uses' => 'UserController@create']);
     Route::post('users/create', ['as' => 'admin.users.store', 'uses' => 'UserController@store']);
 
+    Route::get('me', ['as' => 'admin.users.me', 'uses' => 'UserController@me']);
+    Route::post('me', ['as' => 'admin.users.me.post', 'uses' => 'UserController@postMe']);
+
     // Menus -- MenuController
     Route::get('menus', ['as' => 'admin.menus.index', 'uses' => 'MenuController@index']);
     Route::get('menus/create', ['as' => 'admin.menus.create', 'uses' => 'MenuController@create']);
