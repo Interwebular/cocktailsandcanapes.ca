@@ -10,12 +10,15 @@ padding dark
 
 @section('content')
 
-    <section class="section-panel section-white section-fluid-height">
+    <section class="section-panel section-white section-fluid-height" @if($post->image) style="padding-top: 0" @endif>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-10 col-md-offset-1">
 
                     <div class="blog-post single">
+                        @if($post->image)
+                            <div class="image" style="background:url({{ $post->image }})"></div>
+                        @endif
                         <a href="{{ route('blog.post', $post->slug) }}" class="title">{{ $post->title }}</a>
                         <div class="meta">
                             Posted by {{ $post->user->name }} {{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }}
@@ -46,8 +49,9 @@ padding dark
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                 </div>
-                <div class="col-md-4">
-                    <h3>Recent Posts</h3>
+                <div class="col-md-10 col-md-offset-1">
+                    <hr />
+                    <h3>Read More</h3>
                     @foreach($recentPosts as $post)
                         <a href="{{ route('blog.post', $post->slug) }}">{{ $post->title }}</a> <br>
                     @endforeach

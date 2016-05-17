@@ -24,6 +24,9 @@ padding dark
                 <div class="col-md-8">
                     @foreach($posts as $post)
                         <div class="blog-post">
+                            @if($post->image)
+                                <div class="image image-sm" style="background:url({{ $post->image }})"></div>
+                            @endif
                             <a href="{{ route('blog.post', $post->slug) }}" class="title">{{ $post->title }}</a>
                             <div class="meta">
                                 Posted by {{ $post->user->name }} {{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }}
