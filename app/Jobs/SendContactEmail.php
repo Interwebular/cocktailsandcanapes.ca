@@ -39,11 +39,11 @@ class SendContactEmail extends Job implements ShouldQueue
         $email = $this->email;
 
         Mail::raw($this->message, function ($m) use ($email, $name) {
-            if(env('APP_ENV') === 'production') {
-                $m->to('info@cocktailsandcanapes.ca', 'Cocktails And Canapes Info');
+            if(env('APP_ENV') == 'local') {
+                $m->to('brant@interwebular.net', 'Debug - Cocktails And Canapes');
             }
             else {
-                $m->to('brant@interwebular.net', 'Debug - Cocktails And Canapes');
+                $m->to('info@cocktailsandcanapes.ca', 'Cocktails And Canapes Info');
             }
 
             $m->subject('Website Form Submission');
