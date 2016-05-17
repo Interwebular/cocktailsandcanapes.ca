@@ -17,7 +17,7 @@ padding dark
 
                     <div class="blog-post single">
                         @if($post->image)
-                            <div class="image" style="background:url({{ $post->image }})"></div>
+                            <div class="image" style="background-image:url({{ $post->image }})"></div>
                         @endif
                         <a href="{{ route('blog.post', $post->slug) }}" class="title">{{ $post->title }}</a>
                         <div class="meta">

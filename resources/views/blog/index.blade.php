@@ -25,7 +25,7 @@ padding dark
                     @foreach($posts as $post)
                         <div class="blog-post">
                             @if($post->image)
-                                <div class="image image-sm" style="background:url({{ $post->image }})"></div>
+                                <div class="image image-sm" style="background-image:url({{ $post->image }})"></div>
                             @endif
                             <a href="{{ route('blog.post', $post->slug) }}" class="title">{{ $post->title }}</a>
                             <div class="meta">
