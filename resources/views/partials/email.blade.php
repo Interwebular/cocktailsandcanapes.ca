@@ -19,7 +19,7 @@
           link += (key.charAt(ltr))
         }
       }
-    document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+    document.write("<a onclick='javascript:sendEmailEvent();' href='mailto:"+link+"'>"+link+"</a>")
     }
     //-->
     </script><noscript>[Please enable javascript to see our email address, or <a href="{{ route('contact.index') }}">click here</a> to contact]</noscript>
@@ -44,7 +44,7 @@
           link += (key.charAt(ltr))
         }
       }
-    document.write("<a href='mailto:"+link+"'><i class=\"fa fa-envelope\"></i></a>")
+    document.write("<a onclick='javascript:sendEmailEvent();' href='mailto:"+link+"'><i class=\"fa fa-envelope\"></i></a>")
     }
     //-->
     </script><noscript>[Please enable javascript to see our email address, or <a href="{{ route('contact.index') }}">click here</a> to contact]</noscript>
@@ -70,7 +70,7 @@
           link += (key.charAt(ltr))
         }
       }
-    document.write("<a href='mailto:"+link+"'>Request A Quote</a>")
+    document.write("<a onclick='javascript:sendEmailEvent();' href='mailto:"+link+"'>Request A Quote</a>")
     }
     //-->
     </script><noscript>[Please enable javascript to see our email address, or <a href="{{ route('contact.index') }}">click here</a> to contact]</noscript>
