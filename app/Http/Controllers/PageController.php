@@ -98,4 +98,8 @@ class PageController extends Controller
     public function privacy() {
         return view('website.privacy');
     }
+
+    public function DeightonCup() {
+        return view('website.deightoncup');
+    }
 }

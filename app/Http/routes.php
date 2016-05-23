@@ -105,4 +105,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('gallery', ['as' => 'gallery.index', 'uses' => 'PageController@gallery']);
     Route::get('privacy-policy', ['as' => 'legal.pp', 'uses' => 'PageController@privacy']);
     Route::get('disclaimer', ['as' => 'legal.disclaimer', 'uses' => 'PageController@disclaimer']);
+
+    Route::get('deightoncup', 'PageController@DeightonCup');
 });
