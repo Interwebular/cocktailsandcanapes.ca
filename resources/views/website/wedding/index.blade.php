@@ -192,7 +192,7 @@ dark
                   {!! Recaptcha::render() !!}
               </div>
               <div class="form-group">
-                  <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
+                  <button type="submit" onclick='javascript:sendEmailEvent();' class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
                   <div class="clearfix"></div>
               </div>
           </form>

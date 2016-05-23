@@ -68,7 +68,7 @@ padding dark
                             {!! Recaptcha::render() !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right dark">Submit</button>
+                            <button type="submit" onclick='javascript:sendEmailEvent();' class="submit-btn btn btn-primary btn-lg pull-right dark">Submit</button>
                         </div>
                     </form>
                 </div>
