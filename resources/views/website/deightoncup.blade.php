@@ -8,167 +8,104 @@ dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url(http://deightoncup.com/images/img3.jpg); display:block;"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/deighton/bg.jpg') }}); display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
         <div class="content-center">
+            <img src="{{ asset('img/deighton/deighton-cup-white.png') }}" style="width:150px;display:inline-block;margin-bottom:30px;" />
+
             <h1 class="wedding-title">
-                <small>The official catering company of 8th annual</small><br>
-                DEIGHTON CUP
+                The official catering company of 8th annual <b>DEIGHTON CUP</b>
             </h1>
-        </div>
-    </section>
 
-
-    <section class="section-panel section-white section-fluid-height padding">
-        <div class="content-center">
-
-            <h1 class="wedding-title alt">
-                Write Up 1
-            </h1>
-            <div class="spacer"></div>
-            <p class="default">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-
-            <div class="wedding-button-group alt">
-                <a href="#request-a-tasting">Call To Action</a>
+            <div class="spacer" style="background: #fff;"></div>
+            <div class="clients">
+                    <div class="client" style="color: #fff;">
+                        <div class="quote quote__justified">
+                            This year, East meets West in the Deighton Cup's menu. The event’s traditional Deep South-inspired food program will incorporate subtle and fiery Pacific Rim flavours for a tantalizing array of complimentary and à la carte creations that embody both the Deighton Cup’s heritage and the spirit of the West Coast.
+                        </div>
+                    </div>
             </div>
-
         </div>
     </section>
 
-    <section class="section-panel section-dark section-fluid-height padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Main Lunch <small>Complimentary With Ticket Purchase</small></h1>
-                    <div class="spacer" style="background-color: #fff; margin: 50px auto;"></div>
-                    <div class="menu-v2 row">
 
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="skinny">Smoked Bo Ssam Beef Brisket Sandwich</h2>
-                            <p>
-                                Texas Style '63 Acres' Smoked Beef Brisket, Pickled Zucchini, Black Kale, Sesame Ginger BBQ Glaze, Ssam Sauce on a Crusty Bap Bun
-                                <br><br>
+
+    <section class="section-panel panel-75  hidden-xs hidden-sm">
+        <div class="menu-preview-content-container">
+            <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
+            <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
+            <h1 class="menu-preview-title">
+                Main Lunch
+                <small>Complimentary With Ticket Purchase</small>
+            </h1>
+            <div class="menu-preview-content">
+                <div class="menu-content-preview-slider menu-content-preview-slider-2">
+                    <div>
+                        <h1>Smoked Bo Ssam Beef Brisket Sandwich</h1>
+                        <p>
+                            Texas Style '63 Acres' Smoked Beef Brisket, Pickled Zucchini, Black Kale, Sesame Ginger BBQ Glaze, Ssam Sauce on a Crusty Bap Bun
+                            <br><br>
+                            <small>
                                 Comes with Vietnamese Style Slaw and Confit Pemberton Potato Salad
-                            </p>
-
-                            <h1 class="text-center" style="padding: 30px 0;">- OR -</h1>
-                            <h2 class="skinny">Korean BBQ Shrimp on Grits</h2>
-                            <p>
-                                Korean BBQ 'Oceanwise' Shrimp, White Corn Grits, Sunflower Sprout Salad, Fried Onions, Red Chilies, Green Onion
-                            </p>
-
-                        </div>
+                            </small>
+                        </p>
                     </div>
 
-
-
+                    <div>
+                        <h1>Korean BBQ Shrimp on Grits</h1>
+                        <p>
+                            Korean BBQ 'Oceanwise' Shrimp, White Corn Grits, Sunflower Sprout Salad, Fried Onions, Red Chilies, Green Onion
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="menu-preview-image-container">
+            <div class="menu-image-preview-slider menu-image-preview-slider-2">
+                <div style="background-image:url({{ asset('img/deighton/brisket.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/shrimps.jpg') }})"></div>
             </div>
         </div>
     </section>
 
-    <section class="section-panel section-white section-fluid-height padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Stations <small>$7</small></h1>
-                    <div class="spacer" style="margin: 50px auto;"></div>
-                    <div class="menu-v2 row">
-
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="skinny" style="margin: 30px 0 10px 0;">Pickled French Fry Cone</h2>
-                            <p>
-                                Pickled Russet Potatoes, Sriracha Mayo, 5 Spice Hoi Sin, Green Onion, Fried Shallots, Green Onion & Garlic Sauce, Sesame seeds
-                            </p>
-
-                            <h2 class="skinny" style="margin: 30px 0 10px 0;">Popcorn Chicken Cones</h2>
-                            <p>
-                                Juicy Fried Buttermilk Chicken, Ginger-Sweet Soy Sauce, Fresh Watermelon
-                            </p>
-
-                            <h2 class="skinny" style="margin: 30px 0 10px 0;">Fried Chicken Waffle Taco</h2>
-                            <p>
-                                Buttermilk Waffle, Fried Chicken, Maple Mayonnaise, Maple Syrup, Vietnamese Slaw
-                            </p>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
+    <section class="section-panel panel-75 hidden-xs hidden-sm">
+        <div class="menu-preview-image-container">
+            <div class="menu-image-preview-slider menu-image-preview-slider-1">
+                <div style="background-image:url({{ asset('img/deighton/fries.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/popcorn.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/waffle.jpg') }})"></div>
             </div>
         </div>
-    </section>
+        <div class="menu-preview-content-container">
+            <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
+            <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
 
-    <section class="section-panel section-dark section-fluid-height padding">
-        <div class="content-center">
-
-            <h1 class="wedding-title" style="text-shadow: none;">
-                Write Up 2
+            <h1 class="menu-preview-title">
+                Stations
+                <small>$7</small>
             </h1>
-            <div class="spacer"></div>
-            <p class="default">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
 
-            <div class="cta-wrapper">
-                <a class="cta" href="#" data-toggle="modal" data-target="#tastingModal">Call To Action</a>
+            <div class="menu-preview-content">
+                <div class="menu-content-preview-slider menu-content-preview-slider-1">
+                    <div>
+                        <h1>Pickled French Fry Cone</h1>
+                        <p>Pickled Russet Potatoes, Sriracha Mayo, 5 Spice Hoi Sin, Green Onion, Fried Shallots, Green Onion & Garlic Sauce, Sesame seeds</p>
+                    </div>
+                    <div>
+                        <h1>Popcorn Chicken Cones</h1>
+                        <p>Juicy Fried Buttermilk Chicken, Ginger-Sweet Soy Sauce, Fresh Watermelon</p>
+                    </div>
+                    <div>
+                        <h1>Fried Chicken Waffle Taco</h1>
+                        <p>Buttermilk Waffle, Fried Chicken, Maple Mayonnaise, Maple Syrup, Vietnamese Slaw</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-
-
-
-
-{{-- <div class="modal fade" id="tastingModal" tabindex="-1" role="dialog" aria-labelledby="tastingModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="tastingModalLabel">Request A Tasting</h4>
-      </div>
-      <div class="modal-body">
-            <p class="default" style="font-size: 1em;">
-                Having trouble deciding which menu items to serve for your special day?
-                <br><br>
-                The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $175 for up to four people. Additional $55.00 per Person, for extra guests. Tasting fee is full refunded upon booking with us, which we are certain you will!
-            </p>
-          <form action="{{ route('contact.submit') }}" method="POST">
-              {{ csrf_field() }}
-              <div class="form-group">
-                  <label for="name">Name *</label>
-                  <input type="text" id="name" name="name" class="form-control input-lg" value="{{ old('name') }}" />
-              </div>
-              <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" class="form-control input-lg" value="{{ old('email') }}" />
-              </div>
-              <div class="form-group">
-                  <label for="phone_number">Phone Number *</label>
-                  <input type="text" id="phone_number" name="phone_number" class="form-control input-lg" value="{{ old('phone_number') }}" />
-              </div>
-              <div class="form-group">
-                  <label for="message">Message *</label>
-                  <textarea name="message" id="message" class="form-control input-lg">{{ old('message') }}</textarea>
-              </div>
-              <div class="form-group">
-                  {!! Recaptcha::render() !!}
-              </div>
-              <div class="form-group">
-                  <button type="submit" class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
-                  <div class="clearfix"></div>
-              </div>
-          </form>
-
-      </div>
-    </div>
-  </div>
-</div> --}}
 
 
 @endsection
