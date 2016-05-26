@@ -31,7 +31,7 @@ dark
 
 
 
-    <section class="section-panel panel-75  hidden-xs hidden-sm">
+    <section class="section-panel">
         <div class="menu-preview-content-container">
             <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
             <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
