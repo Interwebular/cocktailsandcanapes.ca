@@ -33,8 +33,8 @@ dark
 
     <section class="section-panel">
         <div class="menu-preview-content-container">
-            <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
-            <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
+            <button class="left left-2 hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
+            <button class="right right-2 hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
             {{-- <h1 class="menu-preview-title">
                 Main Lunch
                 <small>Complimentary With Ticket Purchase</small>
