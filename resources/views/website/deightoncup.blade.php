@@ -35,10 +35,10 @@ dark
         <div class="menu-preview-content-container">
             <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
             <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-            <h1 class="menu-preview-title">
+            {{-- <h1 class="menu-preview-title">
                 Main Lunch
                 <small>Complimentary With Ticket Purchase</small>
-            </h1>
+            </h1> --}}
             <div class="menu-preview-content">
                 <div class="menu-content-preview-slider menu-content-preview-slider-2">
                     <div>
@@ -58,6 +58,19 @@ dark
                             Korean BBQ 'Oceanwise' Shrimp, White Corn Grits, Sunflower Sprout Salad, Fried Onions, Red Chilies, Green Onion
                         </p>
                     </div>
+
+                    <div>
+                        <h1>Pickled French Fry Cone</h1>
+                        <p>Pickled Russet Potatoes, Sriracha Mayo, 5 Spice Hoi Sin, Green Onion, Fried Shallots, Green Onion & Garlic Sauce, Sesame seeds</p>
+                    </div>
+                    <div>
+                        <h1>Popcorn Chicken Cones</h1>
+                        <p>Juicy Fried Buttermilk Chicken, Ginger-Sweet Soy Sauce, Fresh Watermelon</p>
+                    </div>
+                    <div>
+                        <h1>Fried Chicken Waffle Taco</h1>
+                        <p>Buttermilk Waffle, Fried Chicken, Maple Mayonnaise, Maple Syrup, Vietnamese Slaw</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,11 +78,14 @@ dark
             <div class="menu-image-preview-slider menu-image-preview-slider-2">
                 <div style="background-image:url({{ asset('img/deighton/brisket.jpg') }})"></div>
                 <div style="background-image:url({{ asset('img/deighton/shrimps.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/fries.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/popcorn.jpg') }})"></div>
+                <div style="background-image:url({{ asset('img/deighton/waffle.jpg') }})"></div>
             </div>
         </div>
     </section>
 
-    <section class="section-panel panel-75 hidden-xs hidden-sm">
+    {{-- <section class="section-panel panel-75 hidden-xs hidden-sm">
         <div class="menu-preview-image-container">
             <div class="menu-image-preview-slider menu-image-preview-slider-1">
                 <div style="background-image:url({{ asset('img/deighton/fries.jpg') }})"></div>
@@ -104,7 +120,7 @@ dark
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
 
 
