@@ -107,4 +107,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('disclaimer', ['as' => 'legal.disclaimer', 'uses' => 'PageController@disclaimer']);
 
     Route::get('deightoncup', 'PageController@DeightonCup');
+
+    Route::get('landing/wedding-catering', 'LandingController@wedding');
+    Route::get('landing/corporate-event-catering', 'LandingController@events');
+    Route::get('landing/lunch-catering', 'LandingController@lunch');
 });
