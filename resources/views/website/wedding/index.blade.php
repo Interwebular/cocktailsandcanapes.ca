@@ -4,7 +4,8 @@
 dark
 @endsection
 
-@section('page-title') Wedding Catering Menu @endsection
+@section('meta-description') Our Vancouver based company is experienced in wedding catering.  Whether you are looking to have a wedding, large or small, our team will have your special day covered. @endsection
+@section('page-title') Vancouver Wedding Catering Company | Cocktails & Canapes @endsection
 
 @section('content')
 

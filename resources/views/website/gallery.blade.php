@@ -1,6 +1,7 @@
 @extends('website.layout')
 
-@section('page-title') Catering Image Gallery @endsection
+@section('meta-description') A look into our past events! Our catering image gallery showcases a number of Cocktails & Canapes most popular dishes. Canapes, fine plated dinners and cocktails are showcased. @endsection
+@section('page-title') Catering Image Gallery | Cocktails & Canapes Vancouver @endsection
 
 @section('body-classes')
 padding dark

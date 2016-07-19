@@ -4,9 +4,8 @@
 dark padding
 @endsection
 
-@section('page-title') Venues @endsection
-@section('meta-description') Description @endsection
-@section('meta-keywords') Keywords @endsection
+@section('meta-description') We have partnered with some of the best event spaces in Vancouver, Squamish and beyond. The team at Cocktails & Canapes strives to ensure that you find the perfect venue for your event. @endsection
+@section('page-title') Vancouver Event Spaces | Cocktails & Canapes Catering @endsection
 
 @section('content')
 

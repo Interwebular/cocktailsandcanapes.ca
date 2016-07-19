@@ -1,5 +1,8 @@
 @extends('website.layout')
 
+@section('meta-description') Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails & Canapes Event Planning and Catering Company in Vancouver and beyond has you covered. @endsection
+@section('page-title') Cocktails & Canapes | Event and Catering Company Vancouver @endsection
+
 @section('content')
 
     {{--

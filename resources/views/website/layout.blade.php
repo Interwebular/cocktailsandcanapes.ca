@@ -36,7 +36,6 @@
         <!-- SEO meta -->
         <meta name="application-name" content="Cocktails And Canapes">
         <meta name="description" content="@yield('meta-description', 'Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails and Canapes has you covered.')">
-        <meta name="keywords" content="@yield('meta-keywords', 'catering, vancouver caterer, vancouver catering company, cocktails, canapes, wedding canapes, wedding cocktails, wedding venues')">
         <meta property="og:site_name" content="Cocktails And Canapes"/>
         <meta property="og:title" content="@yield('page-title', 'Cocktails And Canapes')"/>
         <meta property="og:description" content="@yield('meta-description', 'Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails and Canapes has you covered.')">
