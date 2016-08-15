@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msvalidate.01" content="5F513BE61DDE8E4D534175AD6B6397B7" />
-        <title>@yield('page-title', 'Welcome') | Cocktails &amp; Canapes</title>
+        <title>@yield('page-title', 'Welcome')</title>
         <script src="https://use.typekit.net/ahl2ncy.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
