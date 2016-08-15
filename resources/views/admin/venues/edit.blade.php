@@ -74,7 +74,10 @@
                             <div class="form-group">
                                 <label for="description">Description</label>
                                 <textarea id="description" name="description" type="text" class="form-control">{{ old('description') ? old('description') : $venue->description }}</textarea>
-                            </div>
+								<p class="help-block">
+									[url=http://someurl.com/something]Check this out![/url]
+								</p>
+							</div>
 
 							<div class="form-group">
 								<label for="is_featured">Featured?</label>

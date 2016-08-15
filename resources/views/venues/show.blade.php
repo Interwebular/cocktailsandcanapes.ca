@@ -27,7 +27,7 @@
                             @endif
                             <p class="venue-description">
                                 @if($venue->description && $venue->description != '-')
-                                    {!! nl2br(e($venue->description)) !!}
+                                    {!! nl2br(preg_replace('/\[url=(.+?)\](.+?)\[\/url\]/', '<a href="\1">\2</a>', e($venue->description))) !!}
                                 @endif
                             </p>
 
