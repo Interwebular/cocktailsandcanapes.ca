@@ -23,7 +23,7 @@ class PageController extends Controller
         else
             $dinners = null;
 
-        return view('website.wedding.index', [
+        return view('website.wedding', [
             'dinners' => $dinners,
             'venues' => \App\Venue::where('is_featured', 1)->take(6)->orderBy('sorting_order', 'ASC')->get()
         ]);
@@ -36,6 +36,34 @@ class PageController extends Controller
     */
     public function contact() {
         return view('website.contact');
+    }
+
+    /**
+    *   Show the event page
+    *
+    *   @return View
+    */
+    public function events() {
+        return view('website.events');
+    }
+
+
+    /**
+    *   Show the services
+    *
+    *   @return View
+    */
+    public function services() {
+        $dinners = \App\Menu::where('slug', 'plated-dinner-fine')->first();
+
+        if($dinners)
+            $dinners = $dinners->meals()->whereNotNull('image')->take(6)->get();
+        else
+            $dinners = null;
+
+        return view('website.services', [
+            'dinners' => $dinners
+        ]);
     }
 
     /**

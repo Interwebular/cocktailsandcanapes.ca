@@ -1,6 +1,6 @@
 @extends('website.layout')
 
-@section('page-title') Tasting is Free! - Vancouver Corporate Event Catering @endsection
+@section('page-title') Vancouver Corporate Event Catering @endsection
 
 @section('body-classes')
 padding dark
@@ -8,7 +8,7 @@ padding dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url({{ asset('img/landing/corpbg.jpg') }})"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/landing/lunch.jpg') }})"></div>
     <section class="section-panel section-fluid-height" style="padding-top: 20px">
         <div class="container">
             <div class="row">
@@ -18,18 +18,28 @@ padding dark
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <p class="default" style="color:#fff;padding: 0 15px;">
-                    The tasting allows you to view how items will be plated and served for your team to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $175 for up to four people. Additional $55.00 per Person, for extra guests.
-                    <strong>Tasting fee is fully refunded upon booking with us, which we are certain you will!</strong>
+                    We really shine when catering Corporate Events because we genuinely get excited by
+                    the experiences we create with our clients. They have ideas, and we know how to
+                    facilitate those ideas with the best one-stop-shop catering services.  
+
+                    {{-- Here’s just a few of
+                    our notable corporate events and clients to date. --}}
                 </p>
 
-                <div style="text-align:center;">
+                {{-- <div style="text-align:center;">
                     <div class="cta-wrapper">
                         <a class="cta" href="{{ route('menus.show') }}">Menu</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6" style="background: #fff;padding-top: 15px; padding-bottom: 15px;">
                 <h4>Book your corporate event now</h4>
+                <p class="help-block">
+You have ideas! Let’s talk about them. Every single event we’ve catered has always
+been unique in its own special way! No two clients are alike, that’s why we can
+customize anything according to your specific needs. Let’s talk about your unique
+concept event experience.
+                </p>
                 @if(count($errors) > 0)
                     <div class="alert alert-danger">
                         <ul>

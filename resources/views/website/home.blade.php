@@ -17,7 +17,8 @@
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
-            <h1 class="alt">A Distinct Culinary Experience</h1>
+            <h1 class="alt">Vancouver's Best Catering Company</h1>
+            {{-- <h1 class="alt">A Distinct Culinary Experience</h1> --}}
             {{-- <img src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
             <br />
             <br />
@@ -30,13 +31,19 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1 class="skinny">A Distinct Culinary Experience</h1>
+            <h1 class="skinny">Cocktails &amp; Canapes is the only catering company with the primary mission to make your event truly unforgettable!</h1>
             <div class="spacer"></div>
             <p class="default">
-                We are a one-stop shop for all of your catering and event planning needs.
-                Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, we have you covered.
-                From unique interpretations of classic dishes and skilfully prepared craft cocktails to memorable venues.
-                Cocktails &amp; Canapés creates a distinctive culinary experience that leaves guests buzzing.
+                Here's why: We dish it up in style! We love creating beautiful-looking appetizers that
+                also taste amazing from local harvest fresh and seasonal.
+                We specialize in Craft cocktails, custom menus, buffets, and chef-served food stations.
+                Catering to all dietary tastes and needs including vegan, gluten-free, celiac and
+                <em>'meatatarians'</em>
+                <br><br>
+                Conceptualized themed large or small scale weddings, cocktail soirees, Christmas
+                parties, corporate parties, and Grandma's 90th birthday. You get the idea; we take care
+                of every detail. Set the stage for a distinctive social experience that will make your
+                event the best buzz in town- seriously. Let’s chat!
             </p>
 
             <div class="cta-wrapper">

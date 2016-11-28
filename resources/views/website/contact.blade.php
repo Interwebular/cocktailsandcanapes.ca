@@ -27,7 +27,10 @@ padding dark
                 <div class="col-md-8">
 
                     <p class="help-block">
-                        Please call us at 604.424.8788, or complete the form below.
+                        You have ideas! Let’s talk about them. Every single event we’ve catered has always
+                        been unique in its own special way! No two clients are alike, that’s why we can
+                        customize anything according to your specific needs. Let’s talk about your unique
+                        concept event experience.
                     </p>
                     <hr>
 
