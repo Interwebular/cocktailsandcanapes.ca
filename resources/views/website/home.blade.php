@@ -17,8 +17,7 @@
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
-            <h1 class="alt">Vancouver's Best Catering Company</h1>
-            {{-- <h1 class="alt">A Distinct Culinary Experience</h1> --}}
+            <h1 class="alt">A Distinct Culinary Experience</h1>
             {{-- <img src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
             <br />
             <br />
