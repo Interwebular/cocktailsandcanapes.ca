@@ -85,6 +85,23 @@
                 ga('send', 'pageview');
             </script>
         @endif
+
+        @if(\Request::path() === 'event-catering-menus/breakfast' || \Request::path() === 'event-catering-menus/lunch')
+            <style>
+                body, .menu {
+                    background:#99ABAD !important;
+                }
+
+                .nav-logo {
+                    width: 125px;
+                }
+
+                nav.desktop.scrolled .nav-logo {
+                    width: 68px;
+                }
+            </style>
+        @endif
+
     </head>
     <body class="@yield('body-classes', '')">
 
@@ -107,7 +124,12 @@
         <nav class="desktop hidden-xs hidden-sm">
             <div class="nav-inner">
                 <a href="{{ url('/') }}">
-                    <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
+                    @if(\Request::path() === 'event-catering-menus/breakfast' || \Request::path() === 'event-catering-menus/lunch')
+                        <img class="nav-logo" src="{{ asset('img/eds-logo.png') }}" alt="Eds Daily"/>
+                    @else
+                        <img class="nav-logo" src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
+                    @endif
+
                 </a>
                 <ul class="nav-items">
                     @include('layouts.partials.navitems')
