@@ -5,15 +5,15 @@
 
 @section('content')
 
-    {{--
-    <video autoplay loop muted poster="{{ asset('videos/intro.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro.png') }})">
-        <source src="{{ asset('videos/intro.webm') }}" type="video/webm">
-        <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
+
+    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
+        <source src="{{ asset('videos/intro_v2.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/intro_v2.mp4') }}" type="video/mp4">
     </video>
-    --}}
+
 
     {{-- <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div> --}}
-    <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div>
+    {{-- <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div> --}}
 
     <section class="section-panel panel-fullscreen panel-fixed">
         <div class="panel-content middle">
