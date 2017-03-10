@@ -189,12 +189,6 @@
             </div>
         </footer>
 
-        <div class="dt-branding">
-            <a href="http://droskiturner.com/" target="_blank" class="dt-logo">
-                <img src="{{ asset('img/droskiturner_logo.png') }}" class="img-responsive" alt="Droskiturner"/>
-            </a>
-        </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
