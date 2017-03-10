@@ -166,10 +166,9 @@ dark
       </div>
       <div class="modal-body">
             <p class="default" style="font-size: 1em;">
-                Having trouble deciding which menu items to serve for your special day?
-                <br><br>
-                The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $175 for up to four people. Additional $55.00 per Person, for extra guests. Tasting fee is full refunded upon booking with us, which we are certain you will!
-            </p>
+Having trouble deciding which menu items to serve for your special day? 
+<br><br>
+The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $200 for up to four people. The tasting fee is fully refunded upon booking with us, which we are certain you will!            </p>
           <form action="{{ route('contact.submit') }}" method="POST">
               {{ csrf_field() }}
               <div class="form-group">
