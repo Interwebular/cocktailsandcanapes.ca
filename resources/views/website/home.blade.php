@@ -7,8 +7,8 @@
 
 
     <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
-        <source src="{{ asset('videos/intro_v2.webm') }}" type="video/webm">
-        <source src="{{ asset('videos/intro_v2.mp4') }}" type="video/mp4">
+        <source src="{{ asset('videos/intro_v3.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/intro_v3.mp4') }}" type="video/mp4">
     </video>
 
 
@@ -30,19 +30,20 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1 class="skinny">Cocktails &amp; Canapes is the only catering company with the primary mission to make your event truly unforgettable!</h1>
+            <h1 class="skinny">
+            Through unique food and drink and unparalleled service, Cocktails &amp; Canapes' primary mission is to make your event truly unforgettable!
+            </h1>
             <div class="spacer"></div>
             <p class="default">
-                Here's why: We dish it up in style! We love creating beautiful-looking appetizers that
-                also taste amazing from local harvest fresh and seasonal.
-                We specialize in Craft cocktails, custom menus, buffets, and chef-served food stations.
-                Catering to all dietary tastes and needs including vegan, gluten-free, celiac and
-                <em>'meatatarians'</em>
+                Here's why: We dish it up in style! We only serve the most innovative and appealing dishes made from 
+                local fresh harvest and seasonal ingredients. We specialize in canapes, craft cocktails, custom menus, 
+                plated dinners, and chef-manned food stations. 
                 <br><br>
-                Conceptualized themed large or small scale weddings, cocktail soirees, Christmas
-                parties, corporate parties, and Grandma's 90th birthday. You get the idea; we take care
-                of every detail. Set the stage for a distinctive social experience that will make your
-                event the best buzz in town- seriously. Let’s chat!
+                Conceptualized themed large or small scale weddings, cocktail soirees, Christmas parties, corporate parties, 
+                and Grandma's 90th birthday. You get the idea; we take care of every detail. Set the stage for a distinctive 
+                social experience that will make your event the best buzz in town - seriously. 
+                <br><br>
+                Don’t worry, our teams got your back!
             </p>
 
             <div class="cta-wrapper">

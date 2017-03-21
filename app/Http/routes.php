@@ -22,6 +22,7 @@ Route::group([
     Route::post('menus/create', ['as' => 'admin.menus.store', 'uses' => 'MenuController@store']);
     Route::get('menus/{menu}/edit', ['as' => 'admin.menus.edit', 'uses' => 'MenuController@edit']);
     Route::put('menus/{menu}/edit', ['as' => 'admin.menus.save', 'uses' => 'MenuController@save']);
+    Route::delete('menus/{menu}', ['as' => 'admin.menu.delete', 'uses' => 'MenuController@delete']);
 
     // Menus -- MealController
     Route::get('menus/{menu}', ['as' => 'admin.menus.show', 'uses' => 'MenuController@show']);
@@ -92,8 +93,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);
 
-    Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
-    Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
+    // Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
+    // Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
 
     Route::get('vancouver-wedding-caterers', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);

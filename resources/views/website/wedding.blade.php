@@ -50,7 +50,7 @@ dark
                         {{ session('success') }}
                     </div>
                 @endif
-                <a href="{{ route('wedding.menus.show') }}">Wedding Menus</a>
+                <a href="{{ route('menus.show') }}">Wedding Menus</a>
                 <a href="#learn-more">Learn More</a>
                 <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>

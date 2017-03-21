@@ -61,5 +61,4 @@ class MenuController extends Controller
 
         return $pdf->stream();
     }
-
 }

@@ -112,4 +112,12 @@ class MenuController extends Controller {
 
         return redirect()->route('admin.menus.edit', [$menu])->with('success', 'Menu Saved');
     }
+
+    public function delete(Menu $menu) {
+
+        \DB::table('meals')->where('menu_id', $menu->id)->delete();
+        $menu->delete();
+
+        return redirect()->back()->with('success', 'Menu Deleted');
+    }
 }
