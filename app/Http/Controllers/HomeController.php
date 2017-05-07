@@ -32,7 +32,12 @@ class HomeController extends Controller
             $dinners = null;
 
         $images = \App\Image::all();
-        $images = $images->random(6);
+
+        if (!$images->isEmpty()) {
+            // if (!count($images) < 6) {
+                $images = $images->random(6);
+            // }
+        }
 
         return view('website.home', [
             'canapes' => $canapes,
