@@ -1,13 +1,15 @@
-$(window).scroll(function() {
-    var height = $(window).scrollTop();
 
-    if(height > 20) {
-        $('nav, .nav-background').addClass('scrolled');
-    }
-    else {
-        $('nav, .nav-background').removeClass('scrolled');
-    }
-});
+// 
+// $(window).scroll(function() {
+//     var height = $(window).scrollTop();
+
+//     if(height > 20) {
+//         $('nav, .nav-background').addClass('scrolled');
+//     }
+//     else {
+//         $('nav, .nav-background').removeClass('scrolled');
+//     }
+// });
 
 
 $('.menu-image-preview-slider-1').slick({

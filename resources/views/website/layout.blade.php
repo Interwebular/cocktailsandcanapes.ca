@@ -120,8 +120,8 @@
             <div class="clearfix"></div>
         </div>
 
-        <div class="nav-background"></div>
-        <nav class="desktop hidden-xs hidden-sm">
+        <div class="nav-background scrolled"></div>
+        <nav class="desktop hidden-xs hidden-sm scrolled">
             <div class="nav-inner">
                 <a href="{{ url('/') }}">
                     @if(\Request::path() === 'event-catering-menus/breakfast' || \Request::path() === 'event-catering-menus/lunch')
