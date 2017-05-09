@@ -21,7 +21,7 @@
             
             <img src="{{ asset('img/tasteofsummer2.png') }}" alt="Cocktails And Canapes"/>
 
-            <h1 class="alt" style="margin-top: 130px;">BOOK YOUR SUMMER BBQ NOW</h1>
+            <h1 class="alt" style="margin-top: 40px;">BOOK YOUR SUMMER BBQ NOW</h1>
 
             <div class="cta-wrapper">
                 <a class="cta" href="{{ route('menus.show') }}/bbq">BBQ Menu</a>
