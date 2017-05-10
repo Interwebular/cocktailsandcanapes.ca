@@ -42,7 +42,7 @@
         </div>
 
         <div class="side-content side-content--right">
-            <strong>Smoked<br />Tomoto</strong><br />
+            <strong>Smoked<br />Tomato</strong><br />
             Pasta Salad<br />
             Pg. 3.
         </div>
