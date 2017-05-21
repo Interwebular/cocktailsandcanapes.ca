@@ -43,6 +43,7 @@ class VenueController extends Controller
             'website' => 'url',
             'phonenumber' => '',
             'contact_name' => '',
+            'meta_title' => '',
             'description' => '',
             'rececption_count' => 'numeric',
             'dining_count' => 'numeric',
@@ -57,6 +58,7 @@ class VenueController extends Controller
         $venue->website = $request->website ? $request->website : 0;
         $venue->phonenumber = $request->phonenumber ? $request->phonenumber : 0;
         $venue->contact_name = $request->contact_name ? $request->contact_name : 0;
+        $venue->meta_title = $request->meta_title;
         $venue->description = $request->description ? $request->description : 0;
         $venue->rececption_count = $request->rececption_count ? $request->rececption_count : 0;
         $venue->dining_count = $request->dining_count ? $request->dining_count : 0;

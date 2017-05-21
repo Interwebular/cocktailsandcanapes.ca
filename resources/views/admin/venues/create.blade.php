@@ -63,6 +63,10 @@
 								<label for="dining_count">Dining Count</label>
                                 <input id="dining_count" name="dining_count" type="text" class="form-control" value="{{ old('dining_count') }}" />
 							</div>
+                            <div class="form-group">
+                                <label for="meta_title">Meta-Title</label>
+                                <input id="meta_title" name="meta_title" type="text" class="form-control" value="{{ old('meta_title') ? old('meta_title') : $venue->meta_title }}" />
+              </div>
 
                             <div class="form-group">
                                 <label for="description">Description</label>

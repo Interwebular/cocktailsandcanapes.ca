@@ -4,7 +4,7 @@
     dark padding
 @endsection
 
-@section('page-title'){{ $venue->name }} | Find The Perfect Venue | Cocktails And Canapes @endsection
+@section('page-title'){{ $venue->name }} | {{ $venue->meta_title }} | Cocktails And Canapes @endsection
 @section('meta-description'){{ preg_replace( "/\r|\n/", "", str_limit($venue->description, 155)) }}@endsection
 
 @section('content')
