@@ -6,25 +6,45 @@
 @section('content')
 
 
-    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
+    {{-- <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
         <source src="{{ asset('videos/intro_v3.webm') }}" type="video/webm">
         <source src="{{ asset('videos/intro_v3.mp4') }}" type="video/mp4">
-    </video>
+    </video> --}}
 
 
     {{-- <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div> --}}
     {{-- <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div> --}}
+    <div class="bgimage" style="background-image:url({{ asset('img/tasteofsummerbg.jpg') }})"></div>
 
     <section class="section-panel panel-fullscreen panel-fixed">
-        <div class="panel-content middle">
-            <h1 class="alt">A Distinct Culinary Experience</h1>
-            {{-- <img src="{{ asset('img/logo_full.png') }}" alt="Cocktails And Canapes"/>
-            <br />
-            <br />
-            <br /> --}}
+        <div class="panel-content upper">
+            
+            <img src="{{ asset('img/tasteofsummer2.png') }}" alt="Cocktails And Canapes"/>
+
+            <h1 class="alt" style="margin-top: 40px;">BOOK YOUR SUMMER BBQ NOW</h1>
+
             <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
+                <a class="cta" href="{{ route('menus.show') }}/bbq">BBQ Menu</a>
             </div>
+        </div>
+
+        <div class="side-content side-content--left">
+            Louisiana<br />
+            <strong>Pork Ribs</strong><br />
+            Pg. 3.
+
+            <br /><br />
+            <strong>
+            Blackened<br />Salmon
+            </strong><br />
+            Sandwhich<br />
+            Pg. 3.
+        </div>
+
+        <div class="side-content side-content--right">
+            <strong>Smoked<br />Tomato</strong><br />
+            Pasta Salad<br />
+            Pg. 3.
         </div>
     </section>
 

@@ -66,6 +66,20 @@
             text-align: center;
         }
 
+        &.upper {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+
+            width: 75%;
+
+            img {
+                width: 100%;
+            }
+        }
+
         h1 {
             font-size: 6em;
             color: #fff;
@@ -88,6 +102,30 @@
             //text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
             margin-bottom: 30px;
             text-transform: uppercase;
+        }
+    }
+
+    .side-content {
+        position: absolute;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.8em;
+        letter-spacing: 2px;
+
+        @include font-light();
+
+        strong {
+            @include font-black();
+        }
+
+        &--left {
+            left: 25px;
+            bottom: 25px;
+        }
+
+        &--right {
+            right: 25px;
+            bottom: 75px;
         }
     }
 
@@ -203,6 +241,19 @@ video#bgvid,
             h1 {
                 font-size: 3em;
             }
+
+            &.upper {
+                width: 100%;
+                left: 0;
+                right: 0;
+                transform: none;
+
+                img { width: 100%; }
+            }
+        }
+
+        .side-content {
+            display: none;
         }
     }
 
