@@ -93,6 +93,10 @@ padding dark
                             <input id="meta_title" name="meta_title" type="text" class="form-control" value="{{ old('meta_title') ? old('meta_title') : $venue->meta_title }}" />
                         </div>
                         <div class="form-group">
+                            <label for="meta_description">Meta-Description</label>
+                            <textarea id="meta_description" name="meta_description" type="text" class="form-control">{{ old('meta-description') }}</textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="description">Description</label>
                             <textarea id="description" name="description" type="text" class="form-control">{{ old('description') }}</textarea>
                         </div>

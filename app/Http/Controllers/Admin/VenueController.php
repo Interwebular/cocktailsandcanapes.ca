@@ -49,6 +49,7 @@ class VenueController extends Controller {
             'phonenumber' => 'required',
             'contact_name' => '',
             'meta_title' => '',
+            'meta_description' => '',
             'description' => 'required',
             'rececption_count' => 'required|numeric',
             'dining_count' => 'required|numeric',
@@ -64,6 +65,7 @@ class VenueController extends Controller {
         $venue->phonenumber = $request->phonenumber;
         $venue->contact_name = $request->contact_name;
         $venue->meta_title = $request->meta_title;
+        $venue->meta_description = $request->meta_description;
         $venue->description = $request->description;
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
@@ -108,6 +110,7 @@ class VenueController extends Controller {
             'phonenumber' => 'required',
             'contact_name' => '',
             'meta_title' => '',
+            'meta_description' => '',
             'description' => 'required',
             'rececption_count' => 'required|numeric',
             'dining_count' => 'required|numeric',
@@ -124,6 +127,7 @@ class VenueController extends Controller {
         $venue->phonenumber = $request->phonenumber;
         $venue->contact_name = $request->contact_name;
         $venue->meta_title = $request->meta_title;
+        $venue->meta_description = $request->meta_description;
         $venue->description = $request->description;
         $venue->rececption_count = $request->rececption_count;
         $venue->dining_count = $request->dining_count;
