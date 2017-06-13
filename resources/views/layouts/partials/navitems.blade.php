@@ -1,5 +1,5 @@
-<li><a @if(Request::route()->getName() === 'page.home') class="active" @endif href="{{ route('page.home') }}">Home</a></li>
-<!-- <li><a @if(Request::route()->getName() === 'about') class="active" @endif href="{{ route('about') }}">About</a></li> -->
+<!-- <li><a @if(Request::route()->getName() === 'page.home') class="active" @endif href="{{ route('page.home') }}">Home</a></li> -->
+<li><a @if(Request::route()->getName() === 'about') class="active" @endif href="{{ route('about') }}">About</a></li>
 <li class="catering-nav">
   <a @if(Request::route()->getName() === 'services') class="active" @endif href="{{ route('services') }}">Catering</a>
   <div class="hidden-nav">
