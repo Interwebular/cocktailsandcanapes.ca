@@ -65,13 +65,6 @@ $('.close-mobile-nav').click(function(e){
     e.preventDefault();
 });
 
-$('.catering-nav').on('hover', function() {
-    // $('.hidden-nav').slideToggle('fast');
-    // $(this).css('color', 'red');
-    // $('.hidden-nav').css('display', 'block');
-    console.log('im working');
-});
-
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 })
