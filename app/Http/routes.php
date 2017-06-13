@@ -96,8 +96,12 @@ Route::group(['middleware' => ['web']], function () {
 // uncommented these two
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.post', 'uses' => 'BlogController@show']);
-
+// 
+// Services
     Route::get('vancouver-wedding-caterers', ['as' => 'weddings.index', 'uses' => 'PageController@weddings']);
+    Route::get('vancouver-corporate-caterers', ['as' => 'corporate.index', 'uses' => 'PageController@corporate']);
+    Route::get('vancouver-party-caterers', ['as' => 'parties.index', 'uses' => 'PageController@parties']);
+// 
     Route::get('find-the-perfect-venue', ['as' => 'venues.index', 'uses' => 'VenueController@index']);
     Route::get('find-the-perfect-venue/{venue}/{name?}', ['as' => 'venues.show', 'uses' => 'VenueController@show']);
     Route::get('venues/submit', ['as' => 'venues.submit', 'uses' => 'VenueController@submit']);
@@ -108,6 +112,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('privacy-policy', ['as' => 'legal.pp', 'uses' => 'PageController@privacy']);
     Route::get('disclaimer', ['as' => 'legal.disclaimer', 'uses' => 'PageController@disclaimer']);
     Route::get('services', ['as' => 'services', 'uses' => 'PageController@services']);
+    // new
+    Route::get('about', ['as' => 'about', 'uses' => 'PageController@about']);
+
     Route::get('corporate-event-catering', ['as' => 'events', 'uses' => 'PageController@events']);
 
 

@@ -1,7 +1,7 @@
 @extends('website.layout')
 
-@section('meta-description') Cocktails & Canapes event planning and catering company in Vancouver offers full event planning and catering services. From corporate holiday parties to weddings, we do it all.  @endsection
-@section('page-title') Contact Cocktails & Canapes | Vancouver Caterers @endsection
+@section('meta-description') Contact Cocktails and Canapes and find out more about our catering services, event planning, and how we can help facilitate your wedding or function. @endsection
+@section('page-title') Contact | Cocktails and Canapes | Catering Vancouver @endsection
 
 @section('body-classes')
 padding dark

@@ -1,7 +1,8 @@
 @extends('website.layout')
 
-@section('page-title') Vancouver Corporate Event Catering @endsection
+@section('page-title') Corporate Caterers | Vancouver | Cocktails and Canapes @endsection
 
+@section('meta-description') Cocktails and Canapes cater each corporate event to the liking of our client; no two events are ever the same! Get in touch to find out more. @endsection
 @section('body-classes')
 padding dark
 @endsection

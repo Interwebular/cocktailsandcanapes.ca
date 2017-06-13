@@ -9,7 +9,7 @@ dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url({{ asset('img/services.jpg') }}); background-position: left center; display:block;"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/cocktail-serving.jpg') }}); background-position: left center; display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
@@ -23,19 +23,26 @@ dark
             <div class="clients">
                 <div class="client" style="color: #fff;">
                     <div class="quote quote__justified">
+                       <p>Cocktails and Canapes are incredibly experienced in providing high-end, gourmet catering services in Vancouver for a wide variety of events and occasions.</p>
+ 
+                        <p>We understand that no two events are the same. This is why Cocktails and Canapes have a range of menu options to suit many different styles of event, including weddings, birthday parties, anniversaries, corporate functions, and private events. </p>
+                    </div>
+                    <!-- <div class="quote quote__justified">
                        Need a Vancouver catering company that can do it all? 
                        We are Vancouver's best all-inclusive catering company. From weddings, birthday parties, 
                        to holiday staff parties; we are second to none! We also cater to live V.I.P 
                        and concert events, corporate launches, wrap parties, small or large scale soirees, 
                        galas and private or social events. We take care of staff, equipment rentals, event 
                        coordination and entertainment booking.
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="wedding-button-group">
                 <a href="{{ route('weddings.index') }}">Weddings</a>
-                <a href="{{ route('contact.index') }}">Customize</a>
-                <a href="{{ route('events') }}">Events</a>
+                <a href="{{ route('corporate.index') }}">Corporate</a>
+                <a href="{{ route('parties.index') }}">Parties</a>
+                <!-- <a href="{{ route('contact.index') }}">Customize</a> -->
+                <!-- <a href="{{ route('events') }}">Events</a> -->
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 @extends('website.layout')
 
-@section('page-title') Submit your venue @endsection
-
+@section('page-title') Submit Your Venue | Wedding Venue | Cocktails and Canapes @endsection
+@section('meta-description') Do you run a venue or event space in Vancouver and surrounding areas? Would you like to be on our listings? Submit your venue to us today! @endsection
 @section('body-classes')
 padding dark
 @endsection

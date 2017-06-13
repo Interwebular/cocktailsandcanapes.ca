@@ -29,6 +29,32 @@ class PageController extends Controller
         ]);
     }
 
+    public function corporate() {
+      $dinners = \App\Menu::where('slug', 'plated-dinner-fine')->first();
+
+      if($dinners)
+          $dinners = $dinners->meals()->whereNotNull('image')->take(6)->get();
+      else
+          $dinners = null;
+
+      return view('website.corporate', [
+          'dinners' => $dinners,
+          'venues' => \App\Venue::where('is_featured', 1)->take(6)->orderBy('sorting_order', 'ASC')->get()
+      ]);
+    }
+    public function parties() {
+        $dinners = \App\Menu::where('slug', 'plated-dinner-fine')->first();
+
+        if($dinners)
+            $dinners = $dinners->meals()->whereNotNull('image')->take(6)->get();
+        else
+            $dinners = null;
+
+        return view('website.parties', [
+            'dinners' => $dinners,
+            'venues' => \App\Venue::where('is_featured', 1)->take(6)->orderBy('sorting_order', 'ASC')->get()
+        ]);
+    }
     /**
     *   Show the contact page
     *
@@ -46,7 +72,9 @@ class PageController extends Controller
     public function events() {
         return view('website.events');
     }
-
+    public function about() {
+        return view('website.about');
+    }
 
     /**
     *   Show the services

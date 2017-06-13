@@ -1,10 +1,9 @@
 @extends('website.layout')
 
-@section('meta-description') Whether you desire an elegant wedding reception, cocktail party, or a tailored thematic experience, Cocktails & Canapes Event Planning and Catering Company in Vancouver and beyond has you covered. @endsection
-@section('page-title') Cocktails & Canapes | Event and Catering Company Vancouver @endsection
+@section('meta-description') Cocktails and Canapes is Vancouver's premier catering company. We cover a wide range of events, weddings, and special occasions across the Lower Mainland. @endsection
+@section('page-title') Cocktails and Canapes | Catering Services | Wedding Caterers @endsection
 
 @section('content')
-
 
     {{-- <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
         <source src="{{ asset('videos/intro_v3.webm') }}" type="video/webm">
@@ -50,23 +49,26 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1 class="skinny">
+            <h2 class="skinny">
             Through unique food and drink and unparalleled service, Cocktails &amp; Canapes' primary mission is to make your event truly unforgettable!
-            </h1>
+            </h2>
             <div class="spacer"></div>
             <p class="default">
-                Here's why: We dish it up in style! We only serve the most innovative and appealing dishes made from 
-                local fresh harvest and seasonal ingredients. We specialize in canapes, craft cocktails, custom menus, 
-                plated dinners, and chef-manned food stations. 
-                <br><br>
-                Conceptualized themed large or small scale weddings, cocktail soirees, Christmas parties, corporate parties, 
-                and Grandma's 90th birthday. You get the idea; we take care of every detail. Set the stage for a distinctive 
-                social experience that will make your event the best buzz in town - seriously. 
-                <br><br>
-                Don’t worry, our teams got your back!
-            </p>
-
-            <div class="cta-wrapper">
+               Cocktails and Canapes is Vancouver's premier catering company.</p>
+            <p class="default">We specialize in creating one-of-a kind experiences for each individual client. There is no “cookie-cutter” menu with us. Our clients have an abundance of catering services and menus to choose from including hot canapes, cold canapes, plated fine-dining, family-style dinner, BBQ, platters, buffets, craft cocktails, and beverages.</p>
+            <h3>Large or small, tradidional or modern</h3>
+            <p class="default">Whether you’re holding a traditional sit-down wedding for 300 guests, an intimate birthday party for close friends and family, or a mid-sized corporate function, Cocktails and Canapes are more than happy to accommodate your needs and desires.</p>
+            <p class="default">Cocktails and Canapes pride ourselves on being incredibly accommodating and offer a range of catering services in Vancouver, including breakfast buffets, office lunchboxes, corporate catering, BBQs, and party catering - to name but a few.</p>
+            <p class="default">Our special event catering services have impressed a wide roster of clients, from Olympic Games closing ceremonies to ??? Read more about what our clients have had to say about us here.</p>
+            <h3>Fresh, seasonal ingredients</h3>
+            <p class="default">Cocktails and Canapes only serve our clients the most innovative, fresh, and seasonal BC ingredients. There’s nothing more we love than combining West Coast ingredients with European and Asian style cooking to create authentic and delicious fusion food, alongside tried and tested classic North American dishes. Cocktails and Canapes pride ourselves on the quality, dedication, and care we put into each event - no matter how big or small.</p>
+            <h3>Professional, highly trained staff</h3>
+            <p class="default">We only employ the best of the best for Cocktails and Canapes. Our staff are efficient, friendly, and incredibly well-trained in their profession. We have a team of trained mixologists who will ensure your guests thirsts are more than adequately quenched, and our team of front of house staff are always on hand to serve you or answer any questions you may have.</p>
+            <p class="default">The Cocktails and Canapes team of chefs are the backbone of our business. Their skills, knowledge, and experience will help create an event that you’ll remember for a lifetime.</p>
+            <h3>Special event catering services</h3>
+            <p class="default">Cocktails and Canapes knows Vancouver and the Lower Mainland like the back of their hand. We can help you find the perfect venue for your wedding, event, or function.</p>
+            <p class="default">We’re more than just another run-of-the-mill catering company. Cocktails and Canapes will help make your special day or event even more memorable. Get in touch to find out more.</p>
+            <div class="cta-wrapper" style="margin-top: 20px;">
                 <a class="cta black" href="{{ route('contact.index') }}">Contact Us</a>
             </div>
         </div>

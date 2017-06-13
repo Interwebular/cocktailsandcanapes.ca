@@ -221,7 +221,8 @@ nav.mobile {
     left: 0;
     right: 0;
     width: 100%;
-    padding: 20px 40px;
+    // padding: 20px 40px;
+    padding: 0 40px;
     transition: background 250ms;
 
 
@@ -232,7 +233,7 @@ nav.mobile {
         .open-mobile-nav {
             position: absolute;
             display: inline-block;
-            top: 10px;
+            // top: 10px;
             right: 0px;
             color: #fff;
             font-size: 2em;
