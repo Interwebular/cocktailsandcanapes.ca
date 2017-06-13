@@ -9,11 +9,11 @@ dark padding
 
 @section('content')
 
-    <section style="padding-top: 0;" class="section-panel section-header">
+    <section class="section-panel section-header section-dark">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="heading" style="text-align: center; color: #fff;">
+                    <h1 class="heading" style="text-align: center;">
                         Find the perfect venue
                     </h1>
 

@@ -53,14 +53,14 @@ dark
       <div class="content-center">
         <h1>Our Team</h1>
       </div>
-      <div class="team-flex">
+      <div style="display: flex; width: 900px; margin-left: auto; margin-right: auto;">
         <?php $first = true; ?>
         <div class="flex-left" style="margin-right: 30px;">
           <div data-name="brett" class="team-name <?php echo $first ? 'isActive' : ''?>">Brett Turner</div>
           <div data-name="olivia" class="team-name">Olivia Fobert</div>
-          <div data-name="mel" class="team-name">Mel Yeaman</div>
-          <div data-name="adam" class="team-name">Adam Meade</div>
-          <div data-name="bianca" class="team-name">Bianca Gabriele</div>
+          <div data-name="mel" class="team-name">Mel</div>
+          <div data-name="adam" class="team-name">Adam</div>
+          <div data-name="bianca" class="team-name">Bianca</div>
         </div>
         <div class="flex-right">
           <div id="brett" class="team-descriptions show">
@@ -80,7 +80,7 @@ dark
             </div> 
           </div>
           <div id="mel" class="team-descriptions">
-            <h3>Mel Yeaman - Director of Operations</h3>
+            <h3>Mel - Director of Operations</h3>
             <div class="team-descriptions__info">
               <p class="default">Mel grew up in a small town on Vancouver Island but always knew she would venture to Vancouver after graduation for a world of opportunities. After studying at Douglas College and Simon Fraser University, Mel obtained her Arts & Humanities Degree while working full time in the hospitality industry.</p>
               <p class="default">Mel worked at Earls Kitchen + Bar for 10 years prior to joining the Cocktails & Canapés team and had the opportunity to work in upper management as the Night Manager. She developed a team of people who succeeded in a high volume restaurant while ensuring the happiness of all customers who walked through the door. Creating relationships with those individuals is something Mel excels at, as she understands that this is what fuels the success of the industry and creates community.</p>
@@ -88,7 +88,7 @@ dark
             </div> 
           </div>
           <div id="adam" class="team-descriptions">
-            <h3>Adam Meade - Executive Chef</h3>
+            <h3>Adam - Executive Chef</h3>
             <div class="team-descriptions__info">
               <p class="default">Growing up in Ontario, Adam had big dreams and an abundance of curiosity. He recalls spending many summer days cooking all of his family’s old Italian recipes with his mother and grandmother, an experience which lead him to discover his passion for food.</p>
               <p class="default">Adam relocated to Toronto and enrolled in the Chef Management Program at George Brown College. From there he began work at Toronto’s Canoe, North 44, and Centro. Adam found that being a chef was a beautiful, creative, ever evolving, graceful, complicated industry and it was exactly what he was looking for. His goal was simple: to learn and absorb as much as he could.</p>
@@ -96,7 +96,7 @@ dark
             </div> 
           </div>
           <div id="bianca" class="team-descriptions">
-            <h3>Bianca Gabriele - Event Manager</h3>
+            <h3>Bianca - Event Manager</h3>
             <div class="team-descriptions__info">
               <p class="default">After six years as a Legal Administrative Assistant, Bianca realized that she was not following her dreams. She quit her job and bought a one-way ticket to Australia to pursue an internship in Events, Sales and Marketing.</p>
               <p class="default">Throughout her year in Australia Bianca began her career and worked on events such as The Hurley Australian Open of Surfing and The Manly Jazz Festival. Not only does Bianca enjoy planning and attending events, she also has a passion for innovative food and cooking.</p>
@@ -107,20 +107,11 @@ dark
 
 
 <style>
-  .team-flex {
-    display: flex;
-    max-width: 900px; 
-    margin-left: auto; 
-    margin-right: auto;
-  }
   .team-name {
     border:1px solid #fff;
-    text-align: center;
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
   }
   .team-name:hover { 
     background-color: white;
@@ -133,35 +124,13 @@ dark
   .flex-left {
     flex-shrink: 0;
   }
-  .flex-right {
-    margin-right: 20px;
-  }
   .team-descriptions {
+    /*display: flex;*/
     display: none;
+    /*flex-direction: column;*/
   }
   .show {
     display: block;
-  }
-
-  @media (max-width: 650px) {
-    .team-flex {
-      flex-direction: column;
-    }
-    .flex-left {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-    .team-name {
-      display: inline-flex;
-      width: 45%;
-      margin: 5px;
-      justify-content: center;
-    }
-  }
-  @media (max-width: 325px) {
-    .team-name {
-      width: 40%;
-    }
   }
 </style>
       </div>
