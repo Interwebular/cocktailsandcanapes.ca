@@ -230,7 +230,7 @@
         @endforeach
 
         <div class="footer">
-            #150 - 351 Abbott Street PO Box 98882 Vancouver, BC V6B 0M4 | 604-728-5937 | info@cocktailsandcanapes.ca
+            #150 - 351 Abbott Street PO Box 98882 Vancouver, BC V6B 0M4 | 604-424-8788 | info@cocktailsandcanapes.ca
         </div>
 
     </body>
