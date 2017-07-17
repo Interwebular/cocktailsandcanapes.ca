@@ -4,8 +4,10 @@
     dark padding
 @endsection
 
-@section('page-title'){{ $venue->name }} | Find The Perfect Venue | Cocktails And Canapes @endsection
-@section('meta-description'){{ preg_replace( "/\r|\n/", "", str_limit($venue->description, 155)) }}@endsection
+@section('page-title'){{ $venue->name }} | {{ $venue->meta_title }} | Cocktails And Canapes @endsection
+@section('meta-description'){{ $venue->meta_description, 155 }}@endsection
+<!-- @section('meta-description'){{ preg_replace( "/\r|\n/", "", str_limit($venue->description, 155)) }}@endsection -->
+
 
 @section('content')
     <section class="section-panel section-white section-fluid-height venue-container" style="padding-top: 0px">
