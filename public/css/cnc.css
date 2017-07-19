@@ -2,7 +2,7 @@ body.dark {
   background: #222; }
 
 body.padding {
-  padding-top: 160px; }
+  padding-top: 95px; }
 
 label {
   font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -662,6 +662,7 @@ a.cta.black {
   padding: 10px 15px;
   border: 1px solid #fff;
   margin: 10px;
+  opacity: 0.8;
   transition: all 300ms;
   letter-spacing: 1px; }
   .wedding-button-group a:hover {

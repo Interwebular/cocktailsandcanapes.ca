@@ -9,7 +9,7 @@ dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url({{ asset('img/restaurant-min.jpg') }}); background-position: left center; display:block;"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/corporate-new-img-min.jpg') }}); background-position: left center; display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
@@ -67,21 +67,19 @@ dark
             </h1>
             <div class="spacer"></div>
             <p class="default">
-                Corporate catering doesn’t have to mean boring, dry sandwiches and stale chips. With the Cocktails and Canapes experience, office party catering will become a whole lot more exciting, much to the delight of your colleagues and guests. 
+                Corporate catering doesn’t have to mean boring, dry sandwiches and potato chips. With Cocktails and Canapes, office party catering will become a whole lot more exciting, much to the delight of your colleagues and guests. We have years of experience in providing catering services for upwards of 3,000 guests, which makes us the ideal hire for any large event. 
                 <br><br>
-                Cocktails and Canapes have experience in providing catering services for upwards of 3,000 guests, which makes us the ideal hire for any large corporate event. We always shine when serving our <a href="https://cocktailsandcanapes.ca/event-catering-menus/plated-dinner-special" target="_blank">plated dinner special menu</a> for many guests and recommend this particular menu for special corporate occasions and events.  
+                We also provide office lunch catering from our well-received <a href="https://cocktailsandcanapes.ca/event-catering-menus/lunch" target="_blank">lunch menu</a>. Served on freshly baked baguettes, fillings include Pineapple and Beef with Arugula and a Chipotle Mayo; Chicken Banh mi; Apricot Glazed Smoked Ham with Double Cream Brie and a Fenugreek Dressing; and Oven-Dried Tomato with a Basil Pesto and Manchego Cheese. 
                 <br><br>
-                We also provide office lunch catering from our well-received <a href="https://cocktailsandcanapes.ca/event-catering-menus/lunch" target="_blank">lunch menu</a>. Served on freshly baked baguettes, fillings include pineapple and beef with arugula and a chipotle mayo; chicken banh mi; apricot glazed smoked ham with double cream brie and a fenugreek dressing; and oven-dried tomato with a basil pesto and manchego cheese. 
-                <br><br>
-                Cocktails and Canapes don’t just stop at delicious, mouth-watering baguettes. We also provide lunch time catering in the form of fresh salads, including quinoa tabbouleh, kale and soba salad, taco salad, and a gluten-free harvest salad. 
+                Cocktails and Canapes don’t just stop at delicious, mouth-watering baguettes. We also provide lunch time catering in the form of fresh salads and bowls, including Quinoa Tabbouleh, Kale and Soba Salad, Taco Salad, and a gluten-free Harvest Salad.
                 <br><br>
                 Many of our lunch menu items can be made vegetarian and we also offer a great selection of gluten-free menu items for corporate events. 
                 <br><br>
                 We understand that not all corporate events occur during lunch or dinner. That’s why we created our <a href="https://cocktailsandcanapes.ca/event-catering-menus/breakfast-canapes" target="_blank">breakfast canapé menu</a>, as well as <a href="https://cocktailsandcanapes.ca/event-catering-menus/breakfast" target="_blank">hot breakfast catering</a> for those early starts. 
                 <br><br>
-                Choose from breakfast burritos, pastries, and a selection of fresh fruit, or nibble on canapes that include smoked bacon profiterole slider with maple syrup aioli and quails egg; mini spinach eggs benedict; and savoury cheesecake with goats cheese filling and balsamic onion jam. 
+                Choose from Breakfast Burritos, Pastries, and a selection of Fresh Fruit, or nibble on canapes that include Smoked Bacon Profiterole Sliders with Maple Syrup Aioli and Quails Egg; Mini Spinach Eggs Benedict; and Savoury Cheesecake with Goat Cheese filling and Balsamic Onion Jam. 
                 <br><br>
-                Both of these menus are perfect for early morning meetings, breakfast events, or simply because you feel like treating your staff (and who doesn’t like breakfast being cooked for them in the morning?)
+                Both of these menus are perfect for early morning meetings, breakfast events, or simply because you feel like treating your staff.
 
 
                <!--  We would love the opportunity to work with you and create a memorable wedding experience tailored to your needs and wants. We are your escape from the cookie cutter menu offerings of maple-glazed salmon and rubber chicken dinners.

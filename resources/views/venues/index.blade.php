@@ -9,31 +9,33 @@ dark padding
 
 @section('content')
 
-    <section style="padding-top: 0;" class="section-panel section-header">
+    <div class="bgimage" style="background-image:url({{ asset('img/event_spaces.jpg') }}); background-position: left center; display:block;"></div>
+
+    <section style="padding-top: 270px 0;" class="section-panel section-fluid-height">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="heading" style="text-align: center; color: #fff;">
+                    <h1 class="wedding-title" style="text-align: center; color: #fff;">
                         Find the perfect venue
                     </h1>
 
                 </div>
             </div>
         </div>
-        <div class="spacer" style="background: #fff; margin-top: 15px;"></div>
+        <!-- <div class="spacer" style="background: #fff; margin-top: 15px;"></div> -->
 
         <div class="content-center" style="margin-top: 30px; margin-left: auto; margin-right: auto; max-width: 650px;">
-            <p class="default" style="color: white;">
-                Cocktails and Canapes are proud to have established a fantastic working relationship with a wide variety of Vancouver venues. Whether you’re looking for a small venue for an intimate wedding, or a large space for a corporate function, we can help you find the space that’s the right fit for you. 
+            <p class="default" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); color: white;">
+                Cocktails and Canapes is proud to have established a fantastic working relationship with a wide variety of Vancouver venues. Whether you’re looking for a small venue for an intimate wedding, or a large space for a corporate function, we can help you find the space that’s the right fit for you. 
                 <br>
                 Browse our listed venues and feel free to get in touch if you have any questions about the spaces listed. We’re more than happy to help. 
             </p>
-            <h1 class="heading" style="margin-left:auto; margin-right: auto; width: 200px;">
+            <!-- <h1 class="heading" style="margin-left:auto; margin-right: auto; width: 200px;">
                 
                 <a href="{{ route('venues.submit') }}" class="boxcta pull-right" style="font-size: 0.4em;">
                     Add Your Venue
                 </a>
-            </h1>
+            </h1> -->
         </div>
     </section>
 

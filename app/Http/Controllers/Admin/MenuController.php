@@ -28,8 +28,10 @@ class MenuController extends Controller {
     *
     *   @return Response
     */
-    public function create() {
-        return view('admin.menus.create');
+    public function create(Menu $menu) {
+        return view('admin.menus.create', [
+            'menu' => $menu
+            ]);
     }
 
     /**
@@ -43,7 +45,9 @@ class MenuController extends Controller {
             'name' => 'required|max:64|unique:menus,name',
             'download_link' => '',
             'is_coming_soon' => 'required|numeric',
-            'type' => 'required'
+            'type' => 'required',
+            'meta_title' => '',
+            'meta_description' => ''
         ]);
 
         $menu = new \App\Menu;
@@ -52,6 +56,8 @@ class MenuController extends Controller {
         $menu->download_link = $request->download_link;
         $menu->pricing = $request->pricing;
         $menu->description = $request->description;
+        $menu->meta_title = $request->meta_title;
+        $menu->meta_description = $request->meta_description;
         $menu->is_coming_soon = $request->is_coming_soon;
         $menu->type = $request->type;
         $menu->save();
@@ -95,7 +101,9 @@ class MenuController extends Controller {
             'download_link' => '',
             'is_coming_soon' => 'required|numeric',
             'sorting_order' => 'required|numeric',
-            'type' => 'required'
+            'type' => 'required',
+            'meta_title' => '',
+            'meta_description' => ''
         ]);
 
         if($menu->name != $request->name)
@@ -105,6 +113,8 @@ class MenuController extends Controller {
         $menu->download_link = $request->download_link;
         $menu->pricing = $request->pricing;
         $menu->description = $request->description;
+        $menu->meta_title = $request->meta_title;
+        $menu->meta_description = $request->meta_description;
         $menu->is_coming_soon = $request->is_coming_soon;
         $menu->sorting_order = $request->sorting_order;
         $menu->type = $request->type;

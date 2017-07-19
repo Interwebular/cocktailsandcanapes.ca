@@ -107,7 +107,7 @@ class PageController extends Controller
             'name' => 'required|max:128',
             'email' => 'required|email',
             'message' => 'required|max:1028',
-            'phone_number' => 'max:25',
+            'phone_number' => 'required|max:25',
             'company' => 'max:128',
             'g-recaptcha-response' => 'required|recaptcha'
         ]);

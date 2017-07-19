@@ -6,7 +6,7 @@
     <div class="hidden-nav__inner">
       <a @if(Request::route()->getName() === 'weddings.index') class="active" @endif href="{{ route('weddings.index') }}">Weddings</a>
       <a @if(Request::route()->getName() === 'corporate.index') class="active" @endif href="{{ route('corporate.index') }}">Corporate</a>
-      <a @if(Request::route()->getName() === 'parties.index') class="active" @endif href="{{ route('parties.index') }}">Parties</a>
+      <a @if(Request::route()->getName() === 'parties.index') class="active" @endif href="{{ route('parties.index') }}">Events</a>
     </div>
   </div>
 </li>

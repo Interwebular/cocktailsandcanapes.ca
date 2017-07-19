@@ -1,7 +1,7 @@
 @extends('website.layout')
 
-@section('meta-description') Cocktails & Canapes in Vancouver offers a complete event catering menu to fit seamlessly with your event. The menu includes: hot and cold canapes, cocktails, fine dinners, family style dinners and more.  @endsection
-@section('page-title') Event Catering Menu Vancouver | Cocktails & Canapes  @endsection
+@section('page-title'){{ $menu->name }} | {{ $menu->meta_title }} | Cocktails And Canapes @endsection
+@section('meta-description'){{ $menu->meta_description, 155 }}@endsection
 
 @section('body-classes')
     dark padding
@@ -10,17 +10,6 @@
 @section('content')
 
     <section class="menu section-panel">
-        <div class="content-center" style="margin-left: auto; margin-right: auto; max-width: 650px;">
-            <h1 class="heading" style="color: #fff; text-align: center;">Choose the perfect menu</h1>
-            <div class="spacer" style="background: #fff; margin-top: 15px;"></div>
-            <p class="default" style="color: white;">
-                Cocktails and Canapes have rustled up a range of menus, cuisines, and dishes to suit any event or special occasion. If you’re looking for a local catering company that will exceed all your expectations, Cocktails and Canapes is the company to hire. 
-                <br>
-                Browse our menus and get in touch if you have any questions or comments for us. We’re more than happy to answer and ensure your needs are catered for.
-            </p>
-        </div>
-
- 
         <div class="container-fluid menu-container">
             <div class="menu-button-container">
                 {!! \App\Services\Menus\Menus::renderMenuNav($type, $menu) !!}

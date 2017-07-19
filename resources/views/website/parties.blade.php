@@ -12,8 +12,8 @@ dark
     <div class="bgimage" style="background-image:url({{ asset('img/dining-lights-min.jpg') }}); background-position: left center; display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
-        <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
-        <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
+        <!-- <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button> -->
+        <!-- <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button> -->
         <div class="content-center">
             <h1 class="wedding-title">
                 DON’T TAKE OUR WORD FOR IT<br>
@@ -50,7 +50,7 @@ dark
                         {{ session('success') }}
                     </div>
                 @endif
-                <a href="{{ route('menus.show') }}">Party Menus</a>
+                <a href="{{ route('menus.show') }}">Event Menus</a>
                 <a href="#learn-more">Learn More</a>
                 <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>
@@ -61,15 +61,15 @@ dark
         <div class="content-center">
 
             <h1 class="wedding-title alt">
-                Party Catering
+                Event Catering
             </h1>
             <div class="spacer"></div>
             <p class="default">
-                We provide the best party catering in Vancouver. Whether you’re hosting a small cocktail party, a large scale birthday bash, or an office party, Cocktails and Canapes will work to produce a menu that’s perfect for your special occasion.
+                We provide the best event catering in Vancouver. Whether you’re hosting a small cocktail party, a large scale birthday bash, or a ‘just because’ event, Cocktails and Canapes will work to produce a menu that’s perfect for your special occasion.
                 <br><br>
-                If you’re looking for party catering that is ideal for guests who are mingling or networking, our <a href="https://cocktailsandcanapes.ca/event-catering-menus/hot-canapes" target="_blank">hot canapes</a> or <a href="https://cocktailsandcanapes.ca/event-catering-menus/cold-canapes" target="_blank">cold canapes menu</a> will be what you’re looking for. Allow your guests to nibble on dishes such as BBQ duck blini with hoi sin and gooseberry slaw; west coast crab spoons with saffron aioli; morel and fig with toasted brioche; or porcini arancini with smoked mozzarella and white wine risotto. We can also create custom menus to match the theme of any party.
+                If you’re looking for party catering that is ideal for guests who are mingling or networking, our <a href="https://cocktailsandcanapes.ca/event-catering-menus/hot-canapes" target="_blank">canapes menu</a> will be what you’re looking for. Allow your guests to nibble on small bites such as BBQ Duck Blini with Hoi Sin and Gooseberry Slaw; West Coast Crab Spoons with Saffron Aioli; Morel and Fig with Toasted Brioche; or Porcini Arancini with Smoked Mozzarella and White Wine Risotto. We can also create custom menus to match the theme of any party.
                 <br><br>
-                Cocktails and Canapes also can supply a <a href="https://cocktailsandcanapes.ca/event-catering-menus/buffet-dinner" target="_blank">buffet dinner menu</a>, should you require more than canapes. We cook and serve a variety of fresh salads, mains, sides, and desserts, including arugula salad with blueberry vinaigrette; 8 hour braised beef short rib; thyme and black sesame crusted trout; and dark chocolate cafe au lait. 
+                Cocktails and Canapes also can supply a <a target="_blank" href="https://cocktailsandcanapes.ca/event-catering-menus/buffet-dinner">plated dinner menu</a>, should you require more than canapes. We cook and serve a variety of fresh salads, mains, sides, and desserts, including Arugula Salad with Blueberry Vinaigrette; 8 Hour Braised Beef Short Rib; Thyme and Black Sesame Crusted Trout; and Dark Chocolate Cafe Au Lait. 
                 <br><br>
                 No party is complete without drinks. We’ve compiled a <a href="https://cocktailsandcanapes.ca/event-catering-menus/craft-cocktails" target="_blank">craft cocktail menu</a> that is prepared by our professional and highly-trained mixologists, alongside a carefully curated <a href="https://cocktailsandcanapes.ca/event-catering-menus/beverage-list" target="_blank">beverage list</a> that showcases the very best in BC liquor and wine. 
                 <br><br>
