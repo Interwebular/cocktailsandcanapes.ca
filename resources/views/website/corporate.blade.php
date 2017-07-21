@@ -9,7 +9,7 @@ dark
 
 @section('content')
 
-    <div class="bgimage" style="background-image:url({{ asset('img/corporate-new-img-min.jpg') }}); background-position: left center; display:block;"></div>
+    <div class="bgimage" style="background-image:url({{ asset('img/corporate-new-img-min.JPG') }}); background-position: left center; display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
