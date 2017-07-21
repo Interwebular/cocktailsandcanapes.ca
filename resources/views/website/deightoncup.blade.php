@@ -22,7 +22,7 @@ dark
             <div class="clients">
                     <div class="client" style="color: #fff;">
                         <div class="quote quote__justified">
-                            East meets West in Cocktails & Canapés’ eighth anniversary menu for the Deighton Cup. Executive Chef Brett Turner has taken the event’s traditional Deep South-inspired food program and incorporated both subtle and fiery Pacific Rim flavours. The result is a tantalizing array of complimentary and à la carte creations that embody both the Deighton Cup’s heritage and the spirit of the West Coast.
+                            East meets West in Cocktails & Canapes’ eighth anniversary menu for the Deighton Cup. Executive Chef Brett Turner has taken the event’s traditional Deep South-inspired food program and incorporated both subtle and fiery Pacific Rim flavours. The result is a tantalizing array of complimentary and à la carte creations that embody both the Deighton Cup’s heritage and the spirit of the West Coast.
                         </div>
                     </div>
             </div>

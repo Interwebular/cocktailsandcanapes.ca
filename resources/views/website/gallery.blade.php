@@ -1,7 +1,7 @@
 @extends('website.layout')
 
-@section('meta-description') A look into our past events! Our catering image gallery showcases a number of Cocktails & Canapes most popular dishes. Canapes, fine plated dinners and cocktails are showcased. @endsection
-@section('page-title') Catering Image Gallery | Cocktails & Canapes Vancouver @endsection
+@section('meta-description') Browse our gallery that showcases Cocktails and Canapes most popular dishes. Can you see any of your favourite dishes from our menu in the gallery?  @endsection
+@section('page-title') Gallery | Catering Vancouver | Cocktails and Canapes @endsection
 
 @section('body-classes')
 padding dark
@@ -44,8 +44,58 @@ padding dark
         <div style="text-align:center">
             {!! $images->render()  !!}
         </div>
+
+        <div class="wedding-button-group alt" style="text-align: center;">
+            <a href="#" data-toggle="modal" data-target="#tastingModal" style="border-color: white; color: white;">Book A Tasting</a>
+        </div>
     </section>
 
+
+
+
+    <div class="modal fade" id="tastingModal" tabindex="-1" role="dialog" aria-labelledby="tastingModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="tastingModalLabel">Request A Tasting</h4>
+          </div>
+          <div class="modal-body">
+                <p class="default" style="font-size: 1em;">
+    Having trouble deciding which menu items to serve for your special day? 
+    <br><br>
+    The tasting allows you to view how items will be plated and served for your guests to enjoy. This also allows you to have the opportunity to tailor the menu to your needs. We offer tastings at a flat rate of $200 for up to four people. The tasting fee is fully refunded upon booking with us, which we are certain you will!            </p>
+              <form action="{{ route('contact.submit') }}" method="POST">
+                  {{ csrf_field() }}
+                  <div class="form-group">
+                      <label for="name">Name *</label>
+                      <input type="text" id="name" name="name" class="form-control input-lg" value="{{ old('name') }}" />
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email *</label>
+                      <input type="email" id="email" name="email" class="form-control input-lg" value="{{ old('email') }}" />
+                  </div>
+                  <div class="form-group">
+                      <label for="phone_number">Phone Number *</label>
+                      <input type="text" id="phone_number" name="phone_number" class="form-control input-lg" value="{{ old('phone_number') }}" />
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message *</label>
+                      <textarea name="message" id="message" class="form-control input-lg">{{ old('message') }}</textarea>
+                  </div>
+                  <div class="form-group">
+                      {!! Recaptcha::render() !!}
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" onclick='javascript:sendEmailEvent();' class="submit-btn btn btn-primary btn-lg pull-right">Submit</button>
+                      <div class="clearfix"></div>
+                  </div>
+              </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
 @endsection
 
 @section('js')

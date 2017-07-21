@@ -4,16 +4,16 @@
 dark
 @endsection
 
-@section('meta-description') Vancouver Catering Services @endsection
-@section('page-title') Vancouver Catering Company | Cocktails & Canapes @endsection
+@section('meta-description') Weddings, office parties, birthdays, baby showers, anniversaries, team building - whatever the occasion Cocktails and Canapes have got you covered.  @endsection
+@section('page-title') Catering Services | Vancouver | Cocktails and Canapes @endsection
 
 @section('content')
-
-    <div class="bgimage" style="background-image:url({{ asset('img/services.jpg') }}); background-position: left center; display:block;"></div>
+<!-- renamed to catering in routes -->
+    <div class="bgimage" style="background-image:url({{ asset('img/catering_services.jpg') }}); background-position: left center; display:block;"></div>
 
     <section class="section-panel section-fluid-height" style="padding: 270px 0;">
-        <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
-        <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
+        <!-- <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button> -->
+        <!-- <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button> -->
         <div class="content-center">
             <h1 class="wedding-title">
                 CATERING SERVICES
@@ -22,20 +22,27 @@ dark
             <div class="spacer" style="background: #fff;"></div>
             <div class="clients">
                 <div class="client" style="color: #fff;">
-                    <div class="quote quote__justified">
+                    <div style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);" class="quote quote__justified">
+                       <p>Cocktails and Canapes is incredibly experienced in providing high-end, gourmet catering services in Vancouver for a wide variety of events and occasions.</p>
+ 
+                        <p>We understand that no two events are the same. This is why Cocktails and Canapes have a range of menu options to suit many different styles of event, including weddings, birthday parties, anniversaries, corporate functions, and private events. </p>
+                    </div>
+                    <!-- <div class="quote quote__justified">
                        Need a Vancouver catering company that can do it all? 
                        We are Vancouver's best all-inclusive catering company. From weddings, birthday parties, 
                        to holiday staff parties; we are second to none! We also cater to live V.I.P 
                        and concert events, corporate launches, wrap parties, small or large scale soirees, 
                        galas and private or social events. We take care of staff, equipment rentals, event 
                        coordination and entertainment booking.
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="wedding-button-group">
                 <a href="{{ route('weddings.index') }}">Weddings</a>
-                <a href="{{ route('contact.index') }}">Customize</a>
-                <a href="{{ route('events') }}">Events</a>
+                <a href="{{ route('corporate.index') }}">Corporate</a>
+                <a href="{{ route('parties.index') }}">Events</a>
+                <!-- <a href="{{ route('contact.index') }}">Customize</a> -->
+                <!-- <a href="{{ route('events') }}">Events</a> -->
             </div>
         </div>
     </section>
@@ -128,7 +135,6 @@ dark
 
 @section('js')
     <script>
-
         $('a[href*=\\#]:not([href=\\#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -141,7 +147,6 @@ dark
                 }
             }
         });
-
     </script>
 
 

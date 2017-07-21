@@ -44,6 +44,16 @@
 							</div>
 
 							<div class="form-group">
+							  <label for="meta_title">Meta-Title</label>
+							  <input id="meta_title" name="meta_title" type="text" class="form-control" value="{{ old('meta_title') ? old('meta_title') : $menu->meta_title }}" />
+							</div>
+							
+							<div class="form-group">
+							    <label for="meta_description">Meta-Description</label>
+							    <textarea id="meta_description" name="meta_description" type="text" class="form-control"> {{ old('meta_description')}}</textarea>
+							</div>
+
+							<div class="form-group">
 								<label for="is_coming_soon">Status</label>
 								<select name="is_coming_soon" id="is_coming_soon" class="form-control">
 									<option value="0">Active</option>

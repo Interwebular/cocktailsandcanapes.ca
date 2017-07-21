@@ -51,7 +51,8 @@ dark
                     </div>
                 @endif
                 <a href="{{ route('menus.show') }}">Wedding Menus</a>
-                <a href="#learn-more">Learn More</a>
+                <a href="{{ route('gallery.index') }}">Gallery</a>
+                <!-- <a href="#learn-more">Learn More</a> -->
                 <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>
         </div>
@@ -65,9 +66,25 @@ dark
             </h1>
             <div class="spacer"></div>
             <p class="default">
-                We would love the opportunity to work with you and create a memorable wedding experience tailored to your needs and wants. We are your escape from the cookie cutter menu offerings of maple-glazed salmon and rubber chicken dinners.
+                Cocktails and Canapes is Vancouver’s premier wedding caterer and will work alongside you to make your special day even more memorable. We’ll take care of everything; from the set up, to the service, to pouring the drinks, and clearing up afterwards. This will allow you to relax and know that everything is taken care of by our highly trained, professional staff. 
                 <br><br>
-                With us, you don’t just get a caterer, you get a team of experienced event and culinary professionals who have seen and done it all. We are here to make your vision come to life and provide a distinct culinary experience that leaves your guests buzzing.
+                Our team of chefs have worked to create menus for every style of wedding. Thinking of having an elegant <a href="https://cocktailsandcanapes.ca/event-catering-menus/plated-dinner-fine" target="_blank">sit-down meal</a> with touches of fine dining? We will cater to impress with dishes that include elk tartare, game hen porchetta, herb crusted lamb rack, and heirloom carrot soup. 
+                <br><br>
+                Alternatively, Cocktails and Canapes can provide catering for a wedding reception with our <a href="https://cocktailsandcanapes.ca/event-catering-menus/hot-canapes" target="_blank">hot canapes menu</a>, which includes Lemon Basil Arancini, Haida Gwaii Sablefish Spoons, and a Short Rib Slider with Black Cherry Jam and Truffle Frisee. Both our hot and <a href="https://cocktailsandcanapes.ca/event-catering-menus/cold-canapes" target="_blank">cold canapes menu</a> are perfect for nibbling on whilst your guests mingle and sip on one of our <a href="https://cocktailsandcanapes.ca/event-catering-menus/craft-cocktails" target="_blank">signature craft cocktails</a>.
+                <br><br>
+                Thinking of getting hitched in the sunshine? We also serve a <a href="https://cocktailsandcanapes.ca/event-catering-menus/bbq" target="_blank">BBQ menu</a> that includes summertime favourites such as Smoked Pulled Pork, Vegetarian + Beef Burgers, Corn On The Cobb with Chimmichurri Butter, Louisiana-Style Pork Ribs, and Chipotle and Honey Roasted Baby Potatoes. Perfect for hot and sunny summer weddings in Vancouver.
+                <br><br>
+                Should you choose to keep your wedding catering more informal, our <a href="https://cocktailsandcanapes.ca/event-catering-menus/buffet-dinner" target="_blank">buffet dinner menu</a> - with Pan-Seared Red Snapper, Hanger Steak, and Spring Harvest Salad - might be more to your liking. 
+                <br><br>
+                Cocktails and Canapes work closely with local breweries and distilleries to ensure that our clients receive the very best liquor selection from our <a href="https://cocktailsandcanapes.ca/event-catering-menus/beverage-list" target="_blank">beverage menu</a>. We’re proud to support Vancouver breweries 33 Acres, Postmark, Four Winds, and Parallel 49, alongside serving spirits from the Odd Society in East Vancouver. Our beverage list is rounded off with a BC-centric wine list, French champagne, and fizz.
+                <br><br>
+                Cocktails and Canapes are aware that people have different dietary needs. That’s why we provide gluten-free, vegetarian, and vegan catering, should our clients need those dietary requirements for their wedding or event.
+                <br><br>
+                If you’re looking for a highly skilled, professional company to cater your wedding reception, Cocktails and Canapes are the Vancouver caterers you need. Get in touch to ask any questions about our wedding catering menu.
+
+               <!--  We would love the opportunity to work with you and create a memorable wedding experience tailored to your needs and wants. We are your escape from the cookie cutter menu offerings of maple-glazed salmon and rubber chicken dinners.
+                <br><br>
+                With us, you don’t just get a caterer, you get a team of experienced event and culinary professionals who have seen and done it all. We are here to make your vision come to life and provide a distinct culinary experience that leaves your guests buzzing. -->
             </p>
 
             <div class="wedding-button-group alt">

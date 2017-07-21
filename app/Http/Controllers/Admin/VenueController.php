@@ -30,8 +30,10 @@ class VenueController extends Controller {
     *
     *   @return Response
     */
-    public function create() {
-        return view('admin.venues.create');
+    public function create(Venue $venue) {
+        return view('admin.venues.create', [
+            'venue' => $venue
+            ]);
     }
 
     /**
