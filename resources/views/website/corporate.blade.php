@@ -69,13 +69,13 @@ dark
             <p class="default">
                 Corporate catering doesn’t have to mean boring, dry sandwiches and potato chips. With Cocktails and Canapes, office party catering will become a whole lot more exciting, much to the delight of your colleagues and guests. We have years of experience in providing catering services for upwards of 3,000 guests, which makes us the ideal hire for any large event. 
                 <br><br>
-                We also provide office lunch catering from our well-received <a href="https://cocktailsandcanapes.ca/event-catering-menus/lunch" target="_blank">lunch menu</a>. Served on freshly baked baguettes, fillings include Pineapple and Beef with Arugula and a Chipotle Mayo; Chicken Banh mi; Apricot Glazed Smoked Ham with Double Cream Brie and a Fenugreek Dressing; and Oven-Dried Tomato with a Basil Pesto and Manchego Cheese. 
+                We also provide office lunch catering from our well-received <a href="https://cocktailsandcanapes.ca/menus/lunch" target="_blank">lunch menu</a>. Served on freshly baked baguettes, fillings include Pineapple and Beef with Arugula and a Chipotle Mayo; Chicken Banh mi; Apricot Glazed Smoked Ham with Double Cream Brie and a Fenugreek Dressing; and Oven-Dried Tomato with a Basil Pesto and Manchego Cheese. 
                 <br><br>
                 Cocktails and Canapes don’t just stop at delicious, mouth-watering baguettes. We also provide lunch time catering in the form of fresh salads and bowls, including Quinoa Tabbouleh, Kale and Soba Salad, Taco Salad, and a gluten-free Harvest Salad.
                 <br><br>
                 Many of our lunch menu items can be made vegetarian and we also offer a great selection of gluten-free menu items for corporate events. 
                 <br><br>
-                We understand that not all corporate events occur during lunch or dinner. That’s why we created our <a href="https://cocktailsandcanapes.ca/event-catering-menus/breakfast-canapes" target="_blank">breakfast canapé menu</a>, as well as <a href="https://cocktailsandcanapes.ca/event-catering-menus/breakfast" target="_blank">hot breakfast catering</a> for those early starts. 
+                We understand that not all corporate events occur during lunch or dinner. That’s why we created our <a href="https://cocktailsandcanapes.ca/menus/breakfast-canapes" target="_blank">breakfast canapé menu</a>, as well as <a href="https://cocktailsandcanapes.ca/menus/breakfast" target="_blank">hot breakfast catering</a> for those early starts. 
                 <br><br>
                 Choose from Breakfast Burritos, Pastries, and a selection of Fresh Fruit, or nibble on canapes that include Smoked Bacon Profiterole Sliders with Maple Syrup Aioli and Quails Egg; Mini Spinach Eggs Benedict; and Savoury Cheesecake with Goat Cheese filling and Balsamic Onion Jam. 
                 <br><br>
