@@ -13,7 +13,7 @@ dark
  <!-- <div class="bgimage" style="background-image:url({{ asset('img/services.jpg') }}); background-position: left center; display:block;"></div> -->
  <div class="bgimage" style="background-image:url({{ asset('img/about.jpg') }}); background-position: left center; display:block;"></div>
 
-    <section class="section-panel section-fluid-height" style="padding: 270px 0;">
+    <section class="section-panel section-fluid-height" style="padding: 245px 0;">
         <!-- <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button> -->
         <!-- <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button> -->
         <div class="content-center">
@@ -67,7 +67,7 @@ dark
           <div id="brett" class="team-descriptions show">
             <h3>Brett Turner - Owner and Culinary Director</h3>
             <div class="team-descriptions__info">
-              <p class="default">A graduate of the <a href="http://culinaryclassics.tripod.com/dfcs.html" target="_blank">Dubrulle Culinary Institute</a>, Brett started off his career working at The Beach House before quickly making his way up the culinary ladder and becoming the first Executive Chef for Brown’s Social Group.</p>
+              <p class="default">A graduate of the Dubrulle Culinary Institute</a>, Brett started off his career working at The Beach House before quickly making his way up the culinary ladder and becoming the first Executive Chef for Brown’s Social Group.</p>
               <p class="default">Brett then accepted the position of Executive Chef of Blueprint Hospitality Group, a role in which he oversaw the building, operations, and culinary vision of some of Vancouver’s hottest restaurants including Charles Bar, Bismarck, and The Colony. Over the next fifteen years, Brett’s experience and drive took him from the kitchen to the boardroom.</p>
               <p class="default">Launching Cocktails and Canapes in 2013, Brett strives to work with local purveyors of produce and has formed strong relationships with suppliers. This allows Cocktails and Canapes to continually build a unique menu of offerings around locally and sustainably sourced foods. Brett’s penchant for attention to detail, event operations experience, sense of culinary creativity, and his passion for food and wine make him a true asset as Owner and Culinary Director of Cocktails & Canapes.</p>
             </div> 
