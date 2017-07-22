@@ -21,7 +21,7 @@ dark
             </h1>
 
             <div class="spacer" style="background: #fff;"></div>
-            <div class="clients">
+            <!-- <div class="clients">
                 @foreach(App\Services\Testimonials\Retrieve::random('wedding') as $testimonial)
                     <div class="client" style="color: #fff;">
                         <div class="quote quote__justified">
@@ -32,6 +32,16 @@ dark
                         </blockquote>
                     </div>
                 @endforeach
+            </div> -->
+            <div class="clients">
+                <div class="client" style="color: #fff;">
+                    <div class="quote quote__justified">
+                        Love the team at Cocktails & Canapes! They've catered a large number of our events over the past 2 years, often creating custom menus designed specifically for our guests and event theme. Whenever I need great food, a professional service team that I can depend on, and fun ideas, I look to them for help. Would definitely recommend them for your next event/party!
+                    </div>
+                    <blockquote style="color: #fff;">
+                        <p>Melissa Mak</p>
+                    </blockquote>
+                </div>
             </div>
             <div class="spacer" style="background: #fff;"></div>
             <div class="wedding-button-group">
