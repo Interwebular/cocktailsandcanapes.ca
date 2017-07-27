@@ -17,4 +17,10 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect old URLS to new ones...
+    Redirect /event-catering-menus/ https://cocktailsandcanapes.ca/menus
+
+
+
 </IfModule>
