@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+    
+    # Redirect old URLS to new ones...
+    Redirect /event-catering-menus/ https://cocktailsandcanapes.ca/menus
+    Redirect /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate.html
+    Redirect /vancouver-wedding-caterers/ https://cocktailsandcanapes.ca/catering/weddings
+    Redirect /services/ https://cocktailsandcanapes.ca/catering
+
+
+
+
+</IfModule>
