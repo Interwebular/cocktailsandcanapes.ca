@@ -22,6 +22,6 @@
     Redirect Permanent /event-catering-menus/ https://cocktailsandcanapes.ca/menus
     Redirect Permanent /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate.html
     Redirect Permanent /vancouver-wedding-caterers/ https://cocktailsandcanapes.ca/catering/weddings
-    Redirect Permanent /services/ https://cocktailsandcanapes.ca/catering
+    Redirect Permanent /services/ /catering/
 
 </IfModule>
