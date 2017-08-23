@@ -33,7 +33,7 @@
                     @foreach($menu->categories as $category)
                         <div class="row">
                             <div class="col-xs-12">
-                                <h1 class="menu-category">{{$category->name}}</h1>
+                                <h2 class="menu-category">{{$category->name}}</h2>
                             </div>
                         </div>
                         <div class="row m-grid">
@@ -103,7 +103,7 @@
                                 $meal->name = str_replace('(PLUS $5)', '', $meal->name);
                             ?>
                             <div>
-                                <h1>{{ $meal->name }}</h1>
+                                <h2 class="h1-replace">{{ $meal->name }}</h2>
                                 <p>{{ $meal->description }}</p>
                             </div>
                         @endforeach

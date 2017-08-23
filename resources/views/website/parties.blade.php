@@ -70,9 +70,9 @@ dark
     <section id="learn-more"  class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
 
-            <h1 class="wedding-title alt">
+            <h2 class="wedding-title alt">
                 Event Catering
-            </h1>
+            </h2>
             <div class="spacer"></div>
             <p class="default">
                 We provide the best event catering in Vancouver. Whether you’re hosting a small cocktail party, a large scale birthday bash, or a ‘just because’ event, Cocktails and Canapes will work to produce a menu that’s perfect for your special occasion.
@@ -103,9 +103,9 @@ dark
             <div class="menu-preview-content-container">
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-                <h1 class="menu-preview-title">
+                <h2 class="menu-preview-title">
                     Dinner Menu
-                </h1>
+                </h2>
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($dinners as $dinner)
@@ -115,7 +115,7 @@ dark
                                 $dinner->name = str_replace('(PLUS $5)', '', $dinner->name);
                             ?>
                             <div>
-                                <h1>{{ $dinner->name }}</h1>
+                                <h2 class="h1-replace">{{ $dinner->name }}</h2>
                                 <p>{{ $dinner->description }}</p>
                             </div>
                         @endforeach
@@ -137,9 +137,9 @@ dark
     <section id="request-a-tasting"  class="section-panel section-dark section-fluid-height padding">
         <div class="content-center">
 
-            <h1 class="wedding-title" style="text-shadow: none;">
+            <h2 class="wedding-title" style="text-shadow: none;">
                 TASTING
-            </h1>
+            </h2>
             <div class="spacer"></div>
             <p class="default">
                 Having trouble deciding which menu items to serve for your special day? 

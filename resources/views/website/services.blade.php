@@ -99,9 +99,9 @@ dark
             <div class="menu-preview-content-container">
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-                <h1 class="menu-preview-title">
+                <h2 class="menu-preview-title">
                     Dinner Menu
-                </h1>
+                </h2>
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($dinners as $dinner)
@@ -111,7 +111,7 @@ dark
                                 $dinner->name = str_replace('(PLUS $5)', '', $dinner->name);
                             ?>
                             <div>
-                                <h1>{{ $dinner->name }}</h1>
+                                <h2 class="h1-replace">{{ $dinner->name }}</h2>
                                 <p>{{ $dinner->description }}</p>
                             </div>
                         @endforeach

@@ -79,7 +79,7 @@
 
                         </div>
                         <div class="col-md-6 col-md-offset-3" style="margin-top: 30px;">
-                            <h1>Interested In This Venue?</h1>
+                            <h2 style="text-align:center;">Interested In This Venue?</h2>
                             @if(count($errors) > 0)
                                 <div class="alert alert-danger">
                                     <ul>

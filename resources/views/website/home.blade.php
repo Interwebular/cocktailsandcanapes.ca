@@ -50,9 +50,9 @@
 
     <section class="section-panel section-white section-fluid-height padding">
         <div class="content-center">
-            <h1 class="skinny">
+            <h2 class="skinny">
             Through unique food and drink and unparalleled service, Cocktails &amp; Canapes' primary mission is to make your event truly unforgettable!
-            </h1>
+            </h2>
             <div class="spacer"></div>
             <p class="default">
                Cocktails and Canapes is Vancouver's premier catering company.</p>
@@ -80,9 +80,9 @@
             <div class="menu-preview-content-container">
                 <button class="left left-2 "><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-2 "><i class="fa fa-arrow-circle-o-right"></i></button>
-                <h1 class="menu-preview-title">
+                <h2 class="menu-preview-title">
                     Dinner Menu
-                </h1>
+                </h2>
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-2">
                         @foreach($dinners as $dinner)
@@ -92,7 +92,7 @@
                                 $dinner->name = str_replace('(PLUS $5)', '', $dinner->name);
                             ?>
                             <div>
-                                <h1>{{ $dinner->name }}</h1>
+                                <h2 class="h1-replace">{{ $dinner->name }}</h2>
                                 <p>{{ $dinner->description }}</p>
                             </div>
                         @endforeach
@@ -124,15 +124,15 @@
                 <button class="left left-1"><i class="fa fa-arrow-circle-o-left"></i></button>
                 <button class="right right-1"><i class="fa fa-arrow-circle-o-right"></i></button>
 
-                <h1 class="menu-preview-title">
+                <h2 class="menu-preview-title">
                     Canapes Menu
-                </h1>
+                </h2>
 
                 <div class="menu-preview-content">
                     <div class="menu-content-preview-slider menu-content-preview-slider-1">
                         @foreach($canapes as $canape)
                             <div>
-                                <h1>{{ $canape->name }}</h1>
+                                <h2 class="h1-replace">{{ $canape->name }}</h2>
                                 <p>{{ $canape->description }}</p>
                             </div>
                         @endforeach
@@ -148,7 +148,7 @@
         <button class="section-button section-button-left client-left hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-left"></i></button>
         <button class="section-button section-button-right client-right hidden-xs hidden-sm"><i class="fa fa-arrow-circle-o-right"></i></button>
         <div class="content-center">
-            <h1 class="skinny">Our Clients Are Our Biggest Fans</h1>
+            <h2 class="skinny">Our Clients Are Our Biggest Fans</h2>
             <div class="spacer"></div>
             <div class="clients">
                 @foreach(App\Services\Testimonials\Retrieve::random() as $testimonial)
@@ -167,7 +167,7 @@
 
     {{-- <section class="section-panel section-fluid-height section-dark">
         <div class="content-center">
-            <h1>Recent News</h1>
+            <h2>Recent News</h2>
         </div>
 
         <div class="container">

@@ -52,7 +52,7 @@ dark
 
     <section id="team" class="section-panel section-dark section-fluid-height padding">
       <div class="content-center">
-        <h1>Our Team</h1>
+        <h2>Our Team</h2>
       </div>
       <div class="team-flex">
         <?php $first = true; ?>
@@ -109,7 +109,7 @@ dark
 
       <div id="clients">
         <div class="content-center">
-          <h1>Our Clients</h1>
+          <h2>Our Clients</h2>
         </div>
         <div style="display: flex; justify-content: center; flex-wrap: wrap;">
           <a target="_blank" href="http://www.openroadautogroup.com
