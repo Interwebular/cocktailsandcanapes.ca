@@ -48,27 +48,40 @@ class Handler extends ExceptionHandler
     //     return parent::render($request, $e);
     // }
 
-    public function render($request, Exception $e
+    // public function render($request, Exception $e
+    // {
+    //     if($this->isHttpException($e)) {
+    //         switch($e->getStatusCode()) {
+    //             // not found
+    //             case 404:
+    //             return redirect()->guest('page.home');
+    //             break;
+
+    //             // internal error
+    //             case '500':
+    //             return redirect()->guest('page.home');
+    //             break;
+
+    //             default:
+    //                 return $this->renderHttpException($e);
+    //                 break;
+    //         }
+    //         else {
+    //             return parent::render($request, $e);
+    //         }
+    //     }
+    // }
+    public function render($request, Exception $e)
     {
-        if($this->isHttpException($e)) {
-            switch($e->getStatusCode()) {
-                // not found
-                case 404:
-                return redirect()->guest('page.home');
-                break;
+        if($this->isHttpException($e))
+        {
+            if($e->getStatusCode == 404)
+               return redirect()->guest('home');
 
-                // internal error
-                case '500':
-                return redirect()->guest('page.home');
-                break;
-
-                default:
-                    return $this->renderHttpException($e);
-                    break;
-            }
-            else {
-                return parent::render($request, $e);
-            }
+            if($e->getStatusCode == 500)
+               return redirect()->guest('home');
         }
+
+        return parent::render($request, $e);
     }
 }
