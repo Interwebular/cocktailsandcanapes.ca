@@ -75,10 +75,10 @@ class Handler extends ExceptionHandler
     {
         if($this->isHttpException($e))
         {
-            if($e->getStatusCode == 404)
+            if($e->getStatusCode() == 404)
                return redirect()->guest('home');
 
-            if($e->getStatusCode == 500)
+            if($e->getStatusCode() == 500)
                return redirect()->guest('home');
         }
 
