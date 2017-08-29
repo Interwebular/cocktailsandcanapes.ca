@@ -60,10 +60,10 @@ dark
                         {{ session('success') }}
                     </div>
                 @endif
-                <a href="{{ route('menus.show') }}">Corporate Menus</a>
-                <a href="#learn-more">Learn More</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="{{ route('menus.show') }}">Corporate Menus</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#learn-more">Learn More</a>
                 <!-- <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a> -->
-                <a @if(Request::route()->getName() === 'events' || Request::route()->getName() === 'events') class="active" @endif href="{{ route('events') }}">Book now</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" @if(Request::route()->getName() === 'events' || Request::route()->getName() === 'events') class="active" @endif href="{{ route('events') }}">Book now</a>
 
             </div>
         </div>
@@ -98,7 +98,7 @@ dark
             </p>
 
             <div class="wedding-button-group alt">
-                <a href="#request-a-tasting">Interested In A Tasting?</a>
+                <a style="border: 2px solid black; font-weight: bold;" href="#request-a-tasting">Interested In A Tasting?</a>
             </div>
 
         </div>

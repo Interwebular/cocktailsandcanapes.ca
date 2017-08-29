@@ -40,9 +40,9 @@ dark
                 </div>
             </div>
             <div class="wedding-button-group">
-                <a href="#team">Team</a>
-                <a href="#clients">Clients</a>
-                <a href="#testimonials">Testimonials</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#team">Team</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#clients">Clients</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#testimonials">Testimonials</a>
                 <!-- <a href="{{ route('weddings.index') }}">Team</a> -->
                 <!-- <a href="{{ route('contact.index') }}">Testimonials</a> -->
                 <!-- <a href="{{ route('events') }}">clients</a> -->
@@ -201,8 +201,9 @@ dark
         margin-right: auto;
       }
       .team-name {
-        border:1px solid #fff;
+        border: 2px solid #fff;
         text-align: center;
+        font-weight: bold;
         padding: 10px;
         margin: 10px;
         cursor: pointer;

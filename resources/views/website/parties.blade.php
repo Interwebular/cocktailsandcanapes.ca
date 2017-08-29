@@ -60,9 +60,9 @@ dark
                         {{ session('success') }}
                     </div>
                 @endif
-                <a href="{{ route('menus.show') }}">Event Menus</a>
-                <a href="#learn-more">Learn More</a>
-                <a href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="{{ route('menus.show') }}">Event Menus</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#learn-more">Learn More</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="#" data-toggle="modal" data-target="#tastingModal">Request A Tasting</a>
             </div>
         </div>
     </section>
@@ -92,7 +92,7 @@ dark
             </p>
 
             <div class="wedding-button-group alt">
-                <a href="#request-a-tasting">Interested In A Tasting?</a>
+                <a style="border: 2px solid black; font-weight: bold;" href="#request-a-tasting">Interested In A Tasting?</a>
             </div>
 
         </div>

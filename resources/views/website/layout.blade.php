@@ -178,7 +178,6 @@
                     </p>
                     <p>
                         <strong>Mailing Address:</strong><br>
-                        150 – 351 Abbott St.<br>
                         P.O. Box 98882<br>
                         Vancouver, BC V6B 0M4
                     </p>

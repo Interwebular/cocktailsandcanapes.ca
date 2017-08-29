@@ -38,9 +38,9 @@ dark
                 </div>
             </div>
             <div class="wedding-button-group">
-                <a href="{{ route('weddings.index') }}">Weddings</a>
-                <a href="{{ route('corporate.index') }}">Corporate</a>
-                <a href="{{ route('parties.index') }}">Events</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="{{ route('weddings.index') }}">Weddings</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="{{ route('corporate.index') }}">Corporate</a>
+                <a style="border: 2px solid #fff; font-weight: bold;" href="{{ route('parties.index') }}">Events</a>
                 <!-- <a href="{{ route('contact.index') }}">Customize</a> -->
                 <!-- <a href="{{ route('events') }}">Events</a> -->
             </div>
