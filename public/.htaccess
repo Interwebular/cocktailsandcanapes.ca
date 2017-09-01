@@ -19,9 +19,17 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
     # Redirect old URLS to new ones...
-    Redirect Permanent /event-catering-menus/ https://cocktailsandcanapes.ca/menus
-    Redirect Permanent /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate.html
-    Redirect Permanent /vancouver-wedding-caterers/ https://cocktailsandcanapes.ca/catering/weddings
-    Redirect Permanent /services/ /catering/
+
+
+    Redirect 301 /event-catering-menus https://cocktailsandcanapes.ca/menus
+
+    Redirect 301 /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate
+
+
+
+    # Redirect Permanent /event-catering-menus/ https://cocktailsandcanapes.ca/menus
+    # Redirect Permanent /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate.html
+    #Redirect Permanent /vancouver-wedding-caterers/ https://cocktailsandcanapes.ca/catering/weddings
+    #Redirect Permanent /services /catering
 
 </IfModule>
