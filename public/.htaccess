@@ -21,9 +21,9 @@
     # Redirect old URLS to new ones...
 
 
-    Redirect 301 /event-catering-menus https://cocktailsandcanapes.ca/menus
+    Redirect 301 /event-catering-menus.php https://cocktailsandcanapes.ca/menus
 
-    Redirect 301 /corporate-event-catering/ https://cocktailsandcanapes.ca/catering/corporate
+    Redirect 301 /corporate.blade.php https://cocktailsandcanapes.ca/catering/corporate
 
 
 
