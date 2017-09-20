@@ -43,10 +43,10 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $e
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $e)
-    {
-        return parent::render($request, $e);
-    }
+    // public function render($request, Exception $e)
+    // {
+    //     return parent::render($request, $e);
+    // }
 
     // public function render($request, Exception $e
     // {
@@ -74,17 +74,17 @@ class Handler extends ExceptionHandler
 
 
     // BELOW REDIRECT WORKS
-    // public function render($request, Exception $e)
-    // {
-    //     if($this->isHttpException($e))
-    //     {
-    //         if($e->getStatusCode() == 404)
-    //            return redirect()->guest('/');
+    public function render($request, Exception $e)
+    {
+        if($this->isHttpException($e))
+        {
+            if($e->getStatusCode() == 404)
+               return redirect()->guest('/');
 
-    //         if($e->getStatusCode() == 500)
-    //            return redirect()->guest('/');
-    //     }
+            if($e->getStatusCode() == 500)
+               return redirect()->guest('/');
+        }
 
-    //     return parent::render($request, $e);
-    // }
+        return parent::render($request, $e);
+    }
 }
