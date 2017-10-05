@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div class="side-content side-content--left">
+<!--         <div class="side-content side-content--left">
             Louisiana<br />
             <strong>Pork Ribs</strong><br />
             Pg. 3.
@@ -42,13 +42,13 @@
             </strong><br />
             Sandwhich<br />
             Pg. 3.
-        </div>
+        </div> -->
 
-        <div class="side-content side-content--right">
+<!--         <div class="side-content side-content--right">
             <strong>Smoked<br />Tomato</strong><br />
             Pasta Salad<br />
             Pg. 3.
-        </div>
+        </div> -->
     </section>
 
     <section class="section-panel section-white section-fluid-height padding">
