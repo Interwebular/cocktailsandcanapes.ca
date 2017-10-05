@@ -6,25 +6,28 @@
 @section('content')
 
 
-    {{-- <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
+    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
         <source src="{{ asset('videos/intro_v3.webm') }}" type="video/webm">
         <source src="{{ asset('videos/intro_v3.mp4') }}" type="video/mp4">
-    </video> --}}
+    </video>
 
 
     {{-- <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div> --}}
-    {{-- <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div> --}}
-    <div class="bgimage" style="background-image:url({{ asset('img/tasteofsummerbg.jpg') }})"></div>
+    <!-- <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div> -->
+    <!-- <div class="bgimage" style="background-image:url({{ asset('img/tasteofsummerbg.jpg') }})"></div> -->
 
     <section class="section-panel panel-fullscreen panel-fixed">
-        <div class="panel-content upper">
+        <div class="panel-content middle">
             
-            <img src="{{ asset('img/tasteofsummer2.png') }}" alt="Cocktails And Canapes"/>
+            <!-- <img src="{{ asset('img/tasteofsummer2.png') }}" alt="Cocktails And Canapes"/> -->
 
-            <h1 class="alt" style="margin-top: 40px;">BOOK YOUR SUMMER BBQ NOW</h1>
+            <!-- <h1 class="alt" style="margin-top: 40px;">BOOK YOUR SUMMER BBQ NOW</h1> -->
+            <h1 class="alt" style="margin-top: 40px;">A Distinct Culinary Experience</h1>
+
 
             <div class="cta-wrapper">
-                <a class="cta" href="{{ route('menus.show') }}/bbq">BBQ Menu</a>
+                <!-- <a class="cta" href="{{ route('menus.show') }}/bbq">BBQ Menu</a> -->
+                <a class="cta" href="{{ route('menus.show') }}">Catering Menu</a>
             </div>
         </div>
 
