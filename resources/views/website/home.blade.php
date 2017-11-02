@@ -6,16 +6,16 @@
 @section('content')
 
 
-   <!--  <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
+    <video autoplay loop muted poster="{{ asset('videos/intro_v2.png') }}" id="bgvid" style="background-image:url({{ asset('videos/intro_v2.png') }})">
         <source src="{{ asset('videos/intro_v3.webm') }}" type="video/webm">
         <source src="{{ asset('videos/intro_v3.mp4') }}" type="video/mp4">
-    </video> -->
+    </video>
 
 
     <!-- {{-- <div class="bgimage" style="background-image:url({{ asset('videos/intro_v2.png') }})"></div> --}} -->
     <!-- <div class="bgimage" style="background-image:url({{ asset('img/sushi_darker.jpg') }})"></div> -->
     <!-- <div class="bgimage" style="background-image:url({{ asset('img/tasteofsummerbg.jpg') }})"></div> -->
-    <div class="bgimage" style="background-image:url({{ asset('img/Winter2017_revised.png') }})"></div>
+    <!-- <div class="bgimage" style="background-image:url({{ asset('img/Winter2017_revised.png') }})"></div> -->
 
 
     <section class="section-panel panel-fullscreen panel-fixed">
