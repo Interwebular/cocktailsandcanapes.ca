@@ -8,7 +8,9 @@
     }
 
     &.panel-fullscreen {
-        height: 100vh;
+        // height: 100vh;
+        height: 90vh;
+
     }
 
     &.panel-75 {
@@ -218,7 +220,8 @@
 video#bgvid,
 .bgimage {
     position: fixed;
-    top: 50%;
+    // top: 50%;
+    top: 47.5%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -231,11 +234,18 @@ video#bgvid,
     transform: translateX(-50%) translateY(-50%);
     background-position: center center;
     background-repeat:  no-repeat;
-    background-size: cover;
+    // background-size: cover;
+    background-size: 100% 95%;
 }
 
 .bgimage {
     //display: none;
+}
+
+@media(max-width: 650px) {
+    .bgimage {
+        background-size: cover;
+    }
 }
 
 @media(max-width: 630px) {
