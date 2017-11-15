@@ -312,7 +312,7 @@ nav.mobile.scrolled {
     padding-left: 10px;
     padding-right: 10px; }
   .section-panel.panel-fullscreen {
-    height: 90vh; }
+    height: 100vh; }
   .section-panel.panel-75 {
     height: 75vh; }
   .section-panel.panel-fullwidth {
@@ -455,7 +455,7 @@ nav.mobile.scrolled {
 video#bgvid,
 .bgimage {
   position: fixed;
-  top: 47.5%;
+  top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -465,7 +465,7 @@ video#bgvid,
   transform: translateX(-50%) translateY(-50%);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100% 95%; }
+  background-size: cover; }
 
 @media (max-width: 650px) {
   .bgimage {
